@@ -1,11 +1,10 @@
 extends Control
 
+func mouse_entered(source: Button) -> void:
+	pass
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func mouse_exited(source: Button) -> void:
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func mouse_pressed(source: Button) -> void:
 	pass
