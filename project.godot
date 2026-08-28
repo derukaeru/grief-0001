@@ -10,10 +10,29 @@ config_version=5
 
 [application]
 
-config/name="grief-0008"
+config/name="grief-0001"
 config/tags=PackedStringArray("ysws")
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Dialogues="*uid://cexw0hhsm6gmg"
+DialogueManager="*uid://bxn5pfsev51jx"
+GameManager="*uid://d4nh45asujswm"
+Registry="*uid://c65mvilfqnkvp"
+SceneChanger="*uid://br3dekiu3ufrs"
+Util="*uid://ch0wvw74rhgkd"
+
+[display]
+
+window/size/viewport_width=560
+window/size/viewport_height=396
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [physics]
 
