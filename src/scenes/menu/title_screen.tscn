@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dix67ojrdr6ht"]
 
 [ext_resource type="Script" uid="uid://gdniltp6ahcj" path="res://src/scenes/menu/title_screen.gd" id="1_fbi7p"]
+[ext_resource type="PackedScene" uid="uid://c5wqen1jgstwm" path="res://src/scenes/menu/settings_screen.tscn" id="2_4v2w5"]
 
 [node name="title_screen" type="Control" unique_id=198211424]
 layout_mode = 3
@@ -12,6 +13,65 @@ grow_vertical = 2
 script = ExtResource("1_fbi7p")
 
 [node name="background" type="TextureRect" parent="." unique_id=1735990166]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="main_menu" type="Control" parent="." unique_id=1407386202]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start" type="Button" parent="main_menu" unique_id=2054431500]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -120.0
+offset_top = -2.0
+offset_right = 120.0
+offset_bottom = 38.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "start"
+flat = true
+
+[node name="settings" type="Button" parent="main_menu" unique_id=1578761108]
+layout_mode = 0
+offset_left = -120.0
+offset_top = 50.0
+offset_right = 120.0
+offset_bottom = 90.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "settings"
+flat = true
+
+[node name="exit" type="Button" parent="main_menu" unique_id=193737445]
+layout_mode = 0
+offset_left = -120.0
+offset_top = 106.0
+offset_right = 120.0
+offset_bottom = 146.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "exit"
+flat = true
+
+[node name="settings_screen" parent="." unique_id=1557528192 instance=ExtResource("2_4v2w5")]
+visible = false
+layout_mode = 1
+
+[connection signal="mouse_entered" from="main_menu/start" to="." method="mouse_entered" flags=18]
+[connection signal="mouse_exited" from="main_menu/start" to="." method="mouse_exited" flags=18]
+[connection signal="pressed" from="main_menu/start" to="." method="mouse_pressed" flags=18]
+[connection signal="pressed" from="main_menu/start" to="." method="start_pressed"]
+[connection signal="mouse_entered" from="main_menu/settings" to="." method="mouse_entered" flags=18]
+[connection signal="mouse_exited" from="main_menu/settings" to="." method="mouse_exited" flags=18]
+[connection signal="pressed" from="main_menu/settings" to="." method="mouse_pressed" flags=18]
+[connection signal="mouse_entered" from="main_menu/exit" to="." method="mouse_entered" flags=18]
+[connection signal="mouse_exited" from="main_menu/exit" to="." method="mouse_exited" flags=18]
+[connection signal="pressed" from="main_menu/exit" to="." method="mouse_pressed" flags=18]
+[connection signal="pressed" from="main_menu/exit" to="." method="exit_pressed"]

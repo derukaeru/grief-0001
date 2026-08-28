@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dm826hg21t232"]
+
+[ext_resource type="Script" uid="uid://cyyx6o8ysuua3" path="res://src/scenes/main/main.gd" id="1_4rfip"]
+[ext_resource type="PackedScene" uid="uid://vjpjbwjhxt4l" path="res://src/scenes/entities/player.tscn" id="1_hsw67"]
+
+[node name="main" type="Node2D" unique_id=1305880561]
+script = ExtResource("1_4rfip")
+
+[node name="map_container" type="Node2D" parent="." unique_id=746658146]
+
+[node name="player" parent="." unique_id=1173586369 instance=ExtResource("1_hsw67")]
+position = Vector2(280, 208)
