@@ -16,6 +16,9 @@ var npc_line: String = ""
 var current_line_index: int = 0
 var current_letter_index: int = 0
 
+var line_finished: bool = false
+var clicked: bool = false
+
 func _process(delta: float) -> void:
 	if not typing: return
 	typing_time -= delta
@@ -51,10 +54,29 @@ func letter() -> void:
 			
 			await get_tree().create_timer(2.0).timeout
 			queue_free()
-			
+
+func continue_dialogue() -> void:
+	npc_line = npc_paragraph[current_line_index]
+	typing = true
+
+func gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index != MOUSE_BUTTON_LEFT: return
+		
+		if not event.pressed(): 
+			clicked = false
 			return
 		
-		npc_line = npc_paragraph[current_line_index]
-		await get_tree().create_timer(1.0).timeout
+		if line_finished:
+			continue_dialogue()
+		else:
+			current_letter_index = 0
+			current_line_index += 1
+			
+			done_line.emit()
+			typing = false
+			
+			dialogue_label.text = npc_line
+			npc_line = npc_paragraph[current_line_index]
 		
-		typing = true
+		clicked = true

@@ -12,7 +12,6 @@ config_version=5
 
 config/name="grief-0001"
 config/tags=PackedStringArray("ysws")
-run/main_scene="uid://dm826hg21t232"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -29,7 +28,7 @@ EventBus="*uid://dnxc3fw3lky7m"
 [display]
 
 window/size/viewport_width=560
-window/size/viewport_height=396
+window/size/viewport_height=400
 window/stretch/mode="viewport"
 
 [editor_plugins]
