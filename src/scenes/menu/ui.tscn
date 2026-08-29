@@ -8,3 +8,4 @@ script = ExtResource("1_komq3")
 
 [node name="pause_screen" parent="." unique_id=2145161773 instance=ExtResource("1_wpnud")]
 visible = false
+z_index = 10
