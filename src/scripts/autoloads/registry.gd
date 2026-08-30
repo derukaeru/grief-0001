@@ -8,4 +8,9 @@ var UID: Dictionary = {
 	"pause_screen": "uid://7jemke30bxqq",
 	"settings_screen": "uid://c5wqen1jgstwm",
 	"dialogue_box": "uid://6cae11kpahyv",
+	
+	"main": "uid://dm826hg21t232",
+	"computer": "uid://bmed7iwjan57j",
+	
+	"ui": "uid://cmtfp0l7x5ipi",
 }

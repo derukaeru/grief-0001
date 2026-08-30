@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bmed7iwjan57j"]
+
+[ext_resource type="Script" uid="uid://duek5op16obe5" path="res://src/scenes/main/computer.gd" id="1_50o8y"]
+
+[node name="computer" type="Control" unique_id=953791105]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_50o8y")
+
+[node name="background" type="ColorRect" parent="." unique_id=671017548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+
+[node name="action_bar" type="Control" parent="." unique_id=1874253632]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="background" type="ColorRect" parent="action_bar" unique_id=99554708]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1539, 0.22743002, 0.27, 1)

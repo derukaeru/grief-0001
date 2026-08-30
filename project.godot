@@ -12,6 +12,7 @@ config_version=5
 
 config/name="grief-0001"
 config/tags=PackedStringArray("ysws")
+run/main_scene="uid://dm826hg21t232"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,10 +26,14 @@ SceneChanger="*uid://br3dekiu3ufrs"
 Util="*uid://ch0wvw74rhgkd"
 EventBus="*uid://dnxc3fw3lky7m"
 
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [display]
 
-window/size/viewport_width=560
-window/size/viewport_height=400
+window/size/viewport_width=576
+window/size/viewport_height=480
 window/stretch/mode="viewport"
 
 [editor_plugins]
