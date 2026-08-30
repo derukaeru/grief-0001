@@ -121,11 +121,11 @@ shader_parameter/roll_speed = 4.0
 shader_parameter/roll_size = 15.0
 shader_parameter/roll_variation = 1.8
 shader_parameter/distort_intensity = 0.0050000002375
-shader_parameter/noise_opacity = 0.0
+shader_parameter/noise_opacity = 0.02000000095
 shader_parameter/noise_speed = 5.0
-shader_parameter/static_noise_intensity = 0.030000001425
+shader_parameter/static_noise_intensity = 0.0
 shader_parameter/aberration = 0.02000004845000003
-shader_parameter/brightness = 1.09
+shader_parameter/brightness = 1.0
 shader_parameter/discolor = true
 shader_parameter/warp_amount = 0.0750000035625
 shader_parameter/clip_warp = false
@@ -173,6 +173,23 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1539, 0.22743002, 0.27, 1)
 
+[node name="time" type="Label" parent="action_bar" unique_id=1497911665]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -32.0
+offset_right = -7.0
+offset_bottom = -9.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "16:51"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="apps" type="Control" parent="." unique_id=110403345]
 anchors_preset = 0
 offset_right = 40.0
@@ -195,7 +212,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="lock_screen" type="Control" parent="." unique_id=1854427984]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -219,9 +235,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -136.0
+offset_left = -144.0
 offset_top = 56.0
-offset_right = 136.0
+offset_right = 128.0
 offset_bottom = 95.0
 grow_horizontal = 2
 grow_vertical = 2

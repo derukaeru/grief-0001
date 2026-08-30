@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://fbsacnexsa3a" path="res://src/scenes/main/main.gd" id="1_4rfip"]
 [ext_resource type="PackedScene" uid="uid://vjpjbwjhxt4l" path="res://src/scenes/entities/player.tscn" id="1_hsw67"]
+[ext_resource type="PackedScene" uid="uid://ormu8fsixur7" path="res://src/scenes/maps/field.tscn" id="2_45uaa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_45uaa"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -12,7 +13,7 @@ sky_material = SubResource("ProceduralSkyMaterial_45uaa")
 
 [sub_resource type="Environment" id="Environment_fub2y"]
 background_mode = 1
-background_color = Color(0.34418076, 0.64292985, 0.78531367, 1)
+background_color = Color(0.05502162, 0.061924934, 0.065123506, 1)
 sky = SubResource("Sky_vw57g")
 tonemap_mode = 2
 
@@ -27,5 +28,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="map_container" type="Node3D" parent="." unique_id=1039681208]
+
+[node name="field" parent="map_container" unique_id=1818184762 instance=ExtResource("2_45uaa")]
 
 [node name="player" parent="." unique_id=431114784 instance=ExtResource("1_hsw67")]

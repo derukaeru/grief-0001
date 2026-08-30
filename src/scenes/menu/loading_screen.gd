@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 signal loading_screen_ready
 @onready var animation: AnimationPlayer = $AnimationPlayer
@@ -15,5 +15,4 @@ func _on_progress_changed(value: float) -> void:
 func _on_loading_finished() -> void:
 	animation.play_backwards("fade")
 	await animation.animation_finished
-	
 	queue_free()

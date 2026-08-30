@@ -12,10 +12,12 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		if get_tree().paused:
 			get_tree().paused = false
-			pause_screen.open()
+			Util.mouse_captured()
+			pause_screen.close()
 		else:
 			get_tree().paused = true
-			pause_screen.close()
+			pause_screen.open()
+			Util.mouse_visible()
 
 func show_map_transition() -> void:
 	map_transition.show()

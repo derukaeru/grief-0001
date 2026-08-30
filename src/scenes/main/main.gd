@@ -6,6 +6,8 @@ var current_map: String = ""
 func _ready() -> void:
 	EventBus.move_to.connect(change_map)
 	GameManager.ui.show()
+	
+	Util.mouse_captured()
 
 func change_map(to: String, from: String = current_map) -> void:
 	for entry in map_container.get_children():

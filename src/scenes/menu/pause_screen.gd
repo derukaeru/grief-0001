@@ -3,6 +3,7 @@ class_name PauseScreen extends Control
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
+	Util.mouse_captured()
 	hide()
 
 func _on_settings_pressed() -> void:

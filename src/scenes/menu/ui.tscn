@@ -17,14 +17,20 @@ layer = 5
 script = ExtResource("1_komq3")
 
 [node name="map_transition" type="ColorRect" parent="." unique_id=1783105567]
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="map_animation" type="AnimationPlayer" parent="map_transition" unique_id=673442684]
 libraries/ = SubResource("AnimationLibrary_atyx7")
 
 [node name="display" type="Control" parent="." unique_id=1762093881]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

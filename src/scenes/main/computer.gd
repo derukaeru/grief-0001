@@ -7,15 +7,23 @@ class_name Computer extends Control
 
 var password: String = "grief"
 
+var windows: Dictionary = {}
+
 func _ready() -> void:
 	EventBus.open_app.connect(open_app)
+	EventBus.closed_app.connect(closed_app)
 
 func open_app(app_name: String) -> void:
 	if not Registry.APPS.has(app_name):
 		return push_error("Registry does not have record of this app %d" % app_name)
 	
-	var window: AppWindow = load(Registry.APPS[app_name]).instantiate()
-	windows_container.add_child(window)
+	if windows.has(app_name):
+		windows[app_name].show()
+	else:
+		var window: AppWindow = load(Registry.APPS[app_name]).instantiate()
+		windows_container.add_child(window)
+		
+		windows.set(window.app_name, window)
 	
 func unlock() -> void:
 	if password == password_label.text:
@@ -25,3 +33,6 @@ func unlock() -> void:
 	else:
 		password_label.text = ""
 		lockscreen_animation.play("wrong")
+
+func closed_app(app_name: String) -> void:
+	windows.erase(app_name)
