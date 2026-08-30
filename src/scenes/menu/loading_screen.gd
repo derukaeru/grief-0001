@@ -2,15 +2,14 @@ extends CanvasLayer
 
 signal loading_screen_ready
 @onready var animation: AnimationPlayer = $AnimationPlayer
-@onready var loading_progress: Label = $loading_progress
 
 func _ready() -> void:
 	animation.play("fade")
 	await animation.animation_finished
 	loading_screen_ready.emit()
 
-func _on_progress_changed(value: float) -> void:
-	loading_progress.text = str(int(value * 10)) + "%"
+func _on_progress_changed(_value: float) -> void:
+	pass
 
 func _on_loading_finished() -> void:
 	animation.play_backwards("fade")

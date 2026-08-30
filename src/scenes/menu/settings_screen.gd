@@ -2,10 +2,10 @@ class_name SettingsScreen extends Control
 @onready var animation: AnimationPlayer = $AnimationPlayer
 
 func open() -> void:
-	pass
+	show()
 
 func close() -> void:
-	pass
+	hide()
 
 func mouse_entered(source: Button) -> void:
 	var tw: Tween = get_tree().create_tween()
