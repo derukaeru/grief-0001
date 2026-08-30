@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://duek5op16obe5" path="res://src/scenes/main/computer.gd" id="1_50o8y"]
 [ext_resource type="PackedScene" uid="uid://th2gaejqgi12" path="res://src/scenes/computer/apps/logs_md.tscn" id="2_141df"]
+[ext_resource type="Texture2D" uid="uid://c6c7frj5giys3" path="res://src/assets/sprites/icons/search.png" id="2_v3isc"]
 [ext_resource type="Shader" uid="uid://dh2rgyr1iv45a" path="res://src/assets/shaders/crt.gdshader" id="3_1j8nl"]
-[ext_resource type="Texture2D" uid="uid://beot3iybto2nd" path="res://icon.svg" id="3_1qd64"]
+[ext_resource type="Texture2D" uid="uid://gorpfyfpd0ek" path="res://src/assets/sprites/icons/user.png" id="3_1qd64"]
+[ext_resource type="PackedScene" uid="uid://q8ki0l64c3i2" path="res://src/scenes/computer/apps/eye_png.tscn" id="3_474aq"]
 
 [sub_resource type="Animation" id="Animation_1j8nl"]
 length = 0.001
@@ -152,7 +154,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.32544094, 0.3254409, 0.32544076, 1)
+color = Color(0.14406255, 0.14406255, 0.14406255, 1)
 
 [node name="action_bar" type="Control" parent="." unique_id=1874253632]
 layout_mode = 1
@@ -190,10 +192,20 @@ text = "16:51"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="search" type="TextureButton" parent="action_bar" unique_id=1953406959]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 7.0
+offset_right = 37.0
+offset_bottom = 34.0
+texture_normal = ExtResource("2_v3isc")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="apps" type="Control" parent="." unique_id=110403345]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 576.0
+offset_bottom = 480.0
 
 [node name="logs_md" parent="apps" unique_id=1302605451 instance=ExtResource("2_141df")]
 layout_mode = 0
@@ -202,7 +214,15 @@ offset_top = 23.0
 offset_right = 90.0
 offset_bottom = 79.0
 
+[node name="eye_png" parent="apps" unique_id=1823144492 instance=ExtResource("3_474aq")]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 24.0
+offset_right = 192.0
+offset_bottom = 80.0
+
 [node name="windows" type="Control" parent="." unique_id=1852505008]
+y_sort_enabled = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -212,6 +232,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="lock_screen" type="Control" parent="." unique_id=1854427984]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -272,9 +293,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -64.0
-offset_top = -144.0
+offset_top = -112.0
 offset_right = 64.0
-offset_bottom = -16.0
+offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_1qd64")

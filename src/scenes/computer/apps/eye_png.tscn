@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://q8ki0l64c3i2"]
+
+[ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_t2jmu"]
+[ext_resource type="Texture2D" uid="uid://dd4ilhivajitl" path="res://src/assets/sprites/icons/eye.png" id="2_dc7cm"]
+
+[node name="eye_png" unique_id=1302605451 instance=ExtResource("1_t2jmu")]
+app_name = "eye_png"
+
+[node name="icon" parent="." index="0" unique_id=1956253907]
+texture = ExtResource("2_dc7cm")
+
+[node name="app_name" parent="." index="1" unique_id=1899806684]
+text = "eye.png"

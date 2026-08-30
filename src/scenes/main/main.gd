@@ -10,6 +10,7 @@ func _ready() -> void:
 	GameManager.ui.show()
 	
 	Util.mouse_captured()
+	GameManager.current_view = "3d"
 
 func change_map(to: String, from: String = current_map) -> void:
 	for entry in map_container.get_children():

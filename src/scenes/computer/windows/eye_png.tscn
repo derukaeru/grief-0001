@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c84nq7y1lfr27"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_hxar2"]
+[ext_resource type="Texture2D" uid="uid://dd4ilhivajitl" path="res://src/assets/sprites/icons/eye.png" id="2_mocw5"]
+
+[node name="eye_png" unique_id=1725337698 instance=ExtResource("1_hxar2")]
+offset_right = -381.0
+offset_bottom = -245.0
+app_name = "eye_png"
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
+offset_right = 164.0
+text = "eye.png"
+
+[node name="image" type="TextureRect" parent="." index="2" unique_id=2067355003]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 195.0
+offset_bottom = 235.0
+texture = ExtResource("2_mocw5")
+expand_mode = 1

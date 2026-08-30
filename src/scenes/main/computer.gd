@@ -6,7 +6,6 @@ class_name Computer extends Control
 @onready var lockscreen_animation: AnimationPlayer = $lock_screen/AnimationPlayer
 
 var password: String = "grief"
-
 var windows: Dictionary = {}
 
 func _ready() -> void:
@@ -16,11 +15,12 @@ func _ready() -> void:
 	GameManager.ui.pause_screen.close()
 	GameManager.ui.show()
 	
-	Util.mouse_captured()
+	Util.mouse_visible()
+	GameManager.current_view = "computer"
 
 func open_app(app_name: String) -> void:
 	if not Registry.APPS.has(app_name):
-		return push_error("Registry does not have record of this app %d" % app_name)
+		return push_error("Registry does not have record of this app %s" % app_name)
 	
 	if windows.has(app_name):
 		windows[app_name].show()
@@ -29,7 +29,7 @@ func open_app(app_name: String) -> void:
 		windows_container.add_child(window)
 		
 		windows.set(window.app_name, window)
-	
+
 func unlock() -> void:
 	if password == password_label.text:
 		lockscreen_animation.play("open")

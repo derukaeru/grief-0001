@@ -3,7 +3,12 @@ class_name PauseScreen extends Control
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
-	Util.mouse_captured()
+	
+	if GameManager.current_view == "3d":
+		Util.mouse_captured()
+	else:
+		Util.mouse_visible()
+	
 	hide()
 
 func _on_settings_pressed() -> void:

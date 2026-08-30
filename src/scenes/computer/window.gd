@@ -23,10 +23,6 @@ func top_bar_gui_input(event: InputEvent) -> void:
 			else:
 				dragging = false
 	
-	if event is InputEventMouseMotion:
-		pass
-		# drag the window here
-
-func _process(_delta: float) -> void:
-	if dragging:
-		pass
+	if not draggable: return
+	if event is InputEventMouseMotion and dragging:
+		global_position += event.relative
