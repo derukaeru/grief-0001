@@ -52,6 +52,7 @@ offset_left = 334.0
 offset_top = 4.0
 offset_right = 366.0
 offset_bottom = 36.0
+mouse_behavior_recursive = 2
 text = "_"
 
 [node name="app_name" type="Label" parent="top_bar" unique_id=1590715306]
@@ -62,6 +63,6 @@ offset_right = 301.0
 offset_bottom = 36.0
 vertical_alignment = 1
 
-[connection signal="gui_input" from="top_bar" to="." method="gui_input"]
+[connection signal="gui_input" from="top_bar" to="." method="top_bar_gui_input"]
 [connection signal="pressed" from="top_bar/close" to="." method="close"]
 [connection signal="pressed" from="top_bar/minimize" to="." method="minimize"]

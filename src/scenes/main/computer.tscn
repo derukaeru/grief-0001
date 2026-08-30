@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://duek5op16obe5" path="res://src/scenes/main/computer.gd" id="1_50o8y"]
 [ext_resource type="PackedScene" uid="uid://th2gaejqgi12" path="res://src/scenes/computer/apps/logs_md.tscn" id="2_141df"]
 [ext_resource type="Shader" uid="uid://dh2rgyr1iv45a" path="res://src/assets/shaders/crt.gdshader" id="3_1j8nl"]
+[ext_resource type="Texture2D" uid="uid://beot3iybto2nd" path="res://icon.svg" id="3_1qd64"]
 
 [sub_resource type="Animation" id="Animation_1j8nl"]
 length = 0.001
@@ -41,10 +42,76 @@ _data = {
 &"open": SubResource("Animation_1qd64")
 }
 
+[sub_resource type="Animation" id="Animation_v3isc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../lock_screen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../lock_screen/password:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(144, 296)]
+}
+
+[sub_resource type="Animation" id="Animation_474aq"]
+resource_name = "open"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../lock_screen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -480)]
+}
+
+[sub_resource type="Animation" id="Animation_avh3n"]
+resource_name = "wrong"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../lock_screen/password:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.055367198, 0.124388, 0.18926561, 0.25009388),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(144, 296), Vector2(133.51, 296), Vector2(149.115, 296), Vector2(138.755, 296), Vector2(144, 296)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v3isc"]
+_data = {
+&"RESET": SubResource("Animation_v3isc"),
+&"open": SubResource("Animation_474aq"),
+&"wrong": SubResource("Animation_avh3n")
+}
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1qd64"]
 shader = ExtResource("3_1j8nl")
 shader_parameter/overlay = true
-shader_parameter/scanlines_opacity = 0.0350000016625
+shader_parameter/scanlines_opacity = 0.0
 shader_parameter/scanlines_width = 0.0850000040375
 shader_parameter/grille_opacity = 0.050000002375
 shader_parameter/resolution = Vector2(640, 480)
@@ -58,9 +125,9 @@ shader_parameter/noise_opacity = 0.0
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.030000001425
 shader_parameter/aberration = 0.02000004845000003
-shader_parameter/brightness = 1.585
+shader_parameter/brightness = 1.09
 shader_parameter/discolor = true
-shader_parameter/warp_amount = 0.0400000019
+shader_parameter/warp_amount = 0.0750000035625
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.250000011875
@@ -125,6 +192,76 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+
+[node name="lock_screen" type="Control" parent="." unique_id=1854427984]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="lock_screen" unique_id=1917951738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27752784, 0.2775277, 0.27752772, 1)
+
+[node name="password" type="LineEdit" parent="lock_screen" unique_id=989831692]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 56.0
+offset_right = 136.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+max_length = 5
+secret = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="lock_screen" unique_id=1767341423]
+root_node = NodePath("../../shader")
+libraries/ = SubResource("AnimationLibrary_v3isc")
+
+[node name="enter" type="Button" parent="lock_screen" unique_id=546920568]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = 104.0
+offset_right = 24.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "enter"
+
+[node name="icon" type="TextureRect" parent="lock_screen" unique_id=2142187132]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -144.0
+offset_right = 64.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_1qd64")
 
 [node name="shader" type="ColorRect" parent="." unique_id=1984452527]
 material = SubResource("ShaderMaterial_1qd64")
@@ -135,3 +272,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[connection signal="pressed" from="lock_screen/enter" to="." method="unlock"]

@@ -17,7 +17,7 @@ func open() -> void:
 func minimize() -> void:
 	pass
 
-func gui_input(event: InputEvent) -> void:
+func top_bar_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
