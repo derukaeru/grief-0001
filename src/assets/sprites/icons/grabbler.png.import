@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqo7qwvvx88n0"
-path="res://.godot/imported/eye_open.png-da165c16da6b195ad0dc2991db6e3fce.ctex"
+uid="uid://bwgungw4c3fwn"
+path="res://.godot/imported/grabbler.png-65d21a4b6d1755a142394fee2b71f7d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/sprites/eye_open.png"
-dest_files=["res://.godot/imported/eye_open.png-da165c16da6b195ad0dc2991db6e3fce.ctex"]
+source_file="res://src/assets/sprites/icons/grabbler.png"
+dest_files=["res://.godot/imported/grabbler.png-65d21a4b6d1755a142394fee2b71f7d7.ctex"]
 
 [params]
 

@@ -5,6 +5,8 @@ var current_map: String = ""
 
 func _ready() -> void:
 	EventBus.move_to.connect(change_map)
+	
+	GameManager.ui.pause_screen.close()
 	GameManager.ui.show()
 	
 	Util.mouse_captured()

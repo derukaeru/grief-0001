@@ -11,6 +11,7 @@ signal loading_finished
 
 func _ready() -> void:
 	set_process(false)
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 func change_scene(scene_name: String) -> void:
 	scene_path = Registry.UID[scene_name]

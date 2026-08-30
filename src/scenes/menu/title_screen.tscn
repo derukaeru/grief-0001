@@ -2,10 +2,17 @@
 
 [ext_resource type="Script" uid="uid://gdniltp6ahcj" path="res://src/scenes/menu/title_screen.gd" id="1_fbi7p"]
 [ext_resource type="PackedScene" uid="uid://c5wqen1jgstwm" path="res://src/scenes/menu/settings_screen.tscn" id="2_4v2w5"]
+[ext_resource type="Shader" uid="uid://bqqjf8mltsi3q" path="res://src/assets/shaders/scroll.gdshader" id="2_n2vqt"]
 [ext_resource type="Texture2D" uid="uid://boa5g6vnh5q83" path="res://src/assets/sprites/ui/loop_background.png" id="2_wf6w8"]
-[ext_resource type="Texture2D" uid="uid://dd4ilhivajitl" path="res://src/assets/sprites/eye.png" id="3_n2vqt"]
+[ext_resource type="Texture2D" uid="uid://dd4ilhivajitl" path="res://src/assets/sprites/icons/eye.png" id="4_n2vqt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7e5sh"]
+shader = ExtResource("2_n2vqt")
+shader_parameter/sx = 0.03
+shader_parameter/sy = 0.03
 
 [node name="title_screen" type="Control" unique_id=198211424]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,6 +22,7 @@ grow_vertical = 2
 script = ExtResource("1_fbi7p")
 
 [node name="background" type="TextureRect" parent="." unique_id=1735990166]
+material = SubResource("ShaderMaterial_7e5sh")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +30,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_wf6w8")
+expand_mode = 1
 stretch_mode = 1
 
 [node name="main_menu" type="Control" parent="." unique_id=1407386202]
@@ -61,7 +70,7 @@ offset_right = 120.0
 offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_n2vqt")
+texture = ExtResource("4_n2vqt")
 expand_mode = 1
 
 [node name="settings" type="Button" parent="main_menu" unique_id=1578761108]
@@ -100,6 +109,7 @@ layout_mode = 1
 [connection signal="pressed" from="main_menu/start" to="." method="mouse_pressed" flags=18]
 [connection signal="mouse_entered" from="main_menu/settings" to="." method="mouse_entered" flags=18]
 [connection signal="mouse_exited" from="main_menu/settings" to="." method="mouse_exited" flags=18]
+[connection signal="pressed" from="main_menu/settings" to="." method="settings_pressed"]
 [connection signal="pressed" from="main_menu/settings" to="." method="mouse_pressed" flags=18]
 [connection signal="mouse_entered" from="main_menu/exit" to="." method="mouse_entered" flags=18]
 [connection signal="mouse_exited" from="main_menu/exit" to="." method="mouse_exited" flags=18]

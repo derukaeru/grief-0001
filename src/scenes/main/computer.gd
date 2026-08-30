@@ -12,6 +12,11 @@ var windows: Dictionary = {}
 func _ready() -> void:
 	EventBus.open_app.connect(open_app)
 	EventBus.closed_app.connect(closed_app)
+	
+	GameManager.ui.pause_screen.close()
+	GameManager.ui.show()
+	
+	Util.mouse_captured()
 
 func open_app(app_name: String) -> void:
 	if not Registry.APPS.has(app_name):

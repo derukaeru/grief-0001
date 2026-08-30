@@ -29,6 +29,7 @@ Registry="*uid://c65mvilfqnkvp"
 SceneChanger="*uid://br3dekiu3ufrs"
 Util="*uid://ch0wvw74rhgkd"
 EventBus="*uid://dnxc3fw3lky7m"
+SettingsManager="*uid://c5e0gnn1w8viy"
 
 [debug]
 
