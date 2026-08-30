@@ -1,6 +1,69 @@
 [gd_scene format=3 uid="uid://bmed7iwjan57j"]
 
 [ext_resource type="Script" uid="uid://duek5op16obe5" path="res://src/scenes/main/computer.gd" id="1_50o8y"]
+[ext_resource type="PackedScene" uid="uid://th2gaejqgi12" path="res://src/scenes/computer/apps/logs_md.tscn" id="2_141df"]
+[ext_resource type="Shader" uid="uid://dh2rgyr1iv45a" path="res://src/assets/shaders/crt.gdshader" id="3_1j8nl"]
+
+[sub_resource type="Animation" id="Animation_1j8nl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1qd64"]
+resource_name = "open"
+length = 0.14
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13983068),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1e-05), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_474aq"]
+_data = {
+&"RESET": SubResource("Animation_1j8nl"),
+&"open": SubResource("Animation_1qd64")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1qd64"]
+shader = ExtResource("3_1j8nl")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0350000016625
+shader_parameter/scanlines_width = 0.0850000040375
+shader_parameter/grille_opacity = 0.050000002375
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = false
+shader_parameter/roll = true
+shader_parameter/roll_speed = 4.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.0050000002375
+shader_parameter/noise_opacity = 0.0
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.030000001425
+shader_parameter/aberration = 0.02000004845000003
+shader_parameter/brightness = 1.585
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0400000019
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.250000011875
 
 [node name="computer" type="Control" unique_id=953791105]
 layout_mode = 3
@@ -9,7 +72,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_50o8y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1208397424]
+libraries/ = SubResource("AnimationLibrary_474aq")
 
 [node name="background" type="ColorRect" parent="." unique_id=671017548]
 layout_mode = 1
@@ -18,7 +85,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+color = Color(0.32544094, 0.3254409, 0.32544076, 1)
 
 [node name="action_bar" type="Control" parent="." unique_id=1874253632]
 layout_mode = 1
@@ -38,3 +105,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1539, 0.22743002, 0.27, 1)
+
+[node name="apps" type="Control" parent="." unique_id=110403345]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="logs_md" parent="apps" unique_id=1302605451 instance=ExtResource("2_141df")]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 23.0
+offset_right = 90.0
+offset_bottom = 79.0
+
+[node name="windows" type="Control" parent="." unique_id=1852505008]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="shader" type="ColorRect" parent="." unique_id=1984452527]
+material = SubResource("ShaderMaterial_1qd64")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

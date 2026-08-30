@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://th2gaejqgi12"]
+
+[ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_0f8ui"]
+[ext_resource type="Texture2D" uid="uid://beot3iybto2nd" path="res://icon.svg" id="2_bh4rl"]
+
+[node name="logs_md" unique_id=1302605451 instance=ExtResource("1_0f8ui")]
+app_name = "logs_md"
+
+[node name="icon" parent="." index="0" unique_id=1956253907]
+texture = ExtResource("2_bh4rl")
+
+[node name="app_name" parent="." index="1" unique_id=1899806684]
+text = "logs.md"

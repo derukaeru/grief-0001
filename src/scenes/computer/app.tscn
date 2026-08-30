@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://e3k77ilpyddl"]
+
+[ext_resource type="Script" uid="uid://ct0fuj2m01q5n" path="res://src/scenes/computer/app.gd" id="1_ohe8x"]
+
+[node name="app" type="Button" unique_id=1302605451]
+offset_left = -28.0
+offset_top = -56.0
+offset_right = 28.0
+flat = true
+script = ExtResource("1_ohe8x")
+
+[node name="icon" type="TextureRect" parent="." unique_id=1956253907]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="app_name" type="Label" parent="." unique_id=1899806684]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 56.0
+offset_right = 69.0
+offset_bottom = 72.0
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="." to="." method="clicked"]

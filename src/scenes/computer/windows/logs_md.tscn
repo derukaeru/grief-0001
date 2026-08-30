@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cs66hq8bxgkd7"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_3t4i5"]
+
+[node name="logs_md" unique_id=1725337698 instance=ExtResource("1_3t4i5")]
+app_name = "logs_md"
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
+text = "logs_md"
+
+[node name="Label" type="Label" parent="." index="2" unique_id=130815771]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 47.0
+offset_right = 401.0
+offset_bottom = 297.0
+text = "12/20/11 13:25:20
+
+ENTRY LOG
+
+| NAME          |     TIME        |
+| M.Denver      |     00:20:12    |
+| S.Crane       |     7:22:21     |
+
+
+"
+
+[connection signal="gui_input" from="top_bar" to="." method="gui_input"]

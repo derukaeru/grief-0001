@@ -44,6 +44,7 @@ mouse_filter = 2
 texture = ExtResource("2_atyx7")
 
 [node name="move_buttons" type="Control" parent="display" unique_id=2066652350]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

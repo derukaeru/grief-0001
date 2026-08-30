@@ -14,3 +14,7 @@ var UID: Dictionary = {
 	
 	"ui": "uid://cmtfp0l7x5ipi",
 }
+
+var APPS: Dictionary = {
+	"logs_md": "uid://cs66hq8bxgkd7",
+}
