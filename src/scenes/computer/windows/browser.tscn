@@ -26,6 +26,7 @@ text = "browser.exe"
 script = ExtResource("2_b7bgn")
 
 [node name="homepage" type="Control" parent="content" index="0" unique_id=202615569]
+visible = false
 anchors_preset = 0
 offset_right = 424.0
 offset_bottom = 264.0
@@ -83,7 +84,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="search_page" type="Control" parent="content" index="1" unique_id=1353191733]
-visible = false
 anchors_preset = 0
 offset_right = 424.0
 offset_bottom = 264.0
@@ -124,6 +124,21 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_41ej8")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_41ej8")
 theme_override_styles/focus = SubResource("StyleBoxFlat_41ej8")
 text = "<"
+
+[node name="no_internet" type="Label" parent="content/search_page" index="4" unique_id=1977088156]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -7.5
+offset_right = 52.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "no internet"
 
 [connection signal="pressed" from="content/homepage/search" to="content" method="home_search"]
 [connection signal="pressed" from="content/search_page/search" to="content" method="search"]

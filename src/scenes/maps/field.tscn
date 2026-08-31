@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://ormu8fsixur7"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y04lm"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_vw57g"]
+sky_material = SubResource("ProceduralSkyMaterial_y04lm")
+
+[sub_resource type="Environment" id="Environment_uw41p"]
+background_mode = 1
+sky = SubResource("Sky_vw57g")
+tonemap_mode = 2
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y04lm"]
 shading_mode = 0
 albedo_color = Color(0.8431161, 0.99077386, 0.7867678, 1)
@@ -10,20 +22,14 @@ size = Vector2(150, 150)
 [sub_resource type="BoxShape3D" id="BoxShape3D_y04lm"]
 size = Vector3(150, 0.01, 150)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y04lm"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_vw57g"]
-sky_material = SubResource("ProceduralSkyMaterial_y04lm")
-
-[sub_resource type="Environment" id="Environment_uw41p"]
-background_mode = 1
-background_color = Color(0.05502162, 0.061924934, 0.065123506, 1)
-sky = SubResource("Sky_vw57g")
-tonemap_mode = 2
-
 [node name="field" type="Node3D" unique_id=1818184762]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2111091084]
+environment = SubResource("Environment_uw41p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1827701187]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
 
 [node name="floor" type="MeshInstance3D" parent="." unique_id=2051523942]
 material_override = SubResource("StandardMaterial3D_y04lm")
@@ -33,10 +39,3 @@ mesh = SubResource("PlaneMesh_y04lm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=446570433]
 shape = SubResource("BoxShape3D_y04lm")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2111091084]
-environment = SubResource("Environment_uw41p")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1827701187]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true

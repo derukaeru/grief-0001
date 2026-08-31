@@ -3,6 +3,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_kgfx5"]
 size = Vector3(20, 0.01, 20)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgfx5"]
+shading_mode = 0
+albedo_color = Color(0.09716626, 0.07754535, 0.05007208, 1)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_ndl7b"]
 size = Vector2(20, 20)
 
@@ -14,4 +18,5 @@ size = Vector2(20, 20)
 shape = SubResource("BoxShape3D_kgfx5")
 
 [node name="floor" type="MeshInstance3D" parent="." unique_id=1286917516]
+material_override = SubResource("StandardMaterial3D_kgfx5")
 mesh = SubResource("PlaneMesh_ndl7b")

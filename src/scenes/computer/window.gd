@@ -1,6 +1,9 @@
 class_name AppWindow extends Control
 
 @onready var animation: AnimationPlayer = $AnimationPlayer
+@onready var folders: Dictionary[String, VBoxContainer] = {
+	"new_folder": $content/new_folder
+}
 
 @export var app_name: String = ""
 @export var draggable: bool = true

@@ -1,17 +1,23 @@
 [gd_scene format=3 uid="uid://b18x6s70piuq6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_udj8r"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Sky" id="Sky_d4u70"]
 sky_material = SubResource("ProceduralSkyMaterial_udj8r")
 
 [sub_resource type="Environment" id="Environment_4xaco"]
-background_mode = 1
+background_mode = 2
 background_color = Color(0.05502162, 0.061924934, 0.065123506, 1)
 sky = SubResource("Sky_d4u70")
 tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.14687553, 0.16346648, 0.18928233, 1)
+fog_density = 0.065
+fog_sky_affect = 0.44
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_udj8r"]
 size = Vector3(100, 0.01, 100)
