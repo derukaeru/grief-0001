@@ -1,4 +1,4 @@
-class_name AppButton extends Button
+class_name AppButton extends TextureButton
 @export var app_name: String = ""
 
 func clicked() -> void:

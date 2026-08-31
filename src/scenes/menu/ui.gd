@@ -6,6 +6,8 @@ class_name UI extends CanvasLayer
 @onready var display: Control = $display
 @onready var move_buttons: Control = $display/move_buttons
 
+@onready var crosshair: ColorRect = $crosshair
+
 func _process(_delta: float) -> void:
 	if not visible: return
 	

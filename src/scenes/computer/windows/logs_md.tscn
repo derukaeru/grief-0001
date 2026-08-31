@@ -8,12 +8,12 @@ app_name = "logs_md"
 [node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
 text = "logs_md"
 
-[node name="Label" type="Label" parent="." index="2" unique_id=130815771]
+[node name="Label" type="Label" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=130815771]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 47.0
+offset_top = 7.0
 offset_right = 401.0
-offset_bottom = 297.0
+offset_bottom = 257.0
 text = "12/20/11 13:25:20
 
 ENTRY LOG

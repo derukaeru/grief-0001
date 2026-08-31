@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://86duxsiv8ctq"]
+
+[ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_mh8ax"]
+[ext_resource type="Texture2D" uid="uid://cqt4tplsyeea1" path="res://src/assets/sprites/icons/settings.png" id="2_mbkjx"]
+
+[node name="settings" unique_id=1302605451 instance=ExtResource("1_mh8ax")]
+texture_normal = ExtResource("2_mbkjx")
+app_name = "settings"
+
+[node name="app_name" parent="." index="0" unique_id=610043953]
+text = "settings"

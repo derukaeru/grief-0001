@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://gv3uh5gyewfl"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_e3wka"]
+
+[node name="files" unique_id=1725337698 instance=ExtResource("1_e3wka")]
+app_name = "files"
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
+text = "file manager"

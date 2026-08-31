@@ -6,8 +6,6 @@ size = Vector2(100, 100)
 [sub_resource type="BoxShape3D" id="BoxShape3D_y04lm"]
 size = Vector3(100, 0.01, 100)
 
-[sub_resource type="SphereMesh" id="SphereMesh_y04lm"]
-
 [node name="field" type="Node3D" unique_id=1818184762]
 
 [node name="floor" type="MeshInstance3D" parent="." unique_id=2051523942]
@@ -17,7 +15,3 @@ mesh = SubResource("PlaneMesh_y04lm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=446570433]
 shape = SubResource("BoxShape3D_y04lm")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=394282424]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.19327, 4.68164, 0)
-mesh = SubResource("SphereMesh_y04lm")

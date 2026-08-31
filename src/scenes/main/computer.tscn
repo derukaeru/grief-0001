@@ -6,6 +6,8 @@
 [ext_resource type="Shader" uid="uid://dh2rgyr1iv45a" path="res://src/assets/shaders/crt.gdshader" id="3_1j8nl"]
 [ext_resource type="Texture2D" uid="uid://gorpfyfpd0ek" path="res://src/assets/sprites/icons/user.png" id="3_1qd64"]
 [ext_resource type="PackedScene" uid="uid://q8ki0l64c3i2" path="res://src/scenes/computer/apps/eye_png.tscn" id="3_474aq"]
+[ext_resource type="PackedScene" uid="uid://86duxsiv8ctq" path="res://src/scenes/computer/apps/settings.tscn" id="5_avh3n"]
+[ext_resource type="PackedScene" uid="uid://b2ikubvndvyk0" path="res://src/scenes/computer/apps/files.tscn" id="6_ovvnk"]
 
 [sub_resource type="Animation" id="Animation_1j8nl"]
 length = 0.001
@@ -207,19 +209,33 @@ anchors_preset = 0
 offset_right = 576.0
 offset_bottom = 480.0
 
-[node name="logs_md" parent="apps" unique_id=1302605451 instance=ExtResource("2_141df")]
+[node name="eye_png" parent="apps" unique_id=1302605451 instance=ExtResource("3_474aq")]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 23.0
-offset_right = 90.0
-offset_bottom = 79.0
+offset_left = 122.0
+offset_top = 27.0
+offset_right = 162.0
+offset_bottom = 67.0
 
-[node name="eye_png" parent="apps" unique_id=1823144492 instance=ExtResource("3_474aq")]
+[node name="logs_md" parent="apps" unique_id=1984162339 instance=ExtResource("2_141df")]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 24.0
-offset_right = 192.0
-offset_bottom = 80.0
+offset_left = 28.0
+offset_top = 27.0
+offset_right = 68.0
+offset_bottom = 67.0
+
+[node name="settings" parent="apps" unique_id=1404995780 instance=ExtResource("5_avh3n")]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 375.0
+offset_right = 538.0
+offset_bottom = 415.0
+
+[node name="files" parent="apps" unique_id=886383904 instance=ExtResource("6_ovvnk")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 220.0
+offset_right = 70.0
+offset_bottom = 260.0
 
 [node name="windows" type="Control" parent="." unique_id=1852505008]
 y_sort_enabled = true

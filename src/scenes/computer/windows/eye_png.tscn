@@ -12,10 +12,9 @@ app_name = "eye_png"
 offset_right = 164.0
 text = "eye.png"
 
-[node name="image" type="TextureRect" parent="." index="2" unique_id=2067355003]
+[node name="image" type="TextureRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=2067355003]
 layout_mode = 0
-offset_top = 40.0
 offset_right = 195.0
-offset_bottom = 235.0
+offset_bottom = 195.0
 texture = ExtResource("2_mocw5")
 expand_mode = 1

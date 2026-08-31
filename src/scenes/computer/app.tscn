@@ -2,28 +2,20 @@
 
 [ext_resource type="Script" uid="uid://ct0fuj2m01q5n" path="res://src/scenes/computer/app.gd" id="1_ohe8x"]
 
-[node name="app" type="Button" unique_id=1302605451]
-offset_left = -28.0
-offset_top = -56.0
-offset_right = 28.0
-flat = true
+[node name="app" type="TextureButton" unique_id=886383904]
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("1_ohe8x")
 
-[node name="icon" type="TextureRect" parent="." unique_id=1956253907]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 1
-
-[node name="app_name" type="Label" parent="." unique_id=1899806684]
+[node name="app_name" type="Label" parent="." unique_id=610043953]
 layout_mode = 0
-offset_left = -13.0
-offset_top = 56.0
-offset_right = 69.0
-offset_bottom = 72.0
+offset_left = -21.0
+offset_top = 40.0
+offset_right = 61.0
+offset_bottom = 56.0
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

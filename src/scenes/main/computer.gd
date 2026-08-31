@@ -17,6 +17,7 @@ func _ready() -> void:
 	
 	Util.mouse_visible()
 	GameManager.current_view = "computer"
+	GameManager.ui.crosshair.hide()
 
 func open_app(app_name: String) -> void:
 	if not Registry.APPS.has(app_name):

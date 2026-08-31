@@ -45,6 +45,8 @@ func _input(event) -> void:
 		if not collider is InteractableComponent: 
 			raycast.add_exception(collider)
 			return
+		if collider is InteractableComponent:
+			collider.interact()
 
 func _interact() -> void:
 	var hit: Node = raycast.get_collider()
