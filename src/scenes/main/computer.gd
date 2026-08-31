@@ -6,7 +6,7 @@ class_name Computer extends Control
 @onready var lockscreen_animation: AnimationPlayer = $lock_screen/AnimationPlayer
 
 var password: String = "grief"
-var windows: Dictionary = {}
+var windows: Dictionary[String, AppWindow] = {}
 
 func _ready() -> void:
 	EventBus.open_app.connect(open_app)
@@ -24,7 +24,7 @@ func open_app(app_name: String) -> void:
 		return push_error("Registry does not have record of this app %s" % app_name)
 	
 	if windows.has(app_name):
-		windows[app_name].show()
+		windows[app_name].open()
 	else:
 		var window: AppWindow = load(Registry.APPS[app_name]).instantiate()
 		windows_container.add_child(window)

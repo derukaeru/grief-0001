@@ -6,6 +6,8 @@ class_name SettingsScreen extends Control
 
 func open() -> void:
 	show()
+	music_slider.value = SettingsManager.music_strength
+	sfx_slider.value = SettingsManager.sound_effect_strength
 
 func close() -> void:
 	hide()

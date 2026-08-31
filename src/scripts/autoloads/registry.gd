@@ -13,6 +13,9 @@ var UID: Dictionary = {
 	"computer": "uid://bmed7iwjan57j",
 	
 	"ui": "uid://cmtfp0l7x5ipi",
+	
+	"crosshair": "uid://co7uwr5i2ivg3",
+	"crosshair_interact": "uid://b6i64ehbuw5sy"
 }
 
 var APPS: Dictionary = {

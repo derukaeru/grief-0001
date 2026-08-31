@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://ormu8fsixur7"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y04lm"]
+shading_mode = 0
+albedo_color = Color(0.8431161, 0.99077386, 0.7867678, 1)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_y04lm"]
-size = Vector2(100, 100)
+size = Vector2(150, 150)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y04lm"]
-size = Vector3(100, 0.01, 100)
+size = Vector3(150, 0.01, 150)
 
 [node name="field" type="Node3D" unique_id=1818184762]
 
 [node name="floor" type="MeshInstance3D" parent="." unique_id=2051523942]
+material_override = SubResource("StandardMaterial3D_y04lm")
 mesh = SubResource("PlaneMesh_y04lm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1324512496]

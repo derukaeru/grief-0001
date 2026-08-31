@@ -6,7 +6,11 @@ class_name AppWindow extends Control
 var dragging: bool = false
 
 func _ready() -> void:
+	open()
+
+func open() -> void:
 	EventBus.opened_app.emit(app_name)
+	show()
 
 func close() -> void:
 	EventBus.closed_app.emit(app_name)

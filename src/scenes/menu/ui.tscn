@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bvyka1j2f136f" path="res://src/scenes/menu/ui.gd" id="1_komq3"]
 [ext_resource type="PackedScene" uid="uid://7jemke30bxqq" path="res://src/scenes/menu/pause_screen.tscn" id="1_wpnud"]
 [ext_resource type="Texture2D" uid="uid://dhjb0aa1r2ct" path="res://src/assets/sprites/ui/display_border.png" id="2_atyx7"]
+[ext_resource type="Texture2D" uid="uid://co7uwr5i2ivg3" path="res://src/assets/sprites/ui/crosshair.png" id="2_e0xvt"]
 
 [sub_resource type="Animation" id="Animation_komq3"]
 resource_name = "toggle"
@@ -16,19 +17,19 @@ _data = {
 layer = 5
 script = ExtResource("1_komq3")
 
-[node name="crosshair" type="ColorRect" parent="." unique_id=998620839]
+[node name="crosshair" type="TextureRect" parent="." unique_id=118085410]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -2.0
-offset_top = -2.0
-offset_right = 2.0
-offset_bottom = 2.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
+texture = ExtResource("2_e0xvt")
 
 [node name="map_transition" type="ColorRect" parent="." unique_id=1783105567]
 visible = false
