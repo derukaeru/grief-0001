@@ -1,5 +1,7 @@
 class_name AppWindow extends Control
 
+@onready var animation: AnimationPlayer = $AnimationPlayer
+
 @export var app_name: String = ""
 @export var draggable: bool = true
 
@@ -11,10 +13,13 @@ func _ready() -> void:
 func open() -> void:
 	EventBus.opened_app.emit(app_name)
 	show()
+	animation.play("open")
 
 func close() -> void:
-	EventBus.closed_app.emit(app_name)
+	animation.play_backwards("open")
+	await animation.animation_finished
 	queue_free()
+	EventBus.closed_app.emit(app_name)
 
 func minimize() -> void:
 	hide()

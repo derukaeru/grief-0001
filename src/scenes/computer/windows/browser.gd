@@ -18,4 +18,4 @@ func home_search() -> void:
 func return_to_homepage() -> void:
 	searchpage_searchbar.text = ""
 	searchpage.hide()
-	searchpage.show()
+	homepage.show()

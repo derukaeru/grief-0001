@@ -23,11 +23,12 @@ var APPS: Dictionary = {
 	"eye_png": "uid://c84nq7y1lfr27",
 	"settings": "uid://bvp1f21g7cpb1",
 	"files": "uid://gv3uh5gyewfl",
-	"browser": "uid://d2yegcwy58ujn"
+	"browser": "uid://d2yegcwy58ujn",
+	"calendar": "uid://ba85ku6a65nyx",
 }
 
 var MAPS: Dictionary = {
 	"field": "uid://ormu8fsixur7",
 	"forest": "uid://b18x6s70piuq6",
-	"house": "",
+	"house": "uid://bvwtdbfgmh8ur",
 }

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://86duxsiv8ctq" path="res://src/scenes/computer/apps/settings.tscn" id="5_avh3n"]
 [ext_resource type="PackedScene" uid="uid://b2ikubvndvyk0" path="res://src/scenes/computer/apps/files.tscn" id="6_ovvnk"]
 [ext_resource type="PackedScene" uid="uid://bjxy7uth6dfl7" path="res://src/scenes/computer/apps/browser.tscn" id="7_vt54a"]
+[ext_resource type="PackedScene" uid="uid://cvic4ktr3p20n" path="res://src/scenes/computer/apps/calendar.tscn" id="8_kjg2o"]
 
 [sub_resource type="Animation" id="Animation_1j8nl"]
 length = 0.001
@@ -234,9 +235,9 @@ offset_bottom = 415.0
 [node name="files" parent="apps" unique_id=886383904 instance=ExtResource("6_ovvnk")]
 layout_mode = 0
 offset_left = 30.0
-offset_top = 220.0
+offset_top = 177.0
 offset_right = 70.0
-offset_bottom = 260.0
+offset_bottom = 217.0
 
 [node name="browser" parent="apps" unique_id=242581469 instance=ExtResource("7_vt54a")]
 layout_mode = 0
@@ -244,6 +245,13 @@ offset_left = 500.0
 offset_top = 20.0
 offset_right = 540.0
 offset_bottom = 60.0
+
+[node name="calendar" parent="apps" unique_id=973011310 instance=ExtResource("8_kjg2o")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 103.0
+offset_right = 70.0
+offset_bottom = 143.0
 
 [node name="windows" type="Control" parent="." unique_id=1852505008]
 y_sort_enabled = true
@@ -256,7 +264,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="lock_screen" type="Control" parent="." unique_id=1854427984]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

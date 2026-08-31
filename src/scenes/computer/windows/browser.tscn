@@ -16,17 +16,16 @@ bg_color = Color(0, 0, 0, 0.35686275)
 [node name="browser" unique_id=1725337698 instance=ExtResource("1_t32bo")]
 app_name = "browser"
 
-[node name="background" parent="." index="0" unique_id=741744896]
+[node name="background" parent="." index="1" unique_id=741744896]
 color = Color(0.39779997, 0.51, 0.41649997, 1)
 
 [node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
 text = "browser.exe"
 
-[node name="content" parent="." index="2" unique_id=976143210]
+[node name="content" parent="." index="3" unique_id=976143210]
 script = ExtResource("2_b7bgn")
 
 [node name="homepage" type="Control" parent="content" index="0" unique_id=202615569]
-visible = false
 anchors_preset = 0
 offset_right = 424.0
 offset_bottom = 264.0
@@ -84,6 +83,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="search_page" type="Control" parent="content" index="1" unique_id=1353191733]
+visible = false
 anchors_preset = 0
 offset_right = 424.0
 offset_bottom = 264.0

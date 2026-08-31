@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bvwtdbfgmh8ur"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kgfx5"]
+size = Vector3(20, 0.01, 20)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ndl7b"]
+size = Vector2(20, 20)
+
+[node name="house" type="Node3D" unique_id=1020484269]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=331523649]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1999378492]
+shape = SubResource("BoxShape3D_kgfx5")
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=1286917516]
+mesh = SubResource("PlaneMesh_ndl7b")

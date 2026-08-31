@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cvic4ktr3p20n"]
+
+[ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_vaok3"]
+[ext_resource type="Texture2D" uid="uid://dbblsvd8marty" path="res://src/assets/sprites/icons/calendar.png" id="2_kkh4d"]
+
+[node name="calendar" unique_id=886383904 instance=ExtResource("1_vaok3")]
+texture_normal = ExtResource("2_kkh4d")
+app_name = "calendar"
+
+[node name="app_name" parent="." index="0" unique_id=610043953]
+text = "calendar"
