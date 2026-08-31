@@ -5,6 +5,8 @@ class_name Computer extends Control
 @onready var lockscreen: Control = $lock_screen
 @onready var lockscreen_animation: AnimationPlayer = $lock_screen/AnimationPlayer
 
+@onready var time_label: Label = $action_bar/time
+
 var password: String = "grief"
 var windows: Dictionary[String, AppWindow] = {}
 
@@ -42,3 +44,6 @@ func unlock() -> void:
 
 func closed_app(app_name: String) -> void:
 	windows.erase(app_name)
+
+func _process(_delta: float) -> void:
+	time_label.text = str(Time.get_time_string_from_system()).left(5)
