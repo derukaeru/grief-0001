@@ -14,8 +14,19 @@ func _ready() -> void:
 	GameManager.ui.crosshair.show()
 
 func change_map(to: String, from: String = current_map) -> void:
+	if not Registry.MAPS.has(to): 
+		return push_error("Registry does not have a record of this map %s" % to) 
+	
 	for entry in map_container.get_children():
 		entry.queue_free()
 	
+	GameManager.ui.show_map_transition()
+	await GameManager.ui.map_transition_done
+	
+	var new_map: Node3D = load(Registry.MAPS[to]).instantiate()
+	map_container.add_child(new_map)
+	
 	EventBus.moved.emit(to, from)
 	current_map = to
+	
+	GameManager.ui.hide_map_transition()

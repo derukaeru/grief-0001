@@ -213,16 +213,16 @@ offset_bottom = 480.0
 [node name="eye_png" parent="apps" unique_id=1302605451 instance=ExtResource("3_474aq")]
 layout_mode = 0
 offset_left = 122.0
-offset_top = 27.0
+offset_top = 20.0
 offset_right = 162.0
-offset_bottom = 67.0
+offset_bottom = 60.0
 
 [node name="logs_md" parent="apps" unique_id=1984162339 instance=ExtResource("2_141df")]
 layout_mode = 0
 offset_left = 28.0
-offset_top = 27.0
+offset_top = 20.0
 offset_right = 68.0
-offset_bottom = 67.0
+offset_bottom = 60.0
 
 [node name="settings" parent="apps" unique_id=1404995780 instance=ExtResource("5_avh3n")]
 layout_mode = 0
@@ -241,9 +241,9 @@ offset_bottom = 260.0
 [node name="browser" parent="apps" unique_id=242581469 instance=ExtResource("7_vt54a")]
 layout_mode = 0
 offset_left = 500.0
-offset_top = 28.0
+offset_top = 20.0
 offset_right = 540.0
-offset_bottom = 68.0
+offset_bottom = 60.0
 
 [node name="windows" type="Control" parent="." unique_id=1852505008]
 y_sort_enabled = true

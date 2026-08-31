@@ -1,4 +1,6 @@
 class_name UI extends CanvasLayer
+signal map_transition_done
+
 @onready var pause_screen: PauseScreen = $pause_screen
 @onready var map_transition: ColorRect = $map_transition
 @onready var map_animation: AnimationPlayer = $map_transition/map_animation
@@ -27,6 +29,9 @@ func _process(_delta: float) -> void:
 func show_map_transition() -> void:
 	map_transition.show()
 	map_animation.play("toggle")
+	
+	await map_animation.animation_finished
+	map_transition.emit()
 
 func hide_map_transition() -> void:
 	map_animation.play_backwards("toggle")

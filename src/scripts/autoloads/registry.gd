@@ -25,3 +25,9 @@ var APPS: Dictionary = {
 	"files": "uid://gv3uh5gyewfl",
 	"browser": "uid://d2yegcwy58ujn"
 }
+
+var MAPS: Dictionary = {
+	"field": "uid://ormu8fsixur7",
+	"forest": "uid://b18x6s70piuq6",
+	"house": "",
+}
