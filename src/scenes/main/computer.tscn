@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://q8ki0l64c3i2" path="res://src/scenes/computer/apps/eye_png.tscn" id="3_474aq"]
 [ext_resource type="PackedScene" uid="uid://86duxsiv8ctq" path="res://src/scenes/computer/apps/settings.tscn" id="5_avh3n"]
 [ext_resource type="PackedScene" uid="uid://b2ikubvndvyk0" path="res://src/scenes/computer/apps/files.tscn" id="6_ovvnk"]
+[ext_resource type="PackedScene" uid="uid://bjxy7uth6dfl7" path="res://src/scenes/computer/apps/browser.tscn" id="7_vt54a"]
 
 [sub_resource type="Animation" id="Animation_1j8nl"]
 length = 0.001
@@ -236,6 +237,13 @@ offset_left = 30.0
 offset_top = 220.0
 offset_right = 70.0
 offset_bottom = 260.0
+
+[node name="browser" parent="apps" unique_id=242581469 instance=ExtResource("7_vt54a")]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 28.0
+offset_right = 540.0
+offset_bottom = 68.0
 
 [node name="windows" type="Control" parent="." unique_id=1852505008]
 y_sort_enabled = true

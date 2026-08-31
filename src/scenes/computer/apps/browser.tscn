@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bjxy7uth6dfl7"]
+
+[ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_lc23q"]
+[ext_resource type="Texture2D" uid="uid://c6c7frj5giys3" path="res://src/assets/sprites/icons/search.png" id="2_0lwrj"]
+
+[node name="browser" unique_id=886383904 instance=ExtResource("1_lc23q")]
+texture_normal = ExtResource("2_0lwrj")
+app_name = "browser"
+
+[node name="app_name" parent="." index="0" unique_id=610043953]
+text = "browser"

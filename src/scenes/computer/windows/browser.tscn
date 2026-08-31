@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://d2yegcwy58ujn"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_t32bo"]
+[ext_resource type="Texture2D" uid="uid://c6c7frj5giys3" path="res://src/assets/sprites/icons/search.png" id="2_1y61k"]
+[ext_resource type="Script" uid="uid://rtliso178rk7" path="res://src/scenes/computer/windows/browser.gd" id="2_b7bgn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8st7l"]
+bg_color = Color(0, 0, 0, 0.42745098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7bgn"]
+bg_color = Color(0, 0, 0, 0.34901962)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41ej8"]
+bg_color = Color(0, 0, 0, 0.35686275)
+
+[node name="browser" unique_id=1725337698 instance=ExtResource("1_t32bo")]
+app_name = "browser"
+
+[node name="background" parent="." index="0" unique_id=741744896]
+color = Color(0.39779997, 0.51, 0.41649997, 1)
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
+text = "browser.exe"
+
+[node name="content" parent="." index="2" unique_id=976143210]
+script = ExtResource("2_b7bgn")
+
+[node name="homepage" type="Control" parent="content" index="0" unique_id=202615569]
+anchors_preset = 0
+offset_right = 424.0
+offset_bottom = 264.0
+
+[node name="background" type="ColorRect" parent="content/homepage" index="0" unique_id=1698114226]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.48969996, 0.58665663, 0.59, 1)
+
+[node name="search_bar" type="LineEdit" parent="content/homepage" index="1" unique_id=1179741821]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -27.0
+offset_right = 122.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8st7l")
+
+[node name="search" type="TextureButton" parent="content/homepage" index="2" unique_id=1008089599]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 105.0
+offset_right = 111.0
+offset_bottom = 129.0
+texture_normal = ExtResource("2_1y61k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="search_label" type="Label" parent="content/homepage" index="3" unique_id=341580824]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -98.0
+offset_right = 85.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "SEARCH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="search_page" type="Control" parent="content" index="1" unique_id=1353191733]
+visible = false
+anchors_preset = 0
+offset_right = 424.0
+offset_bottom = 264.0
+
+[node name="top_bar" type="ColorRect" parent="content/search_page" index="0" unique_id=1749207817]
+layout_mode = 0
+offset_right = 424.0
+offset_bottom = 34.0
+color = Color(0, 0, 0, 0.2627451)
+
+[node name="search_bar" type="LineEdit" parent="content/search_page" index="1" unique_id=696624932]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 5.0
+offset_right = 394.0
+offset_bottom = 28.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7bgn")
+
+[node name="search" type="TextureButton" parent="content/search_page" index="2" unique_id=1832551531]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 26.0
+offset_bottom = 26.0
+texture_normal = ExtResource("2_1y61k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="return" type="Button" parent="content/search_page" index="3" unique_id=1749222811]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 5.0
+offset_right = 420.0
+offset_bottom = 28.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_41ej8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_41ej8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_41ej8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_41ej8")
+theme_override_styles/focus = SubResource("StyleBoxFlat_41ej8")
+text = "<"
+
+[connection signal="pressed" from="content/homepage/search" to="content" method="home_search"]
+[connection signal="pressed" from="content/search_page/search" to="content" method="search"]
+[connection signal="pressed" from="content/search_page/return" to="content" method="return_to_homepage"]
