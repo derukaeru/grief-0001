@@ -6,11 +6,11 @@ extends Control
 @onready var homepage_searchbar: LineEdit = $homepage/search_bar
 @onready var searchpage_searchbar: LineEdit = $search_page/search_bar
 
-func search() -> void:
+func search(_text: String = "") -> void:
 	searchpage.show()
 	homepage.hide()
 
-func home_search() -> void:
+func home_search(_text: String = "") -> void:
 	searchpage_searchbar.text = homepage_searchbar.text
 	searchpage.show()
 	homepage.hide()

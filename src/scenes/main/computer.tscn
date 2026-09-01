@@ -341,4 +341,5 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[connection signal="text_submitted" from="lock_screen/password" to="." method="unlock"]
 [connection signal="pressed" from="lock_screen/enter" to="." method="unlock"]

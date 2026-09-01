@@ -33,7 +33,7 @@ func open_app(app_name: String) -> void:
 		
 		windows.set(window.app_name, window)
 
-func unlock() -> void:
+func unlock(_text: String = "") -> void:
 	if password == password_label.text:
 		lockscreen_animation.play("open")
 		await lockscreen_animation.animation_finished
