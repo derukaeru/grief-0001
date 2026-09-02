@@ -4,6 +4,7 @@ class_name ZipFolderWindow extends Control
 @onready var lock_cover: ColorRect = $content/lock_cover
 @onready var password_label: LineEdit = $content/lock_cover/password
 @onready var lockscreen_animation: AnimationPlayer = $content/lock_cover/AnimationPlayer
+@onready var app_name_label: Label = $top_bar/app_name
 
 @export var app_name: String = ""
 @export var draggable: bool = true
@@ -11,11 +12,15 @@ class_name ZipFolderWindow extends Control
 @export var locked: bool = false
 @export var password: String = ""
 
+var app_name_require: String = "- requires password"
+
 func _ready() -> void:
 	open()
 	
 	if locked:
 		lock_cover.show()
+		app_name_label.text = app_name_label.text + app_name_require
+	
 	password_label.max_length = password.length()
 
 var dragging: bool = false
@@ -48,8 +53,7 @@ func top_bar_gui_input(event: InputEvent) -> void:
 
 func submit(new_text: String = password_label.text) -> void:
 	if password == new_text:
-		lockscreen_animation.play("open")
-		await lockscreen_animation.animation_finished
+		app_name_label.text = app_name_label.text.trim_suffix(app_name_require)
 		lock_cover.hide()
 	else:
 		password_label.text = ""

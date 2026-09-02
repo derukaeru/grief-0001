@@ -24,7 +24,11 @@ func change_scene(scene_name: String) -> void:
 	
 	await new_load_screen.loading_screen_ready
 	start_load()
-	
+
+func change_scene_immediate(scene_name: String) -> void:
+	scene_path = Registry.UID[scene_name]
+	start_load()
+
 func start_load() -> void:
 	var state = ResourceLoader.load_threaded_request(scene_path, "", use_sub_thread)
 	if state == OK:

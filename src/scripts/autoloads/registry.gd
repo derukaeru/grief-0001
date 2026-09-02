@@ -15,7 +15,12 @@ var UID: Dictionary = {
 	"ui": "uid://cmtfp0l7x5ipi",
 	
 	"crosshair": "uid://co7uwr5i2ivg3",
-	"crosshair_interact": "uid://b6i64ehbuw5sy"
+	"crosshair_interact": "uid://b6i64ehbuw5sy",
+	
+	# maps
+	"field_exe": "uid://ormu8fsixur7",
+	"forest": "uid://b18x6s70piuq6",
+	"house": "uid://bvwtdbfgmh8ur",
 }
 
 var APPS: Dictionary = {
@@ -29,10 +34,4 @@ var APPS: Dictionary = {
 
 var ZIPS: Dictionary = {
 	
-}
-
-var MAPS: Dictionary = {
-	"field": "uid://ormu8fsixur7",
-	"forest": "uid://b18x6s70piuq6",
-	"house": "uid://bvwtdbfgmh8ur",
 }

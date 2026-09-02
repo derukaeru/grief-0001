@@ -8,7 +8,7 @@
 [node name="files" unique_id=1725337698 instance=ExtResource("1_e3wka")]
 app_name = "files"
 
-[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
 text = "file manager"
 
 [node name="content" parent="." index="3" unique_id=976143210]
@@ -70,6 +70,15 @@ script = ExtResource("4_fxr66")
 file_name = "eye_png"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
+[node name="field_exe" type="Button" parent="content/main_files" index="2" unique_id=1031723705]
+layout_mode = 2
+text = "field.exe         9.26mb     02-12-2006"
+flat = true
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "field_exe"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
 [node name="new_folder" type="VBoxContainer" parent="content" index="2" unique_id=190746430]
 visible = false
 layout_mode = 0
@@ -78,11 +87,11 @@ offset_top = 31.0
 offset_right = 420.0
 offset_bottom = 259.0
 
-[node name="test" type="Button" parent="content/new_folder" index="0" unique_id=1131367011]
+[node name="return" type="Button" parent="content/new_folder" index="0" unique_id=1131367011]
 layout_mode = 2
-text = "testing asasdasldasd"
+text = "..."
 flat = true
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "test"
+file_name = "return"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"

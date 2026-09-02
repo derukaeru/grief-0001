@@ -31,7 +31,7 @@ func show_map_transition() -> void:
 	map_animation.play("toggle")
 	
 	await map_animation.animation_finished
-	map_transition.emit()
+	map_transition_done.emit()
 
 func hide_map_transition() -> void:
 	map_animation.play_backwards("toggle")
