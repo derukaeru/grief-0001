@@ -27,6 +27,10 @@ var APPS: Dictionary = {
 	"calendar": "uid://ba85ku6a65nyx",
 }
 
+var ZIPS: Dictionary = {
+	
+}
+
 var MAPS: Dictionary = {
 	"field": "uid://ormu8fsixur7",
 	"forest": "uid://b18x6s70piuq6",

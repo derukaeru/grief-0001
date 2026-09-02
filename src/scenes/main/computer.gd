@@ -7,7 +7,7 @@ class_name Computer extends Control
 
 @onready var time_label: Label = $action_bar/time
 
-var password: String = "grief"
+var password: String = "griefed"
 var windows: Dictionary[String, AppWindow] = {}
 
 func _ready() -> void:
@@ -20,6 +20,8 @@ func _ready() -> void:
 	Util.mouse_visible()
 	GameManager.current_view = "computer"
 	GameManager.ui.crosshair.hide()
+	
+	password_label.max_length = password.length()
 
 func open_app(app_name: String) -> void:
 	if not Registry.APPS.has(app_name):

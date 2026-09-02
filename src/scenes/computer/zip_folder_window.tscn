@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dudseog2lkwqk"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_hytfr"]
+[ext_resource type="Script" uid="uid://ch5txwp28tb16" path="res://src/scenes/computer/zip_folder_window.gd" id="2_wexrp"]
+
+[sub_resource type="Animation" id="Animation_wexrp"]
+resource_name = "open"
+
+[sub_resource type="Animation" id="Animation_664al"]
+resource_name = "wrong"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xcf13"]
+_data = {
+&"open": SubResource("Animation_wexrp"),
+&"wrong": SubResource("Animation_664al")
+}
+
+[node name="zip_folder_window" unique_id=1725337698 instance=ExtResource("1_hytfr")]
+script = ExtResource("2_wexrp")
+locked = false
+password = ""
+
+[node name="lock_cover" type="ColorRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=185874785]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21950102, 0.21950102, 0.21950102, 1)
+
+[node name="password" type="LineEdit" parent="content/lock_cover" index="0" unique_id=822570872]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.5
+offset_top = -11.5
+offset_right = 96.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+max_length = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="content/lock_cover" index="1" unique_id=313061300]
+libraries/ = SubResource("AnimationLibrary_xcf13")
+
+[node name="submit" type="Button" parent="content/lock_cover" index="2" unique_id=1033992354]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "submit"
+
+[connection signal="text_submitted" from="content/lock_cover/password" to="." method="submit"]
+[connection signal="pressed" from="content/lock_cover/submit" to="." method="submit"]

@@ -10,3 +10,4 @@ signal closed_app(app_name: String)
 
 signal open_file(file_name: String)
 signal open_folder(file_name: String)
+signal open_zip(zip_name: String)
