@@ -32,7 +32,6 @@ func open_app(app_name: String) -> void:
 	else:
 		var window: AppWindow = load(Registry.APPS[app_name]).instantiate()
 		windows_container.add_child(window)
-		
 		windows.set(window.app_name, window)
 
 func unlock(_text: String = "") -> void:

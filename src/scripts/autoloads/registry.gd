@@ -29,7 +29,6 @@ var APPS: Dictionary = {
 	"settings": "uid://bvp1f21g7cpb1",
 	"files": "uid://gv3uh5gyewfl",
 	"browser": "uid://d2yegcwy58ujn",
-	"calendar": "uid://ba85ku6a65nyx",
 	"messages": "uid://c0p0lbbq1gunc",
 }
 

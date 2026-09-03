@@ -12,7 +12,7 @@ config_version=5
 
 config/name="grief-0001"
 config/tags=PackedStringArray("ysws")
-run/main_scene="uid://dm826hg21t232"
+run/main_scene="uid://bmed7iwjan57j"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -55,7 +55,6 @@ offset_right = 419.0
 offset_bottom = 257.0
 
 [node name="lock_cover" type="ColorRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="2" unique_id=185874785]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

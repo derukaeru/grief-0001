@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://86duxsiv8ctq" path="res://src/scenes/computer/apps/settings.tscn" id="5_avh3n"]
 [ext_resource type="PackedScene" uid="uid://b2ikubvndvyk0" path="res://src/scenes/computer/apps/files.tscn" id="6_ovvnk"]
 [ext_resource type="PackedScene" uid="uid://bjxy7uth6dfl7" path="res://src/scenes/computer/apps/browser.tscn" id="7_vt54a"]
-[ext_resource type="PackedScene" uid="uid://cvic4ktr3p20n" path="res://src/scenes/computer/apps/calendar.tscn" id="8_kjg2o"]
 [ext_resource type="PackedScene" uid="uid://demhk8dg5edmg" path="res://src/scenes/computer/apps/messages.tscn" id="9_a0p0o"]
 
 [sub_resource type="Animation" id="Animation_1j8nl"]
@@ -54,7 +53,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../lock_screen:position")
+tracks/0/path = NodePath("../../lock_screen:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -66,7 +65,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../lock_screen/password:position")
+tracks/1/path = NodePath("../../lock_screen/password:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -82,14 +81,14 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../lock_screen:position")
+tracks/0/path = NodePath("../../lock_screen:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -480)]
+"values": [Vector2(0, 0), Vector2(0, -484)]
 }
 
 [sub_resource type="Animation" id="Animation_avh3n"]
@@ -98,14 +97,14 @@ length = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../lock_screen/password:position")
+tracks/0/path = NodePath("../../lock_screen/password:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.055367198, 0.124388, 0.18926561, 0.25009388),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.04320258, 0.09065623, 0.1273895, 0.17059208, 0.21804573, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(144, 296), Vector2(133.51, 296), Vector2(149.115, 296), Vector2(138.755, 296), Vector2(144, 296)]
+"values": [Vector2(144, 296), Vector2(133, 296), Vector2(160, 296), Vector2(144, 296), Vector2(133, 296), Vector2(160, 296), Vector2(144, 296)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v3isc"]
@@ -247,13 +246,6 @@ offset_top = 20.0
 offset_right = 540.0
 offset_bottom = 60.0
 
-[node name="calendar" parent="apps" unique_id=973011310 instance=ExtResource("8_kjg2o")]
-layout_mode = 0
-offset_left = 30.0
-offset_top = 103.0
-offset_right = 70.0
-offset_bottom = 143.0
-
 [node name="messages" parent="apps" unique_id=1011345376 instance=ExtResource("9_a0p0o")]
 layout_mode = 0
 offset_left = 502.0
@@ -271,7 +263,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="lock_screen" type="Control" parent="." unique_id=1854427984]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -306,7 +297,7 @@ max_length = 5
 secret = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="lock_screen" unique_id=1767341423]
-root_node = NodePath("../../shader")
+root_node = NodePath("../../shader_layer/shader")
 libraries/ = SubResource("AnimationLibrary_v3isc")
 
 [node name="enter" type="Button" parent="lock_screen" unique_id=546920568]
@@ -339,9 +330,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_1qd64")
 
-[node name="shader" type="ColorRect" parent="." unique_id=1984452527]
+[node name="shader_layer" type="CanvasLayer" parent="." unique_id=1335127427]
+layer = 5
+
+[node name="shader" type="ColorRect" parent="shader_layer" unique_id=1984452527]
 material = SubResource("ShaderMaterial_1qd64")
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

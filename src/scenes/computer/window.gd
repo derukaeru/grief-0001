@@ -6,20 +6,24 @@ class_name AppWindow extends Control
 @export var draggable: bool = true
 
 var dragging: bool = false
+var opened: bool = false
 
 func _ready() -> void:
 	open()
 
 func open() -> void:
+	if opened: return
 	EventBus.opened_app.emit(app_name)
 	show()
 	animation.play("open")
+	opened = true
 
 func close() -> void:
 	animation.play_backwards("open")
 	await animation.animation_finished
 	queue_free()
 	EventBus.closed_app.emit(app_name)
+	opened = false
 
 func minimize() -> void:
 	hide()
