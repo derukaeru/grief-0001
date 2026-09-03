@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bmxqn1bc8uwll"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_yerj6"]
+[ext_resource type="Script" uid="uid://buhw6p03i6bhp" path="res://src/scenes/computer/audio_file_window.gd" id="2_ax5n7"]
+
+[node name="audio_file_window" unique_id=1725337698 instance=ExtResource("1_yerj6")]
+offset_right = -198.0
+offset_bottom = -258.0
+script = ExtResource("2_ax5n7")

@@ -29,9 +29,13 @@ func top_bar_gui_input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
 				dragging = true
+				focus()
 			else:
 				dragging = false
 	
 	if not draggable: return
 	if event is InputEventMouseMotion and dragging:
 		global_position += event.relative
+
+func focus() -> void:
+	get_parent().move_child(self, get_parent().get_child_count() - 1)

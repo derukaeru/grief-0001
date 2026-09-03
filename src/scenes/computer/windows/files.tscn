@@ -60,7 +60,7 @@ script = ExtResource("3_s33a6")
 folder_name = "new_folder"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
-[node name="eye" type="Button" parent="content/main_files" index="1" unique_id=1736230867]
+[node name="eye_png" type="Button" parent="content/main_files" index="1" unique_id=1736230867]
 layout_mode = 2
 text = "eye.png           402kb      02-06-2006"
 flat = true
@@ -77,6 +77,15 @@ flat = true
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "field_exe"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="logs_md" type="Button" parent="content/main_files" index="3" unique_id=1677480838]
+layout_mode = 2
+text = "logs.md           3kb        20-12-2006"
+flat = true
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "logs_md"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="new_folder" type="VBoxContainer" parent="content" index="2" unique_id=190746430]

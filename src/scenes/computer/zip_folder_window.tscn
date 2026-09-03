@@ -17,7 +17,45 @@ script = ExtResource("2_wexrp")
 locked = false
 password = ""
 
-[node name="lock_cover" type="ColorRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=185874785]
+[node name="details" type="ColorRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=1430105046]
+layout_mode = 0
+offset_right = 424.0
+offset_bottom = 31.0
+color = Color(0.43944743, 0.40519482, 0.33321214, 1)
+
+[node name="name" type="Label" parent="content/details" index="0" unique_id=2124667245]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 48.0
+offset_bottom = 22.0
+text = "name"
+
+[node name="size" type="Label" parent="content/details" index="1" unique_id=2015801936]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 7.0
+offset_right = 218.0
+offset_bottom = 22.0
+text = "size"
+
+[node name="date" type="Label" parent="content/details" index="2" unique_id=1937525080]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 7.0
+offset_right = 396.0
+offset_bottom = 22.0
+text = "date modified"
+
+[node name="files" type="VBoxContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="1" unique_id=1843158095]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 34.0
+offset_right = 419.0
+offset_bottom = 257.0
+
+[node name="lock_cover" type="ColorRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="2" unique_id=185874785]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

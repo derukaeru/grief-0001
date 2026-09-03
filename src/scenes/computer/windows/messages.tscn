@@ -4,8 +4,31 @@
 
 [node name="messages" unique_id=1725337698 instance=ExtResource("1_bmyae")]
 
-[node name="background" parent="." index="0" unique_id=741744896]
+[node name="background" parent="." index="1" unique_id=741744896]
 color = Color(0.33179998, 0.40529996, 0.42, 1)
 
-[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
 text = "messages"
+
+[node name="messages" type="VBoxContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=1236323039]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 419.0
+offset_bottom = 260.0
+
+[node name="mesage_1" type="Button" parent="content/messages" index="0" unique_id=1803360881]
+layout_mode = 2
+text = "Nick: Hello bruh                    12:24pm"
+alignment = 0
+
+[node name="mesage_2" type="Button" parent="content/messages" index="1" unique_id=1629490891]
+layout_mode = 2
+text = "Lebon James: This is the real le... 04:12am"
+alignment = 0
+
+[node name="message" type="Control" parent="content" parent_id_path=PackedInt32Array(976143210) index="1" unique_id=494394673]
+visible = false
+anchors_preset = 0
+offset_right = 424.0
+offset_bottom = 264.0
