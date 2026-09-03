@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2ikubvndvyk0"]
 
 [ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_umo5e"]
-[ext_resource type="Texture2D" uid="uid://beot3iybto2nd" path="res://icon.svg" id="2_occqb"]
+[ext_resource type="Texture2D" uid="uid://bqh8hcxi0ugxg" path="res://src/assets/sprites/icons/files.png" id="2_occqb"]
 
 [node name="files" unique_id=886383904 instance=ExtResource("1_umo5e")]
 texture_normal = ExtResource("2_occqb")

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c0p0lbbq1gunc"]
 
 [ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_bmyae"]
+[ext_resource type="Script" uid="uid://bumrns0cj27m0" path="res://src/scenes/computer/windows/messages.gd" id="2_61qqh"]
+[ext_resource type="Texture2D" uid="uid://fasaqq7evxms" path="res://src/assets/sprites/icons/return.png" id="3_j5at5"]
 
 [node name="messages" unique_id=1725337698 instance=ExtResource("1_bmyae")]
 
@@ -10,25 +12,46 @@ color = Color(0.33179998, 0.40529996, 0.42, 1)
 [node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
 text = "messages"
 
-[node name="messages" type="VBoxContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=1236323039]
+[node name="content" parent="." index="3" unique_id=976143210]
+script = ExtResource("2_61qqh")
+
+[node name="messages" type="VBoxContainer" parent="content" index="0" unique_id=1236323039]
+visible = false
 layout_mode = 0
 offset_left = 5.0
 offset_top = 4.0
 offset_right = 419.0
 offset_bottom = 260.0
 
-[node name="mesage_1" type="Button" parent="content/messages" index="0" unique_id=1803360881]
-layout_mode = 2
-text = "Nick: Hello bruh                    12:24pm"
-alignment = 0
-
-[node name="mesage_2" type="Button" parent="content/messages" index="1" unique_id=1629490891]
-layout_mode = 2
-text = "Lebon James: This is the real le... 04:12am"
-alignment = 0
-
-[node name="message" type="Control" parent="content" parent_id_path=PackedInt32Array(976143210) index="1" unique_id=494394673]
-visible = false
+[node name="message" type="Control" parent="content" index="1" unique_id=494394673]
 anchors_preset = 0
 offset_right = 424.0
 offset_bottom = 264.0
+
+[node name="top_bar" type="ColorRect" parent="content/message" index="0" unique_id=290908081]
+layout_mode = 0
+offset_right = 424.0
+offset_bottom = 32.0
+color = Color(0, 0, 0, 0.3529412)
+
+[node name="return" type="TextureButton" parent="content/message/top_bar" index="0" unique_id=1233772360]
+modulate = Color(0.9867516, 0.9867516, 0.9867516, 1)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 29.0
+offset_bottom = 27.0
+texture_normal = ExtResource("3_j5at5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="name" type="Label" parent="content/message/top_bar" index="1" unique_id=143685427]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 5.0
+offset_right = 417.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 24
+text = "Lebon James"
+
+[connection signal="pressed" from="content/message/top_bar/return" to="content" method="back"]

@@ -241,16 +241,16 @@ offset_bottom = 217.0
 
 [node name="browser" parent="apps" unique_id=242581469 instance=ExtResource("7_vt54a")]
 layout_mode = 0
-offset_left = 500.0
+offset_left = 495.0
 offset_top = 20.0
-offset_right = 540.0
+offset_right = 535.0
 offset_bottom = 60.0
 
 [node name="messages" parent="apps" unique_id=1011345376 instance=ExtResource("9_a0p0o")]
 layout_mode = 0
-offset_left = 502.0
+offset_left = 497.0
 offset_top = 109.0
-offset_right = 542.0
+offset_right = 537.0
 offset_bottom = 149.0
 
 [node name="windows" type="Control" parent="." unique_id=1852505008]
@@ -263,6 +263,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="lock_screen" type="Control" parent="." unique_id=1854427984]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
