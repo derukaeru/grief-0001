@@ -2,14 +2,23 @@
 
 [ext_resource type="Script" uid="uid://cl4bg1ggsne4n" path="res://src/scenes/computer/message_bubble.gd" id="1_0uj1p"]
 
-[node name="message_bubble" type="Control" unique_id=1001464364]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uj1p"]
+bg_color = Color(0.46832395, 0.5763098, 0.73189634, 1)
+border_width_left = 12
+border_width_top = 6
+border_width_right = 12
+border_width_bottom = 6
+border_color = Color(0.46666667, 0.5764706, 0.73333335, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+
+[node name="message_bubble" type="PanelContainer" unique_id=1652884560]
+offset_right = 45.0
+offset_bottom = 35.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0uj1p")
 script = ExtResource("1_0uj1p")
 
-[node name="label" type="Label" parent="." unique_id=657580605]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 15.0
+[node name="label" type="Label" parent="." unique_id=1882884055]
+layout_mode = 2
+autowrap_mode = 3

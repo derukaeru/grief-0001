@@ -3,6 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_bmyae"]
 [ext_resource type="Script" uid="uid://bumrns0cj27m0" path="res://src/scenes/computer/windows/messages.gd" id="2_61qqh"]
 [ext_resource type="Texture2D" uid="uid://fasaqq7evxms" path="res://src/assets/sprites/icons/return.png" id="3_j5at5"]
+[ext_resource type="Texture2D" uid="uid://7v4l8o7rs5yu" path="res://src/assets/sprites/icons/send.png" id="4_00tdj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6meq"]
+bg_color = Color(0.08, 0.08, 0.08, 0.3882353)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="messages" unique_id=1725337698 instance=ExtResource("1_bmyae")]
 
@@ -35,7 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.40433523, 0.5156178, 0.64899534, 1)
+color = Color(0.17315516, 0.23942259, 0.31957573, 1)
 
 [node name="top_bar" type="ColorRect" parent="content/message" index="1" unique_id=290908081]
 layout_mode = 0
@@ -61,20 +69,39 @@ offset_top = 5.0
 offset_right = 417.0
 offset_bottom = 27.0
 theme_override_font_sizes/font_size = 24
-text = "Lebon James"
 
-[node name="message_bubbles_container" type="Control" parent="content/message" index="2" unique_id=1901601363]
+[node name="ScrollContainer" type="ScrollContainer" parent="content/message" index="2" unique_id=378301765]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 42.0
+offset_right = 419.0
+offset_bottom = 226.0
+
+[node name="message_bubble_container" type="VBoxContainer" parent="content/message/ScrollContainer" index="0" unique_id=1382716259]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="type" type="Panel" parent="content/message" index="3" unique_id=488560827]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -202.5
-offset_top = -92.0
-offset_right = 202.5
-offset_bottom = 126.0
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -34.0
+offset_right = -43.0
+offset_bottom = -4.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s6meq")
+
+[node name="send" type="TextureRect" parent="content/message" index="4" unique_id=247571835]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 233.0
+offset_right = 412.0
+offset_bottom = 257.0
+texture = ExtResource("4_00tdj")
+expand_mode = 1
 
 [connection signal="pressed" from="content/message/top_bar/return" to="content" method="back"]

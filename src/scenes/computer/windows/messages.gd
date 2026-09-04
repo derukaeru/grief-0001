@@ -2,7 +2,9 @@ extends Control
 
 @onready var messages_container: VBoxContainer = $messages
 @onready var message: Control = $message
-@onready var message_bubbles_container: Control = $message/message_bubbles_container
+@onready var messenger_name: Label = $message/top_bar/name
+
+@onready var message_bubbles_container: VBoxContainer = $message/ScrollContainer/message_bubble_container
 
 var messages: Array = [
 	"Lebon James",
@@ -28,6 +30,7 @@ func _ready() -> void:
 
 func open_message(id: String) -> void:
 	var thread: Array = Dialogues.MESSAGES[id]
+	messenger_name.text = id
 	
 	for child in message_bubbles_container.get_children():
 		child.queue_free()
@@ -35,14 +38,15 @@ func open_message(id: String) -> void:
 	for group in thread:
 		var is_them: bool = group["from"] == "them"
 		for line in group["lines"]:
-			var bubble: Control = load(Registry.UID["message_bubble"]).instantiate()
-			message_bubbles_container.add_child(bubble)
+			var bubble: PanelContainer = load(Registry.UID["message_bubble"]).instantiate()
+			bubble.them = is_them
 			
-			bubble.label.text = line
-			bubble.label.horizontal_alignment = (
-				HORIZONTAL_ALIGNMENT_LEFT if is_them else HORIZONTAL_ALIGNMENT_RIGHT
-			)
-			# optional: different bg color/anchor per sender for a real chat-bubble look
+			message_bubbles_container.add_child(bubble)
+			bubble.set_text(line)
+	
+	await get_tree().process_frame
+	var scroll: ScrollContainer = $message/ScrollContainer
+	scroll.scroll_vertical = int(scroll.get_v_scroll_bar().max_value)
 	
 	message.show()
 
