@@ -22,6 +22,8 @@ func _ready() -> void:
 	GameManager.ui.crosshair.hide()
 	
 	password_label.max_length = password.length()
+	if GameManager.computer_open:
+		lockscreen.hide()
 
 func open_app(app_name: String) -> void:
 	if not Registry.APPS.has(app_name):
@@ -48,6 +50,8 @@ func open_zip(zip_name: String) -> void:
 func unlock(_text: String = "") -> void:
 	if password == password_label.text:
 		lockscreen_animation.play("open")
+		password_label.text = ""
+		GameManager.computer_open = true
 		await lockscreen_animation.animation_finished
 		lockscreen.hide()
 	else:

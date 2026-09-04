@@ -14,3 +14,5 @@ var MESSAGES: Dictionary[String, Array] = {
 		{"from": "them", "lines": ["this is the real lebron james"]},
 	],
 }
+
+var NOTES: String = ""

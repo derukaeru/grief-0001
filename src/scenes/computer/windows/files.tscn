@@ -5,6 +5,73 @@
 [ext_resource type="Script" uid="uid://cg4nopqq4ykkf" path="res://src/scripts/components/file_folder.gd" id="3_s33a6"]
 [ext_resource type="Script" uid="uid://bk8wnmpyuw6x2" path="res://src/scripts/components/file.gd" id="4_fxr66"]
 [ext_resource type="Script" uid="uid://bhnkq7fk56pco" path="res://src/scripts/components/return_file.gd" id="5_i6dgw"]
+[ext_resource type="Texture2D" uid="uid://eat5r66gq04p" path="res://src/assets/sprites/icons/lock.png" id="6_o2chk"]
+
+[sub_resource type="Animation" id="Animation_o2chk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("password:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(73.5, 119.5)]
+}
+
+[sub_resource type="Animation" id="Animation_vlglj"]
+resource_name = "open"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -313)]
+}
+
+[sub_resource type="Animation" id="Animation_5stey"]
+resource_name = "wrong"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("password:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.020812593, 0.059301637, 0.10007151, 0.13333334, 0.16666667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(73.5, 119.5), Vector2(64.6, 119.5), Vector2(66.575, 119.5), Vector2(53.24, 119.5), Vector2(72.29, 119.5), Vector2(62.74, 119.5), Vector2(73.5, 119.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5stey"]
+_data = {
+&"RESET": SubResource("Animation_o2chk"),
+&"open": SubResource("Animation_vlglj"),
+&"wrong": SubResource("Animation_5stey")
+}
 
 [node name="files" unique_id=1725337698 instance=ExtResource("1_e3wka")]
 app_name = "files"
@@ -123,3 +190,78 @@ offset_top = 7.0
 offset_right = 396.0
 offset_bottom = 22.0
 text = "date modified"
+
+[node name="lockscreen" type="ColorRect" parent="content" index="3" unique_id=1003493815]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="content/lockscreen" index="0" unique_id=1979434924]
+libraries/ = SubResource("AnimationLibrary_5stey")
+
+[node name="password" type="LineEdit" parent="content/lockscreen" index="1" unique_id=1983292350]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -12.5
+offset_right = 138.5
+offset_bottom = 12.4999695
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="submit" type="Button" parent="content/lockscreen" index="2" unique_id=213667295]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = 18.0
+offset_right = 39.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "submit"
+
+[node name="permission" type="Label" parent="content/lockscreen" index="3" unique_id=1299246913]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -212.0
+offset_top = -15.0
+offset_right = 212.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "please type your password to grant access."
+horizontal_alignment = 1
+
+[node name="icon" type="TextureRect" parent="content/lockscreen" index="4" unique_id=1280156841]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -59.0
+offset_right = 20.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_o2chk")
+expand_mode = 1
+
+[connection signal="text_submitted" from="content/lockscreen/password" to="content" method="unlock"]

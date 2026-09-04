@@ -5,6 +5,9 @@ var canvas_layer = CanvasLayer.new()
 var current_view: String = "3d"
 var current_map: String = ""
 
+var computer_open: bool = false
+var file_manager_open: bool = false
+
 func _ready() -> void:
 	add_child(canvas_layer)
 	

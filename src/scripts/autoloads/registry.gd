@@ -32,6 +32,7 @@ var APPS: Dictionary = {
 	"files": "uid://gv3uh5gyewfl",
 	"browser": "uid://d2yegcwy58ujn",
 	"messages": "uid://c0p0lbbq1gunc",
+	"notes": "uid://muaf5rlusq0f",
 }
 
 var ZIPS: Dictionary = {

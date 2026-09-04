@@ -20,7 +20,7 @@ func mouse_pressed(source: Button) -> void:
 	tw.tween_property(source, "scale", Vector2(1.0, 1.0), 0.15)
 
 func start_pressed() -> void:
-	SceneChanger.change_scene("main")
+	SceneChanger.change_scene("computer")
 
 func settings_pressed() -> void:
 	settings_screen.open()

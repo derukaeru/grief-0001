@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://4o24rm2xgr1m"]
+
+[ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_h3pid"]
+[ext_resource type="Texture2D" uid="uid://q23taynsnvaj" path="res://src/assets/sprites/icons/notes.png" id="2_v4tdi"]
+
+[node name="notes" unique_id=886383904 instance=ExtResource("1_h3pid")]
+texture_normal = ExtResource("2_v4tdi")
+app_name = "notes"
+
+[node name="app_name" parent="." index="0" unique_id=610043953]
+offset_left = -23.0
+offset_right = 63.0
+text = "notes.exe"

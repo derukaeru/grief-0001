@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://muaf5rlusq0f"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_fgqng"]
+[ext_resource type="Script" uid="uid://cmkckgd5ye76j" path="res://src/scenes/computer/windows/notes.gd" id="2_basdr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqjtn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ur3w7"]
+
+[node name="notes_exe" unique_id=1725337698 instance=ExtResource("1_fgqng")]
+app_name = "notes"
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
+text = "notes"
+
+[node name="content" parent="." index="3" unique_id=976143210]
+script = ExtResource("2_basdr")
+
+[node name="background" type="ColorRect" parent="content" index="0" unique_id=1655157556]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.82922095, 0.82494754, 0.7778083, 1)
+
+[node name="notes" type="TextEdit" parent="content" index="1" unique_id=437162407]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 421.0
+offset_bottom = 261.0
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_colors/word_highlighted_color = Color(0.47161293, 0.5036804, 0.5948709, 0.2509804)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uqjtn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ur3w7")
+placeholder_text = "currently empty..."
+context_menu_enabled = false
+wrap_mode = 1
+caret_blink = true
+
+[connection signal="lines_edited_from" from="content/notes" to="content" method="edited"]
