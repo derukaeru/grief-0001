@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dgade15bhigwi"]
+
+[ext_resource type="PackedScene" uid="uid://dudseog2lkwqk" path="res://src/scenes/computer/zip_folder_window.tscn" id="1_erdep"]
+
+[node name="untitled_zip" unique_id=1725337698 instance=ExtResource("1_erdep")]
+app_name = "untitiled.zip"
+locked = true
+password = "untitled_01"
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
+text = "untitled.zip"
+
+[node name="password" parent="content/lock_cover" parent_id_path=PackedInt32Array(185874785) index="0" unique_id=822570872]
+offset_top = -12.0
+offset_bottom = 11.0

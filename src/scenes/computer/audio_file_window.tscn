@@ -2,8 +2,92 @@
 
 [ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_yerj6"]
 [ext_resource type="Script" uid="uid://buhw6p03i6bhp" path="res://src/scenes/computer/audio_file_window.gd" id="2_ax5n7"]
+[ext_resource type="Texture2D" uid="uid://bs4xnc02pi37i" path="res://src/assets/sprites/icons/pause.png" id="3_y50xu"]
+[ext_resource type="Texture2D" uid="uid://dyduw4mhallj3" path="res://src/assets/sprites/icons/play.png" id="4_2fdvg"]
+[ext_resource type="Texture2D" uid="uid://d0uwwpwtessw" path="res://src/assets/sprites/icons/rewind.png" id="5_5fr7k"]
+[ext_resource type="Texture2D" uid="uid://dyyc2f5ijhciu" path="res://src/assets/sprites/icons/forward-fast.png" id="6_868n4"]
 
 [node name="audio_file_window" unique_id=1725337698 instance=ExtResource("1_yerj6")]
 offset_right = -198.0
 offset_bottom = -258.0
 script = ExtResource("2_ax5n7")
+
+[node name="content" parent="." index="3" unique_id=976143210]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="toggle" type="CheckButton" parent="content" index="0" unique_id=1969900701]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -42.0
+offset_right = 18.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/icon_max_width = 24
+theme_override_icons/checked = ExtResource("3_y50xu")
+theme_override_icons/unchecked = ExtResource("4_2fdvg")
+
+[node name="rewind" type="TextureButton" parent="content" index="1" unique_id=662052987]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -67.0
+offset_top = -38.0
+offset_right = -43.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("5_5fr7k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="fast_forward" type="TextureButton" parent="content" index="2" unique_id=624407219]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_top = -38.0
+offset_right = 70.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("6_868n4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="progress" type="ProgressBar" parent="content" index="3" unique_id=567997406]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -14.5
+offset_right = 131.0
+offset_bottom = -6.5
+grow_horizontal = 2
+grow_vertical = 2
+show_percentage = false
+
+[connection signal="toggled" from="content/toggle" to="." method="toggle"]
+[connection signal="pressed" from="content/rewind" to="." method="rewind"]
+[connection signal="pressed" from="content/fast_forward" to="." method="fast_forward"]

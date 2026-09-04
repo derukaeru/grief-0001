@@ -14,7 +14,6 @@ var password: String = "12202008"
 func _ready() -> void:
 	EventBus.open_folder.connect(open_folder)
 	EventBus.open_file.connect(open_file)
-	EventBus.open_zip.connect(open_zip)
 	EventBus.close_folder.connect(close_folder)
 	
 	password_label.max_length = password.length()
@@ -31,14 +30,7 @@ func open_file(file_name: String) -> void:
 func open_folder(folder_name: String) -> void:
 	if not folders.has(folder_name): 
 		return push_error("Folders does not have record of %s" % folder_name)
-	
 	folders[folder_name].show()
-
-func open_zip(zip_name: String) -> void:
-	if not Registry.ZIPS.has(zip_name):
-		return push_error("Zips does not have record of %s" % zip_name)
-	
-	
 
 func close_folder(folder_name: String) -> void:
 	if not folders.has(folder_name): 

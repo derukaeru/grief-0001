@@ -36,5 +36,5 @@ var APPS: Dictionary = {
 }
 
 var ZIPS: Dictionary = {
-	
+	"untitled_zip": "uid://dgade15bhigwi",
 }

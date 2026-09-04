@@ -3,6 +3,8 @@ class_name AudioFileWindow extends Control
 @onready var animation: AnimationPlayer = $AnimationPlayer
 @onready var app_name_label: Label = $top_bar/app_name
 
+@onready var progress: ProgressBar = $content/progress
+
 @export var app_name: String = ""
 @export var draggable: bool = true
 
@@ -45,3 +47,13 @@ func clamp_to_bounds() -> void:
 	var bounds: Rect2 = get_parent().get_rect()
 	global_position.x = clamp(global_position.x, bounds.position.x, bounds.position.x + bounds.size.x - size.x)
 	global_position.y = clamp(global_position.y, bounds.position.y, bounds.position.y + bounds.size.y - size.y)
+
+func toggle(on: bool) -> void: 
+	pass
+
+func rewind() -> void:
+	pass # Replace with function body.
+
+
+func fast_forward() -> void:
+	pass # Replace with function body.

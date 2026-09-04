@@ -12,7 +12,7 @@ class_name ZipFolderWindow extends Control
 @export var locked: bool = false
 @export var password: String = ""
 
-var app_name_require: String = "- requires password"
+var app_name_require: String = " - requires password"
 
 func _ready() -> void:
 	open()

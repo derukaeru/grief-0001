@@ -14,6 +14,8 @@ func _ready() -> void:
 	EventBus.open_app.connect(open_app)
 	EventBus.closed_app.connect(closed_app)
 	
+	EventBus.open_zip.connect(open_zip)
+	
 	GameManager.ui.pause_screen.close()
 	GameManager.ui.show()
 	

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bk8wnmpyuw6x2" path="res://src/scripts/components/file.gd" id="4_fxr66"]
 [ext_resource type="Script" uid="uid://bhnkq7fk56pco" path="res://src/scripts/components/return_file.gd" id="5_i6dgw"]
 [ext_resource type="Texture2D" uid="uid://eat5r66gq04p" path="res://src/assets/sprites/icons/lock.png" id="6_o2chk"]
+[ext_resource type="Script" uid="uid://d1msimb6cwx4c" path="res://src/scripts/components/zip_file.gd" id="6_vlglj"]
 
 [sub_resource type="Animation" id="Animation_o2chk"]
 length = 0.001
@@ -136,7 +137,6 @@ file_name = "logs_md"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="new_folder" type="ColorRect" parent="content" index="1" unique_id=327654599]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -160,6 +160,15 @@ alignment = 0
 script = ExtResource("5_i6dgw")
 folder_name = "new_folder"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="untitled_zip" type="Button" parent="content/new_folder/files" index="1" unique_id=1094842183]
+layout_mode = 2
+text = "untitled.zip      2.34mb      20-08-2007"
+flat = true
+alignment = 0
+script = ExtResource("6_vlglj")
+zip_name = "untitled_zip"
+metadata/_custom_type_script = "uid://d1msimb6cwx4c"
 
 [node name="details" type="ColorRect" parent="content" index="2" unique_id=1649789165]
 layout_mode = 0
@@ -192,6 +201,7 @@ offset_bottom = 22.0
 text = "date modified"
 
 [node name="lockscreen" type="ColorRect" parent="content" index="3" unique_id=1003493815]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -265,3 +275,4 @@ texture = ExtResource("6_o2chk")
 expand_mode = 1
 
 [connection signal="text_submitted" from="content/lockscreen/password" to="content" method="unlock"]
+[connection signal="pressed" from="content/lockscreen/submit" to="content" method="unlock"]

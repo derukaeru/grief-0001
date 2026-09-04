@@ -10,4 +10,4 @@ app_name = "notes"
 [node name="app_name" parent="." index="0" unique_id=610043953]
 offset_left = -23.0
 offset_right = 63.0
-text = "notes.exe"
+text = "notes"

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://betoqyae7litl"]
+
+[ext_resource type="Script" uid="uid://d1msimb6cwx4c" path="res://src/scripts/components/zip_file.gd" id="1_2r3xs"]
+
+[node name="untitled_zip" type="Button" unique_id=1119362471]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "untitled.zip 2.3mb 20-08-2007"
+flat = true
+alignment = 0
+script = ExtResource("1_2r3xs")
+zip_name = "untitled_zip"
+metadata/_custom_type_script = "uid://d1msimb6cwx4c"

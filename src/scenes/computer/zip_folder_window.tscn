@@ -4,11 +4,40 @@
 [ext_resource type="Script" uid="uid://ch5txwp28tb16" path="res://src/scenes/computer/zip_folder_window.gd" id="2_wexrp"]
 [ext_resource type="Texture2D" uid="uid://eat5r66gq04p" path="res://src/assets/sprites/icons/lock.png" id="3_664al"]
 
+[sub_resource type="Animation" id="Animation_xcf13"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("password:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(115.5, 120.5)]
+}
+
 [sub_resource type="Animation" id="Animation_664al"]
 resource_name = "wrong"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("password:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.25038692, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(115.5, 120), Vector2(102, 120), Vector2(120, 120), Vector2(110, 120), Vector2(130, 120), Vector2(115.5, 120)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xcf13"]
 _data = {
+&"RESET": SubResource("Animation_xcf13"),
 &"wrong": SubResource("Animation_664al")
 }
 
@@ -49,9 +78,9 @@ text = "date modified"
 
 [node name="files" type="VBoxContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="1" unique_id=1843158095]
 layout_mode = 0
-offset_left = 8.0
+offset_left = 6.0
 offset_top = 34.0
-offset_right = 419.0
+offset_right = 417.0
 offset_bottom = 257.0
 
 [node name="lock_cover" type="ColorRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="2" unique_id=185874785]
@@ -72,7 +101,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -96.5
 offset_top = -11.5
-offset_right = 96.5
+offset_right = 96.49988
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
