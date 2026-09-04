@@ -40,3 +40,8 @@ func top_bar_gui_input(event: InputEvent) -> void:
 
 func focus() -> void:
 	get_parent().move_child(self, get_parent().get_child_count() - 1)
+
+func clamp_to_bounds() -> void:
+	var bounds: Rect2 = get_parent().get_rect()
+	global_position.x = clamp(global_position.x, bounds.position.x, bounds.position.x + bounds.size.x - size.x)
+	global_position.y = clamp(global_position.y, bounds.position.y, bounds.position.y + bounds.size.y - size.y)

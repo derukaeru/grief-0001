@@ -6,6 +6,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_7iji4"]
 size = Vector3(0.8376465, 0.8569336, 0.8984375)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_v3fyf"]
+size = Vector3(0.86920166, 0.8432007, 0.8590088)
+
 [node name="computer" type="Area3D" unique_id=1702524455]
 script = ExtResource("1_v3fyf")
 metadata/_custom_type_script = "uid://c0yu71qncicxx"
@@ -19,5 +22,11 @@ shape = SubResource("BoxShape3D_7iji4")
 [node name="CrtTv" type="MeshInstance3D" parent="model_container" unique_id=1043689948]
 transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 0, 0, 0)
 mesh = ExtResource("2_8lekp")
+
+[node name="collision" type="StaticBody3D" parent="." unique_id=1655749131]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collision" unique_id=245538100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02041626, 0.4112854, -0.0016479492)
+shape = SubResource("BoxShape3D_v3fyf")
 
 [connection signal="interacted" from="." to="." method="interactedf"]

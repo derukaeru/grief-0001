@@ -1,19 +1,11 @@
 [gd_scene format=3 uid="uid://th2gaejqgi12"]
 
 [ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_0f8ui"]
-[ext_resource type="Texture2D" uid="uid://gorpfyfpd0ek" path="res://src/assets/sprites/icons/user.png" id="2_bh4rl"]
+[ext_resource type="Texture2D" uid="uid://degqxwxvk1mli" path="res://src/assets/sprites/icons/document.png" id="2_bh4rl"]
 
 [node name="logs_md" unique_id=1302605451 instance=ExtResource("1_0f8ui")]
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-offset_bottom = 0.0
 texture_normal = ExtResource("2_bh4rl")
 app_name = "logs_md"
 
 [node name="app_name" parent="." index="0" unique_id=610043953]
-offset_left = -21.0
-offset_top = 40.0
-offset_right = 61.0
-offset_bottom = 56.0
 text = "logs.md"

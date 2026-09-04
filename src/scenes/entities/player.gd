@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody3D
 
-@onready var raycast: RayCast3D = $RayCast3D
+@onready var raycast: RayCast3D = $Camera3D/RayCast3D
 @onready var camera: Camera3D = $Camera3D
 @export var gravity: float = 9.8
 
@@ -36,8 +36,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _input(event) -> void:
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed and not GameManager.has_interacted:
-			GameManager.has_interacted = true
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			_interact()
 	
 	if raycast.is_colliding():
@@ -47,15 +46,14 @@ func _input(event) -> void:
 			return
 		
 		if collider is InteractableComponent:
-			collider.interact()
 			GameManager.ui.crosshair.texture = GameManager.ui.crosshair_interact_sprite
-		else:
-			GameManager.ui.crosshair.texture = GameManager.ui.crosshair_sprite
+	else:
+		GameManager.ui.crosshair.texture = GameManager.ui.crosshair_sprite
 
 func _interact() -> void:
 	var hit: Node = raycast.get_collider()
 	if not hit: return
-
+	
 	if hit is InteractableComponent:
 		hit.interact()
 

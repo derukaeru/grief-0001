@@ -37,6 +37,8 @@ func close() -> void:
 	EventBus.closed_app.emit(app_name)
 
 func minimize() -> void:
+	animation.play_backwards("open")
+	await animation.animation_finished
 	hide()
 
 func top_bar_gui_input(event: InputEvent) -> void:
@@ -62,3 +64,8 @@ func submit(new_text: String = password_label.text) -> void:
 	else:
 		password_label.text = ""
 		lockscreen_animation.play("wrong")
+
+func clamp_to_bounds() -> void:
+	var bounds: Rect2 = get_parent().get_rect()
+	global_position.x = clamp(global_position.x, bounds.position.x, bounds.position.x + bounds.size.x - size.x)
+	global_position.y = clamp(global_position.y, bounds.position.y, bounds.position.y + bounds.size.y - size.y)
