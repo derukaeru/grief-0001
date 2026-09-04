@@ -5,8 +5,8 @@
 [node name="logs_md" unique_id=1725337698 instance=ExtResource("1_3t4i5")]
 app_name = "logs_md"
 
-[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
-text = "logs_md"
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
+text = "logs.md"
 
 [node name="Label" type="Label" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=130815771]
 layout_mode = 0

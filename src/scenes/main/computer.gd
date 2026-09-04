@@ -8,7 +8,7 @@ class_name Computer extends Control
 @onready var time_label: Label = $action_bar/time
 
 var password: String = "griefed"
-var windows: Dictionary[String, AppWindow] = {}
+var windows: Dictionary = {}
 
 func _ready() -> void:
 	EventBus.open_app.connect(open_app)
@@ -31,6 +31,17 @@ func open_app(app_name: String) -> void:
 		windows[app_name].open()
 	else:
 		var window: AppWindow = load(Registry.APPS[app_name]).instantiate()
+		windows_container.add_child(window)
+		windows.set(window.app_name, window)
+
+func open_zip(zip_name: String) -> void:
+	if not Registry.ZIPS.has(zip_name):
+		return push_error("Registry does not have record of this zip %s" % zip_name)
+	
+	if windows.has(zip_name):
+		windows[zip_name].open()
+	else:
+		var window: ZipFolderWindow = load(Registry.ZIPS[zip_name]).instantiate()
 		windows_container.add_child(window)
 		windows.set(window.app_name, window)
 

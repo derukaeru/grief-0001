@@ -24,7 +24,6 @@ func _ready() -> void:
 		button.text_direction = Control.TEXT_DIRECTION_LTR
 
 func open_message(id: String) -> void:
-	messages_container.hide()
 	var dialogue: Array = Dialogues.MESSAGES[id]
 	
 	# todo here
@@ -32,5 +31,4 @@ func open_message(id: String) -> void:
 	message.show()
 
 func back() -> void:
-	messages_container.show()
 	message.hide()

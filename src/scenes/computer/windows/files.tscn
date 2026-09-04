@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://besujrlhk5746" path="res://src/scenes/computer/windows/files.gd" id="2_rnh80"]
 [ext_resource type="Script" uid="uid://cg4nopqq4ykkf" path="res://src/scripts/components/file_folder.gd" id="3_s33a6"]
 [ext_resource type="Script" uid="uid://bk8wnmpyuw6x2" path="res://src/scripts/components/file.gd" id="4_fxr66"]
+[ext_resource type="Script" uid="uid://bhnkq7fk56pco" path="res://src/scripts/components/return_file.gd" id="5_i6dgw"]
 
 [node name="files" unique_id=1725337698 instance=ExtResource("1_e3wka")]
 app_name = "files"
@@ -14,7 +15,86 @@ text = "file manager"
 [node name="content" parent="." index="3" unique_id=976143210]
 script = ExtResource("2_rnh80")
 
-[node name="details" type="ColorRect" parent="content" index="0" unique_id=1649789165]
+[node name="main_files" type="ColorRect" parent="content" index="0" unique_id=2105435081]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
+[node name="files" type="VBoxContainer" parent="content/main_files" index="0" unique_id=1466532337]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 31.0
+offset_right = 420.0
+offset_bottom = 259.0
+
+[node name="new_folder" type="Button" parent="content/main_files/files" index="0" unique_id=935824657]
+layout_mode = 2
+text = "new folder        2.3mb      24-12-2006"
+flat = true
+alignment = 0
+script = ExtResource("3_s33a6")
+folder_name = "new_folder"
+metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
+
+[node name="eye_png" type="Button" parent="content/main_files/files" index="1" unique_id=1736230867]
+layout_mode = 2
+text = "eye.png           402kb      02-06-2006"
+flat = true
+alignment = 0
+text_direction = 1
+script = ExtResource("4_fxr66")
+file_name = "eye_png"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="field_exe" type="Button" parent="content/main_files/files" index="2" unique_id=1031723705]
+layout_mode = 2
+text = "field.exe         9.26mb     02-12-2006"
+flat = true
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "field_exe"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="logs_md" type="Button" parent="content/main_files/files" index="3" unique_id=1677480838]
+layout_mode = 2
+text = "logs.md           3kb        20-12-2006"
+flat = true
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "logs_md"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="new_folder" type="ColorRect" parent="content" index="1" unique_id=327654599]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5017282, 0.4667167, 0.3967002, 1)
+
+[node name="files" type="VBoxContainer" parent="content/new_folder" index="0" unique_id=190746430]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 32.0
+offset_right = 420.0
+offset_bottom = 261.0
+
+[node name="return" type="Button" parent="content/new_folder/files" index="0" unique_id=1865027969]
+layout_mode = 2
+text = "< return"
+flat = true
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "new_folder"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="details" type="ColorRect" parent="content" index="2" unique_id=1649789165]
 layout_mode = 0
 offset_right = 424.0
 offset_bottom = 31.0
@@ -43,64 +123,3 @@ offset_top = 7.0
 offset_right = 396.0
 offset_bottom = 22.0
 text = "date modified"
-
-[node name="main_files" type="VBoxContainer" parent="content" index="1" unique_id=1466532337]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 31.0
-offset_right = 420.0
-offset_bottom = 259.0
-
-[node name="new_folder" type="Button" parent="content/main_files" index="0" unique_id=935824657]
-layout_mode = 2
-text = "new folder        2.3mb      24-12-2006"
-flat = true
-alignment = 0
-script = ExtResource("3_s33a6")
-folder_name = "new_folder"
-metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
-
-[node name="eye_png" type="Button" parent="content/main_files" index="1" unique_id=1736230867]
-layout_mode = 2
-text = "eye.png           402kb      02-06-2006"
-flat = true
-alignment = 0
-text_direction = 1
-script = ExtResource("4_fxr66")
-file_name = "eye_png"
-metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
-
-[node name="field_exe" type="Button" parent="content/main_files" index="2" unique_id=1031723705]
-layout_mode = 2
-text = "field.exe         9.26mb     02-12-2006"
-flat = true
-alignment = 0
-script = ExtResource("4_fxr66")
-file_name = "field_exe"
-metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
-
-[node name="logs_md" type="Button" parent="content/main_files" index="3" unique_id=1677480838]
-layout_mode = 2
-text = "logs.md           3kb        20-12-2006"
-flat = true
-alignment = 0
-script = ExtResource("4_fxr66")
-file_name = "logs_md"
-metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
-
-[node name="new_folder" type="VBoxContainer" parent="content" index="2" unique_id=190746430]
-visible = false
-layout_mode = 0
-offset_left = 4.0
-offset_top = 31.0
-offset_right = 420.0
-offset_bottom = 259.0
-
-[node name="return" type="Button" parent="content/new_folder" index="0" unique_id=1131367011]
-layout_mode = 2
-text = "..."
-flat = true
-alignment = 0
-script = ExtResource("4_fxr66")
-file_name = "return"
-metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"

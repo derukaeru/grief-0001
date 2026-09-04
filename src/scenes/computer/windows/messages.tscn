@@ -16,7 +16,6 @@ text = "messages"
 script = ExtResource("2_61qqh")
 
 [node name="messages" type="VBoxContainer" parent="content" index="0" unique_id=1236323039]
-visible = false
 layout_mode = 0
 offset_left = 5.0
 offset_top = 4.0
@@ -28,7 +27,16 @@ anchors_preset = 0
 offset_right = 424.0
 offset_bottom = 264.0
 
-[node name="top_bar" type="ColorRect" parent="content/message" index="0" unique_id=290908081]
+[node name="background" type="ColorRect" parent="content/message" index="0" unique_id=2114163894]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.40433523, 0.5156178, 0.64899534, 1)
+
+[node name="top_bar" type="ColorRect" parent="content/message" index="1" unique_id=290908081]
 layout_mode = 0
 offset_right = 424.0
 offset_bottom = 32.0
