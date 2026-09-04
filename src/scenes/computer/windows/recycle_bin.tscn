@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://lqqdtrn3j0qk"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_ofgxo"]
+[ext_resource type="Script" uid="uid://c1dvl8gi33ovf" path="res://src/scenes/computer/windows/recycle_bin.gd" id="2_k2n74"]
+
+[node name="recycle_bin" unique_id=1725337698 instance=ExtResource("1_ofgxo")]
+app_name = "recycle_bin"
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
+text = "recycle bin"
+
+[node name="content" parent="." index="3" unique_id=976143210]
+script = ExtResource("2_k2n74")
+
+[node name="files" type="VBoxContainer" parent="content" index="0" unique_id=447172133]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

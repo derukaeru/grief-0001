@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b1dk628v453gm"]
+
+[ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_prdn4"]
+
+[node name="imail" unique_id=886383904 instance=ExtResource("1_prdn4")]
+app_name = "imail"
+
+[node name="app_name" parent="." index="0" unique_id=610043953]
+text = "imail"

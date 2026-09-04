@@ -12,4 +12,7 @@ signal open_file(file_name: String)
 signal open_folder(file_name: String)
 signal open_zip(zip_name: String)
 
+signal open_image(image_name: String)
+signal open_audio(audio_name: String)
+
 signal close_folder(folder_name: String)

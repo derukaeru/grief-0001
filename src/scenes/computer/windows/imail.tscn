@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bssndj6if32cu"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_1uwr3"]
+
+[node name="imail" unique_id=1725337698 instance=ExtResource("1_1uwr3")]
+app_name = "imail"
+
+[node name="background" parent="." index="1" unique_id=741744896]
+color = Color(0.78024316, 0.5830439, 0.5501801, 1)
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
+text = "imail"

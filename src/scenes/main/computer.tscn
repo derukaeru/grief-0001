@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bjxy7uth6dfl7" path="res://src/scenes/computer/apps/browser.tscn" id="7_vt54a"]
 [ext_resource type="PackedScene" uid="uid://4o24rm2xgr1m" path="res://src/scenes/computer/apps/notes.tscn" id="9_4ea6q"]
 [ext_resource type="PackedScene" uid="uid://demhk8dg5edmg" path="res://src/scenes/computer/apps/messages.tscn" id="9_a0p0o"]
+[ext_resource type="PackedScene" uid="uid://bbtll75h5mhru" path="res://src/scenes/computer/apps/recycle_bin.tscn" id="10_buu0b"]
+[ext_resource type="PackedScene" uid="uid://b1dk628v453gm" path="res://src/scenes/computer/apps/imail.tscn" id="11_afb7v"]
 
 [sub_resource type="Animation" id="Animation_1j8nl"]
 length = 0.001
@@ -214,10 +216,10 @@ offset_bottom = 480.0
 
 [node name="eye_png" parent="apps" unique_id=1302605451 instance=ExtResource("3_474aq")]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 20.0
-offset_right = 168.0
-offset_bottom = 60.0
+offset_left = 244.0
+offset_top = 180.0
+offset_right = 284.0
+offset_bottom = 220.0
 
 [node name="logs_md" parent="apps" unique_id=1984162339 instance=ExtResource("2_141df")]
 layout_mode = 0
@@ -229,9 +231,9 @@ offset_bottom = 60.0
 [node name="settings" parent="apps" unique_id=1404995780 instance=ExtResource("5_avh3n")]
 layout_mode = 0
 offset_left = 498.0
-offset_top = 375.0
+offset_top = 354.0
 offset_right = 538.0
-offset_bottom = 415.0
+offset_bottom = 394.0
 
 [node name="files" parent="apps" unique_id=886383904 instance=ExtResource("6_ovvnk")]
 layout_mode = 0
@@ -260,6 +262,20 @@ offset_left = 34.0
 offset_top = 98.0
 offset_right = 74.0
 offset_bottom = 138.0
+
+[node name="recycle_bin" parent="apps" unique_id=1354687474 instance=ExtResource("10_buu0b")]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 360.0
+offset_right = 75.0
+offset_bottom = 400.0
+
+[node name="imail" parent="apps" unique_id=734688266 instance=ExtResource("11_afb7v")]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 358.0
+offset_right = 372.0
+offset_bottom = 398.0
 
 [node name="windows" type="Control" parent="." unique_id=1852505008]
 layout_mode = 1

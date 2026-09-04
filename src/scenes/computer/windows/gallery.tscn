@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://kb3omh7ww8hf"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_ohh0t"]
+
+[node name="gallery" unique_id=1725337698 instance=ExtResource("1_ohh0t")]
+app_name = "gallery"
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
+text = "gallery"
+
+[node name="images" type="VBoxContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=238637294]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

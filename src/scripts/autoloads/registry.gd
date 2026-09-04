@@ -23,6 +23,9 @@ var UID: Dictionary = {
 	"field_exe": "uid://ormu8fsixur7",
 	"forest": "uid://b18x6s70piuq6",
 	"house": "uid://bvwtdbfgmh8ur",
+	
+	"audio_file_window": "uid://bmxqn1bc8uwll",
+	"image_file_window": ""
 }
 
 var APPS: Dictionary = {
@@ -33,8 +36,17 @@ var APPS: Dictionary = {
 	"browser": "uid://d2yegcwy58ujn",
 	"messages": "uid://c0p0lbbq1gunc",
 	"notes": "uid://muaf5rlusq0f",
+	"imail": "uid://bssndj6if32cu",
 }
 
 var ZIPS: Dictionary = {
 	"untitled_zip": "uid://dgade15bhigwi",
+}
+
+var IMAGES: Dictionary = {
+	
+}
+
+var AUDIOS: Dictionary = {
+	
 }

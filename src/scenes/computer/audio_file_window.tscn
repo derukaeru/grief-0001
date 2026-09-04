@@ -11,12 +11,14 @@
 offset_right = -198.0
 offset_bottom = -258.0
 script = ExtResource("2_ax5n7")
+audio = null
 
 [node name="content" parent="." index="3" unique_id=976143210]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
@@ -87,6 +89,8 @@ offset_bottom = -6.5
 grow_horizontal = 2
 grow_vertical = 2
 show_percentage = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="content" index="4" unique_id=167681458]
 
 [connection signal="toggled" from="content/toggle" to="." method="toggle"]
 [connection signal="pressed" from="content/rewind" to="." method="rewind"]

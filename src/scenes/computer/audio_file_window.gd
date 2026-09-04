@@ -4,14 +4,22 @@ class_name AudioFileWindow extends Control
 @onready var app_name_label: Label = $top_bar/app_name
 
 @onready var progress: ProgressBar = $content/progress
+@onready var audiostream: AudioStreamPlayer = $content/AudioStreamPlayer
 
 @export var app_name: String = ""
+@export var audio: AudioStream = null
+
 @export var draggable: bool = true
 
 var dragging: bool = false
+var seek_step: float = 2.5
 
 func _ready() -> void:
 	open()
+	
+	if audio:
+		audiostream.stream = audio
+	progress.max_value = audio.get_length() if audio else 0.0
 
 func open() -> void:
 	EventBus.opened_app.emit(app_name)
@@ -49,11 +57,18 @@ func clamp_to_bounds() -> void:
 	global_position.y = clamp(global_position.y, bounds.position.y, bounds.position.y + bounds.size.y - size.y)
 
 func toggle(on: bool) -> void: 
-	pass
+	if on:
+		audiostream.play(progress.value)
+	else:
+		progress.value = audiostream.get_playback_position()
+		audiostream.stop()
 
 func rewind() -> void:
-	pass # Replace with function body.
-
+	var new_pos: float = max(audiostream.get_playback_position() - seek_step, 0.0)
+	audiostream.seek(new_pos)
+	progress.value = new_pos
 
 func fast_forward() -> void:
-	pass # Replace with function body.
+	var new_pos: float = min(audiostream.get_playback_position() + seek_step, audio.get_length())
+	audiostream.seek(new_pos)
+	progress.value = new_pos
