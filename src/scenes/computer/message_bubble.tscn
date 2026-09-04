@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b2ra3je6qaakp"]
+
+[ext_resource type="Script" uid="uid://cl4bg1ggsne4n" path="res://src/scenes/computer/message_bubble.gd" id="1_0uj1p"]
+
+[node name="message_bubble" type="Control" unique_id=1001464364]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0uj1p")
+
+[node name="label" type="Label" parent="." unique_id=657580605]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 15.0

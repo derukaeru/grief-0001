@@ -17,6 +17,8 @@ var UID: Dictionary = {
 	"crosshair": "uid://co7uwr5i2ivg3",
 	"crosshair_interact": "uid://b6i64ehbuw5sy",
 	
+	"message_bubble": "uid://b2ra3je6qaakp",
+	
 	# maps
 	"field_exe": "uid://ormu8fsixur7",
 	"forest": "uid://b18x6s70piuq6",

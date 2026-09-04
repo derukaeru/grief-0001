@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b4wpjmv6lvmbo"]
+
+[ext_resource type="Script" uid="uid://cfw7dkh7ot50l" path="res://src/scenes/objects/computer.gd" id="1_v3fyf"]
+[ext_resource type="ArrayMesh" uid="uid://w1w4r01jhql" path="res://src/assets/models/crt_tv.obj" id="2_8lekp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7iji4"]
+size = Vector3(0.8376465, 0.8569336, 0.8984375)
+
+[node name="computer" type="Area3D" unique_id=1702524455]
+script = ExtResource("1_v3fyf")
+metadata/_custom_type_script = "uid://c0yu71qncicxx"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=90609991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004272461, 0.4260254, 0.05078125)
+shape = SubResource("BoxShape3D_7iji4")
+
+[node name="model_container" type="Node3D" parent="." unique_id=1535216649]
+
+[node name="CrtTv" type="MeshInstance3D" parent="model_container" unique_id=1043689948]
+transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 0, 0, 0)
+mesh = ExtResource("2_8lekp")
+
+[connection signal="interacted" from="." to="." method="interactedf"]
