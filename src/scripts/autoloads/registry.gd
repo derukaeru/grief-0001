@@ -18,14 +18,13 @@ var UID: Dictionary = {
 	"crosshair_interact": "uid://b6i64ehbuw5sy",
 	
 	"message_bubble": "uid://b2ra3je6qaakp",
+	"audio_file_window": "uid://bmxqn1bc8uwll",
+	"image_file_window": "uid://1ayjbqtn1xjo",
 	
 	# maps
 	"field_exe": "uid://ormu8fsixur7",
 	"forest": "uid://b18x6s70piuq6",
 	"house": "uid://bvwtdbfgmh8ur",
-	
-	"audio_file_window": "uid://bmxqn1bc8uwll",
-	"image_file_window": ""
 }
 
 var APPS: Dictionary = {

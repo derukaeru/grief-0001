@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://1ayjbqtn1xjo"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_73chq"]
+[ext_resource type="Script" uid="uid://dvgkjgp27id72" path="res://src/scenes/computer/windows/templates/image_file_window.gd" id="2_lm8i2"]
+
+[node name="image_file_window" unique_id=1725337698 instance=ExtResource("1_73chq")]
+offset_right = -124.0
+offset_bottom = -61.0
+script = ExtResource("2_lm8i2")
+texture = null
+
+[node name="content" parent="." index="3" unique_id=976143210]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="image" type="TextureRect" parent="content" index="0" unique_id=1487187002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

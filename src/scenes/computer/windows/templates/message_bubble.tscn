@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2ra3je6qaakp"]
 
-[ext_resource type="Script" uid="uid://cl4bg1ggsne4n" path="res://src/scenes/computer/message_bubble.gd" id="1_0uj1p"]
+[ext_resource type="Script" uid="uid://cl4bg1ggsne4n" path="res://src/scenes/computer/windows/templates/message_bubble.gd" id="1_0uj1p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uj1p"]
 bg_color = Color(0.46832395, 0.5763098, 0.73189634, 1)

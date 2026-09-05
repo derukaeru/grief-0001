@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bbtll75h5mhru"]
 
 [ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_mut8p"]
+[ext_resource type="Texture2D" uid="uid://2f2agt6rysfi" path="res://src/assets/sprites/icons/trash.png" id="2_gg4aj"]
 
 [node name="recycle_bin" unique_id=886383904 instance=ExtResource("1_mut8p")]
+texture_normal = ExtResource("2_gg4aj")
 app_name = "recycle_bin"
 
 [node name="app_name" parent="." index="0" unique_id=610043953]

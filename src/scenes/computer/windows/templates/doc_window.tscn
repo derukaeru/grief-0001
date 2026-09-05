@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bdgnehojvir7p"]
+
+[ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_suolk"]
+[ext_resource type="Script" uid="uid://cwn5g843lwijd" path="res://src/scenes/computer/windows/templates/doc_window.gd" id="2_sxjct"]
+
+[node name="doc_window" unique_id=1725337698 instance=ExtResource("1_suolk")]
+script = ExtResource("2_sxjct")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=547996561]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 419.0
+offset_bottom = 259.0
+
+[node name="Label" type="Label" parent="content/ScrollContainer" index="0" unique_id=115216938]
+layout_mode = 2

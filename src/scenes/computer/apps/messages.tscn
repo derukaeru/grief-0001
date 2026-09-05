@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://demhk8dg5edmg"]
 
 [ext_resource type="PackedScene" uid="uid://e3k77ilpyddl" path="res://src/scenes/computer/app.tscn" id="1_qjdxl"]
-[ext_resource type="Texture2D" uid="uid://dm5mg5vp76hyi" path="res://src/assets/sprites/icons/envelope.png" id="2_evq0g"]
+[ext_resource type="Texture2D" uid="uid://bbwn7us3d50cv" path="res://src/assets/sprites/icons/message.png" id="2_evq0g"]
 
 [node name="messages" unique_id=886383904 instance=ExtResource("1_qjdxl")]
 texture_normal = ExtResource("2_evq0g")

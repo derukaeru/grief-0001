@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgade15bhigwi"]
 
-[ext_resource type="PackedScene" uid="uid://dudseog2lkwqk" path="res://src/scenes/computer/zip_folder_window.tscn" id="1_erdep"]
+[ext_resource type="PackedScene" uid="uid://dudseog2lkwqk" path="res://src/scenes/computer/windows/templates/zip_folder_window.tscn" id="1_erdep"]
 
 [node name="untitled_zip" unique_id=1725337698 instance=ExtResource("1_erdep")]
 app_name = "untitiled.zip"

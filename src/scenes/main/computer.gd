@@ -55,18 +55,32 @@ func open_zip(zip_name: String) -> void:
 func open_image(image_name: String) -> void:
 	if not Registry.IMAGES.has(image_name):
 		return push_error("Registry does not have record of this image %s" % image_name)
+	
+	if windows.has(image_name):
+		windows[image_name].open()
+	else:
+		var image_window: ImageFileWindow = load(Registry.UID.image_file_window).instantiate()
+		image_window.app_name = image_name
+		image_window.app_name_label.text = image_name
+		image_window.image.texture = load(Registry.IMAGES[image_name])
+		
+		windows_container.add_child(image_window)
+		windows.set(image_name, image_window)
 
 func open_audio(audio_name: String) -> void:
 	if not Registry.AUDIOS.has(audio_name):
 		return push_error("Registry does not have record of this audio %s" % audio_name)
 	
-	var audio_window: AudioFileWindow = load(Registry.UID.audio_file_window).instantiate()
-	audio_window.app_name = audio_name
-	audio_window.app_name_label.text = audio_name
-	audio_window.audio = load(Registry.AUDIOS[audio_name])
-	
-	windows_container.add_child(audio_window)
-	windows.set(audio_window.app_name, audio_window)
+	if windows.has(audio_name):
+		windows[audio_name].open()
+	else:
+		var audio_window: AudioFileWindow = load(Registry.UID.audio_file_window).instantiate()
+		audio_window.app_name = audio_name
+		audio_window.app_name_label.text = audio_name
+		audio_window.audio = load(Registry.AUDIOS[audio_name])
+		
+		windows_container.add_child(audio_window)
+		windows.set(audio_window.app_name, audio_window)
 
 func unlock(_text: String = "") -> void:
 	if password == password_label.text:

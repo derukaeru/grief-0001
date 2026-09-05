@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dudseog2lkwqk"]
 
 [ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_hytfr"]
-[ext_resource type="Script" uid="uid://ch5txwp28tb16" path="res://src/scenes/computer/zip_folder_window.gd" id="2_wexrp"]
+[ext_resource type="Script" uid="uid://ch5txwp28tb16" path="res://src/scenes/computer/windows/templates/zip_folder_window.gd" id="2_wexrp"]
 [ext_resource type="Texture2D" uid="uid://eat5r66gq04p" path="res://src/assets/sprites/icons/lock.png" id="3_664al"]
 
 [sub_resource type="Animation" id="Animation_xcf13"]

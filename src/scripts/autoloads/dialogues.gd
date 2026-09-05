@@ -16,3 +16,7 @@ var MESSAGES: Dictionary[String, Array] = {
 }
 
 var NOTES: String = ""
+
+var DOCS: Dictionary[String, String] = {
+	
+}
