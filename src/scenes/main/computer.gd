@@ -6,6 +6,7 @@ class_name Computer extends Control
 @onready var lockscreen_animation: AnimationPlayer = $lock_screen/AnimationPlayer
 
 @onready var time_label: Label = $action_bar/time
+@onready var computer_open_sfx: AudioStreamPlayer = $computer_open
 
 var password: String = "griefed"
 var windows: Dictionary = {}
@@ -87,6 +88,8 @@ func unlock(_text: String = "") -> void:
 		lockscreen_animation.play("open")
 		password_label.text = ""
 		GameManager.computer_open = true
+		computer_open_sfx.play()
+		
 		await lockscreen_animation.animation_finished
 		lockscreen.hide()
 	else:

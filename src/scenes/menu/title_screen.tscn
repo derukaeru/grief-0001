@@ -5,6 +5,8 @@
 [ext_resource type="Shader" uid="uid://bqqjf8mltsi3q" path="res://src/assets/shaders/scroll.gdshader" id="2_n2vqt"]
 [ext_resource type="Texture2D" uid="uid://boa5g6vnh5q83" path="res://src/assets/sprites/ui/loop_background.png" id="2_wf6w8"]
 [ext_resource type="Texture2D" uid="uid://dd4ilhivajitl" path="res://src/assets/sprites/icons/eye.png" id="4_n2vqt"]
+[ext_resource type="AudioStream" uid="uid://c8qrp2e67625k" path="res://src/scripts/data/menu_music.tres" id="6_7e5sh"]
+[ext_resource type="AudioStream" uid="uid://cdpnc70yisrde" path="res://src/assets/sfx/click.wav" id="7_11h5q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7e5sh"]
 shader = ExtResource("2_n2vqt")
@@ -103,15 +105,24 @@ flat = true
 visible = false
 layout_mode = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=79564600]
+stream = ExtResource("6_7e5sh")
+volume_db = -4.65
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="." unique_id=956618517]
+stream = ExtResource("7_11h5q")
+bus = &"SFX"
+
 [connection signal="mouse_entered" from="main_menu/start" to="." method="mouse_entered" flags=18]
 [connection signal="mouse_exited" from="main_menu/start" to="." method="mouse_exited" flags=18]
-[connection signal="pressed" from="main_menu/start" to="." method="mouse_pressed" flags=18]
 [connection signal="pressed" from="main_menu/start" to="." method="start_pressed"]
+[connection signal="pressed" from="main_menu/start" to="." method="mouse_pressed" flags=18]
 [connection signal="mouse_entered" from="main_menu/settings" to="." method="mouse_entered" flags=18]
 [connection signal="mouse_exited" from="main_menu/settings" to="." method="mouse_exited" flags=18]
-[connection signal="pressed" from="main_menu/settings" to="." method="mouse_pressed" flags=18]
 [connection signal="pressed" from="main_menu/settings" to="." method="settings_pressed"]
+[connection signal="pressed" from="main_menu/settings" to="." method="mouse_pressed" flags=18]
 [connection signal="mouse_entered" from="main_menu/exit" to="." method="mouse_entered" flags=18]
 [connection signal="mouse_exited" from="main_menu/exit" to="." method="mouse_exited" flags=18]
-[connection signal="pressed" from="main_menu/exit" to="." method="mouse_pressed" flags=18]
 [connection signal="pressed" from="main_menu/exit" to="." method="exit_pressed"]
+[connection signal="pressed" from="main_menu/exit" to="." method="mouse_pressed" flags=18]

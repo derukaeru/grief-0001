@@ -6,12 +6,10 @@ extends Control
 
 @onready var message_bubbles_container: VBoxContainer = $message/ScrollContainer/message_bubble_container
 
-var messages: Array = [
-	"Lebon James",
-]
 
 func _ready() -> void:
-	for entry in messages:
+	var messengers: Array = Dialogues.MESSAGES.keys()
+	for entry in messengers:
 		if not Dialogues.MESSAGES.has(entry): return
 		var dialogue: Array = Dialogues.MESSAGES[entry]
 		

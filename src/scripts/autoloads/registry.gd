@@ -36,6 +36,7 @@ var APPS: Dictionary = {
 	"messages": "uid://c0p0lbbq1gunc",
 	"notes": "uid://muaf5rlusq0f",
 	"imail": "uid://bssndj6if32cu",
+	"recycle_bin": "uid://lqqdtrn3j0qk",
 }
 
 var ZIPS: Dictionary = {

@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://demhk8dg5edmg" path="res://src/scenes/computer/apps/messages.tscn" id="9_a0p0o"]
 [ext_resource type="PackedScene" uid="uid://bbtll75h5mhru" path="res://src/scenes/computer/apps/recycle_bin.tscn" id="10_buu0b"]
 [ext_resource type="PackedScene" uid="uid://b1dk628v453gm" path="res://src/scenes/computer/apps/imail.tscn" id="11_afb7v"]
+[ext_resource type="AudioStream" uid="uid://w0e0jbny5km3" path="res://src/scripts/data/computer_ambience.tres" id="14_afb7v"]
+[ext_resource type="AudioStream" uid="uid://d2tohd72l0aig" path="res://src/assets/sfx/accept.mp3" id="15_58tlm"]
 
 [sub_resource type="Animation" id="Animation_1j8nl"]
 length = 0.001
@@ -80,7 +82,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_474aq"]
 resource_name = "open"
-length = 0.4
+length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -88,7 +90,7 @@ tracks/0/path = NodePath("../../lock_screen:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, -484)]
@@ -271,6 +273,7 @@ offset_right = 75.0
 offset_bottom = 400.0
 
 [node name="imail" parent="apps" unique_id=734688266 instance=ExtResource("11_afb7v")]
+visible = false
 layout_mode = 0
 offset_left = 332.0
 offset_top = 358.0
@@ -287,7 +290,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="lock_screen" type="Control" parent="." unique_id=1854427984]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -366,6 +368,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="background_music" type="AudioStreamPlayer" parent="." unique_id=1734637532]
+stream = ExtResource("14_afb7v")
+volume_db = -15.105
+autoplay = true
+bus = &"music"
+
+[node name="computer_open" type="AudioStreamPlayer" parent="." unique_id=482374760]
+stream = ExtResource("15_58tlm")
+bus = &"SFX"
 
 [connection signal="text_submitted" from="lock_screen/password" to="." method="unlock"]
 [connection signal="pressed" from="lock_screen/enter" to="." method="unlock"]

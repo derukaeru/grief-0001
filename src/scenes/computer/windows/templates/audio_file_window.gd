@@ -6,6 +6,8 @@ class_name AudioFileWindow extends Control
 @onready var progress: ProgressBar = $content/progress
 @onready var audiostream: AudioStreamPlayer = $content/AudioStreamPlayer
 
+@onready var click_sfx: AudioStreamPlayer = $click
+
 @export var app_name: String = ""
 @export var audio: AudioStream = null
 
@@ -24,16 +26,22 @@ func _ready() -> void:
 func open() -> void:
 	EventBus.opened_app.emit(app_name)
 	show()
+	click_sfx.play()
 	animation.play("open")
 
 func close() -> void:
 	animation.play_backwards("open")
+	click_sfx.play()
 	await animation.animation_finished
 	queue_free()
 	EventBus.closed_app.emit(app_name)
 
 func minimize() -> void:
+	animation.play_backwards("open")
+	click_sfx.play()
+	await animation.animation_finished
 	hide()
+	EventBus.closed_app.emit(app_name)
 
 func top_bar_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

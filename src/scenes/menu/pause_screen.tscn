@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cic00kqmdkdjd" path="res://src/scenes/menu/pause_screen.gd" id="1_s4fn5"]
 [ext_resource type="PackedScene" uid="uid://c5wqen1jgstwm" path="res://src/scenes/menu/settings_screen.tscn" id="2_08yct"]
+[ext_resource type="AudioStream" uid="uid://cdpnc70yisrde" path="res://src/assets/sfx/click.wav" id="3_w6qdq"]
 
 [node name="pause_screen" type="Control" unique_id=2145161773]
 layout_mode = 3
@@ -75,6 +76,10 @@ flat = true
 [node name="settings_screen" parent="." unique_id=1557528192 instance=ExtResource("2_08yct")]
 visible = false
 layout_mode = 1
+
+[node name="click_sfx" type="AudioStreamPlayer" parent="." unique_id=668876154]
+stream = ExtResource("3_w6qdq")
+bus = &"SFX"
 
 [connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]

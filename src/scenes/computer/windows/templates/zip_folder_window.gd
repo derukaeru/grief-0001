@@ -6,6 +6,8 @@ class_name ZipFolderWindow extends Control
 @onready var lockscreen_animation: AnimationPlayer = $content/lock_cover/AnimationPlayer
 @onready var app_name_label: Label = $top_bar/app_name
 
+@onready var click_sfx: AudioStreamPlayer = $click
+
 @export var app_name: String = ""
 @export var draggable: bool = true
 
@@ -29,17 +31,21 @@ func open() -> void:
 	EventBus.opened_app.emit(app_name)
 	show()
 	animation.play("open")
+	click_sfx.play()
 
 func close() -> void:
 	animation.play_backwards("open")
+	click_sfx.play()
 	await animation.animation_finished
 	queue_free()
 	EventBus.closed_app.emit(app_name)
 
 func minimize() -> void:
 	animation.play_backwards("open")
+	click_sfx.play()
 	await animation.animation_finished
 	hide()
+	EventBus.closed_app.emit(app_name)
 
 func top_bar_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

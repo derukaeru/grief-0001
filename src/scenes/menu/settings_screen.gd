@@ -4,6 +4,8 @@ class_name SettingsScreen extends Control
 @onready var music_slider: HSlider = $music_slider
 @onready var sfx_slider: HSlider = $sfx_slider
 
+@onready var click_sfx: AudioStreamPlayer = $click_sfx
+
 func open() -> void:
 	show()
 	music_slider.value = SettingsManager.music_strength
@@ -24,6 +26,8 @@ func mouse_pressed(source: Button) -> void:
 	var tw: Tween = get_tree().create_tween()
 	tw.tween_property(source, "scale", Vector2(0.9, 0.9), 0.15)
 	tw.tween_property(source, "scale", Vector2(1.0, 1.0), 0.15)
+	
+	click_sfx.play()
 
 func music_changed(value_changed: bool) -> void:
 	if not value_changed: return

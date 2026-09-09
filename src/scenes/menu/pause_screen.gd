@@ -1,5 +1,6 @@
 class_name PauseScreen extends Control
 @onready var settings_screen: SettingsScreen = $settings_screen
+@onready var click_sfx: AudioStreamPlayer = $click_sfx
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
@@ -29,6 +30,8 @@ func mouse_pressed(source: Button) -> void:
 	var tw: Tween = get_tree().create_tween()
 	tw.tween_property(source, "scale", Vector2(0.9, 0.9), 0.15)
 	tw.tween_property(source, "scale", Vector2(1.0, 1.0), 0.15)
+	
+	click_sfx.play()
 
 func open() -> void:
 	show()

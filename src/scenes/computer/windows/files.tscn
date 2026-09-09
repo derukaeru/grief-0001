@@ -137,6 +137,7 @@ file_name = "logs_md"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="new_folder" type="ColorRect" parent="content" index="1" unique_id=327654599]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -201,7 +202,6 @@ offset_bottom = 22.0
 text = "date modified"
 
 [node name="lockscreen" type="ColorRect" parent="content" index="3" unique_id=1003493815]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -255,7 +255,7 @@ offset_right = 212.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 12
-text = "please type your password to grant access."
+text = "password required to grant access."
 horizontal_alignment = 1
 
 [node name="icon" type="TextureRect" parent="content/lockscreen" index="4" unique_id=1280156841]

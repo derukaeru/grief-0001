@@ -1,6 +1,7 @@
 class_name AppWindow extends Control
 
 @onready var animation: AnimationPlayer = $AnimationPlayer
+@onready var click_sfx: AudioStreamPlayer = $click
 
 @export var app_name: String = ""
 @export var draggable: bool = true
@@ -17,16 +18,24 @@ func open() -> void:
 	show()
 	animation.play("open")
 	opened = true
+	click_sfx.play()
 
 func close() -> void:
 	animation.play_backwards("open")
+	click_sfx.play()
 	await animation.animation_finished
 	queue_free()
 	EventBus.closed_app.emit(app_name)
 	opened = false
 
 func minimize() -> void:
+	animation.play_backwards("open")
+	click_sfx.play()
+	await animation.animation_finished
 	hide()
+	
+	EventBus.closed_app.emit(app_name)
+	opened = false
 
 func top_bar_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

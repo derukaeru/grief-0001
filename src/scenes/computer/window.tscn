@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cn00ht5rclimh"]
 
 [ext_resource type="Script" uid="uid://cbsoxbiosx3l8" path="res://src/scenes/computer/window.gd" id="1_3xt0a"]
+[ext_resource type="AudioStream" uid="uid://cdpnc70yisrde" path="res://src/assets/sfx/click.wav" id="2_pot43"]
 
 [sub_resource type="Animation" id="Animation_pot43"]
 length = 0.001
@@ -138,6 +139,10 @@ anchors_preset = 0
 offset_top = 40.0
 offset_right = 424.0
 offset_bottom = 304.0
+
+[node name="click" type="AudioStreamPlayer" parent="." unique_id=1121418305]
+stream = ExtResource("2_pot43")
+bus = &"SFX"
 
 [connection signal="gui_input" from="top_bar" to="." method="top_bar_gui_input"]
 [connection signal="pressed" from="top_bar/close" to="." method="close"]
