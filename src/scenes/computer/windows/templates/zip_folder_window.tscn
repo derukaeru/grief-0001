@@ -143,5 +143,6 @@ grow_vertical = 2
 texture = ExtResource("3_664al")
 expand_mode = 1
 
+[connection signal="text_changed" from="content/lock_cover/password" to="." method="_on_text_changed"]
 [connection signal="text_submitted" from="content/lock_cover/password" to="." method="submit"]
 [connection signal="pressed" from="content/lock_cover/submit" to="." method="submit"]

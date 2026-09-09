@@ -44,3 +44,12 @@ shape = SubResource("BoxShape3D_y04lm")
 
 [node name="computer" parent="." unique_id=1702524455 instance=ExtResource("1_uw41p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46299052, -9.39213)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=59703039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6895375, -14.6761055)
+pixel_size = 0.004
+billboard = 1
+no_depth_test = true
+fixed_size = true
+texture_filter = 0
+text = "work in progress"

@@ -13,6 +13,9 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 
+[sub_resource type="LabelSettings" id="LabelSettings_mqs0x"]
+font_size = 20
+
 [node name="message_bubble" type="PanelContainer" unique_id=1652884560]
 offset_right = 45.0
 offset_bottom = 35.0
@@ -21,4 +24,5 @@ script = ExtResource("1_0uj1p")
 
 [node name="label" type="Label" parent="." unique_id=1882884055]
 layout_mode = 2
+label_settings = SubResource("LabelSettings_mqs0x")
 autowrap_mode = 3

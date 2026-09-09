@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_ofgxo"]
 [ext_resource type="Script" uid="uid://c1dvl8gi33ovf" path="res://src/scenes/computer/windows/recycle_bin.gd" id="2_k2n74"]
+[ext_resource type="Script" uid="uid://bk8wnmpyuw6x2" path="res://src/scripts/components/file.gd" id="3_jtgh5"]
 
 [node name="recycle_bin" unique_id=1725337698 instance=ExtResource("1_ofgxo")]
 app_name = "recycle_bin"
@@ -12,12 +13,55 @@ text = "recycle bin"
 [node name="content" parent="." index="3" unique_id=976143210]
 script = ExtResource("2_k2n74")
 
-[node name="files" type="VBoxContainer" parent="content" index="0" unique_id=447172133]
+[node name="details" type="ColorRect" parent="content" index="0" unique_id=65756509]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 424.0
+offset_bottom = 31.0
+color = Color(0.43944743, 0.40519482, 0.33321214, 1)
 
-[node name="empty_label" type="Label" parent="content" index="1" unique_id=1633366673]
+[node name="name" type="Label" parent="content/details" index="0" unique_id=1439197030]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 48.0
+offset_bottom = 22.0
+text = "name"
+
+[node name="size" type="Label" parent="content/details" index="1" unique_id=167161387]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 7.0
+offset_right = 218.0
+offset_bottom = 22.0
+text = "size"
+
+[node name="date" type="Label" parent="content/details" index="2" unique_id=1740607113]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 7.0
+offset_right = 396.0
+offset_bottom = 22.0
+text = "date deleted"
+
+[node name="files" type="VBoxContainer" parent="content" index="1" unique_id=447172133]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 35.0
+offset_right = 420.0
+offset_bottom = 260.0
+
+[node name="new_doc_1" type="Button" parent="content/files" index="0" unique_id=145829660]
+layout_mode = 2
+text = "new_doc_1.txt     2kb        12-21-2008"
+flat = true
+alignment = 0
+script = ExtResource("3_jtgh5")
+file_name = "new_doc_1"
+from = "recycle_bin"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="empty_label" type="Label" parent="content" index="2" unique_id=1633366673]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

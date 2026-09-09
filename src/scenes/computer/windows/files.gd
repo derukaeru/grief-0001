@@ -10,8 +10,10 @@ extends Control
 }
 
 var password: String = "12202008"
+var regex = RegEx.new()
 
 func _ready() -> void:
+	regex.compile("^[0-9]*$")
 	EventBus.open_folder.connect(open_folder)
 	EventBus.open_file.connect(open_file)
 	EventBus.close_folder.connect(close_folder)
@@ -20,9 +22,10 @@ func _ready() -> void:
 	if GameManager.file_manager_open:
 		lockscreen.hide()
 
-func open_file(file_name: String) -> void:
+func open_file(file_name: String, from: String) -> void:
+	if from != "files": return
 	if Registry.APPS.has(file_name):
-		EventBus.open_app.emit(file_name)
+		EventBus.open_app.emit(file_name, "files")
 	elif Registry.UID.has(file_name):
 		GameManager.current_map = file_name
 		SceneChanger.change_scene_immediate("main")
@@ -49,3 +52,15 @@ func unlock(new_pass: String = password_label.text) -> void:
 	else:
 		lockscreen_animation.play("wrong")
 		password_label.text = ""
+
+func _on_text_changed(new_text: String) -> void:
+	if not regex.isValid(new_text):
+		var current_caret = password_label.caret_column
+		
+		var filtered_text = ""
+		for i in range(new_text.length()):
+			if regex.isValid(new_text[i]):
+				filtered_text += new_text[i]
+		
+		password_label.text = filtered_text
+		password_label.caret_column = current_caret - 1

@@ -19,6 +19,9 @@ var MESSAGES: Dictionary[String, Array] = {
 		{"from": "them", "lines": ["good"]},
 		{"from": "you",  "lines": ["what was it about?", "i cant even open it"]},
 		{"from": "you",  "lines": ["...", "hello?"]},
+		{"from": "them", "lines": ["HIM"]},
+		{"from": "them", "lines": ["dzqaktll_612"]},
+		{"from": "you",  "lines": ["what?"]},
 	]
 }
 
