@@ -273,7 +273,6 @@ offset_right = 75.0
 offset_bottom = 400.0
 
 [node name="imail" parent="apps" unique_id=734688266 instance=ExtResource("11_afb7v")]
-visible = false
 layout_mode = 0
 offset_left = 332.0
 offset_top = 358.0
@@ -290,6 +289,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="lock_screen" type="Control" parent="." unique_id=1854427984]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

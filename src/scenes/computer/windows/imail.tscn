@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bssndj6if32cu"]
 
 [ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_1uwr3"]
+[ext_resource type="Script" uid="uid://c7lx4a6qsmfth" path="res://src/scenes/computer/windows/imail.gd" id="2_itx6c"]
 
 [node name="imail" unique_id=1725337698 instance=ExtResource("1_1uwr3")]
 app_name = "imail"
@@ -10,3 +11,18 @@ color = Color(0.78024316, 0.5830439, 0.5501801, 1)
 
 [node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
 text = "imail"
+
+[node name="content" parent="." index="3" unique_id=976143210]
+script = ExtResource("2_itx6c")
+
+[node name="mails" type="VBoxContainer" parent="content" index="0" unique_id=873213578]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 420.0
+offset_bottom = 261.0
+
+[node name="mail" type="Control" parent="content" index="1" unique_id=457954748]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -17,6 +17,7 @@ offset_left = 70.0
 offset_top = 75.0
 offset_right = -82.0
 offset_bottom = -38.0
+app_name = "messages"
 
 [node name="background" parent="." index="1" unique_id=741744896]
 color = Color(0.33179998, 0.40529996, 0.42, 1)
