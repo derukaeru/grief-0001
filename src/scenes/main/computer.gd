@@ -21,11 +21,10 @@ func _ready() -> void:
 	EventBus.open_image.connect(open_image)
 	
 	GameManager.ui.pause_screen.close()
-	GameManager.ui.show()
+	GameManager.ui.hide()
 	
 	Util.mouse_visible()
 	GameManager.current_view = "computer"
-	GameManager.ui.crosshair.hide()
 	
 	password_label.max_length = password.length()
 	if GameManager.computer_open:

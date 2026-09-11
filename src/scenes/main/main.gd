@@ -11,7 +11,6 @@ func _ready() -> void:
 	
 	Util.mouse_captured()
 	GameManager.current_view = "3d"
-	GameManager.ui.crosshair.show()
 	
 	if Registry.UID.has(GameManager.current_map):
 		var map_name: String = GameManager.current_map

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bvyka1j2f136f" path="res://src/scenes/menu/ui.gd" id="1_komq3"]
 [ext_resource type="PackedScene" uid="uid://7jemke30bxqq" path="res://src/scenes/menu/pause_screen.tscn" id="1_wpnud"]
-[ext_resource type="Texture2D" uid="uid://dhjb0aa1r2ct" path="res://src/assets/sprites/ui/display_border.png" id="2_atyx7"]
 [ext_resource type="Texture2D" uid="uid://co7uwr5i2ivg3" path="res://src/assets/sprites/ui/crosshair.png" id="2_e0xvt"]
+[ext_resource type="Shader" uid="uid://c2bi20v87y57j" path="res://src/assets/shaders/buckshot.gdshader" id="4_e0xvt"]
 
 [sub_resource type="Animation" id="Animation_komq3"]
 resource_name = "toggle"
@@ -12,6 +12,23 @@ resource_name = "toggle"
 _data = {
 &"toggle": SubResource("Animation_komq3")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1pr1v"]
+shader = ExtResource("4_e0xvt")
+shader_parameter/exposure = 1.0
+shader_parameter/contrast = 1.05
+shader_parameter/saturation = 0.9
+shader_parameter/enable_pixelate = true
+shader_parameter/pixel_factor = 1.00000002375
+shader_parameter/enable_posterize = false
+shader_parameter/color_levels = 16.0
+shader_parameter/dither_strength = 0.35
+shader_parameter/chrom_aberration = 0.0350000016625
+shader_parameter/vignette_strength = 1.0
+shader_parameter/grain_strength = 0.2
+shader_parameter/tint_color = Vector3(0.95, 1.03, 0.9)
+shader_parameter/tint_strength = 0.15
+shader_parameter/viewport_size_override = Vector2(0, 0)
 
 [node name="ui" type="CanvasLayer" unique_id=1228521]
 layer = 5
@@ -44,48 +61,15 @@ color = Color(0, 0, 0, 1)
 [node name="map_animation" type="AnimationPlayer" parent="map_transition" unique_id=673442684]
 libraries/ = SubResource("AnimationLibrary_atyx7")
 
-[node name="display" type="Control" parent="." unique_id=1762093881]
+[node name="pause_screen" parent="." unique_id=2145161773 instance=ExtResource("1_wpnud")]
 visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
+z_index = 10
 
-[node name="border" type="TextureRect" parent="display" unique_id=2127339482]
-layout_mode = 1
+[node name="shader" type="ColorRect" parent="." unique_id=267409334]
+material = SubResource("ShaderMaterial_1pr1v")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_atyx7")
-
-[node name="move_buttons" type="Control" parent="display" unique_id=2066652350]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="move_left" type="Button" parent="display/move_buttons" unique_id=1403361282]
-layout_mode = 0
-offset_left = 200.0
-offset_top = 416.0
-offset_right = 264.0
-offset_bottom = 456.0
-text = "<"
-
-[node name="move_right" type="Button" parent="display/move_buttons" unique_id=1561214342]
-layout_mode = 0
-offset_left = 312.0
-offset_top = 416.0
-offset_right = 376.0
-offset_bottom = 456.0
-text = ">"
-
-[node name="pause_screen" parent="." unique_id=2145161773 instance=ExtResource("1_wpnud")]
-visible = false
-z_index = 10

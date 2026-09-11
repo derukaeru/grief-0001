@@ -5,9 +5,6 @@ signal map_transition_done
 @onready var map_transition: ColorRect = $map_transition
 @onready var map_animation: AnimationPlayer = $map_transition/map_animation
 
-@onready var display: Control = $display
-@onready var move_buttons: Control = $display/move_buttons
-
 @onready var crosshair: TextureRect = $crosshair
 
 var crosshair_sprite: CompressedTexture2D = load(Registry.UID.crosshair)
