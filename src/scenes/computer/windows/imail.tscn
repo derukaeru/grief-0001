@@ -37,6 +37,7 @@ horizontal_scroll_mode = 0
 
 [node name="mails" type="VBoxContainer" parent="content/ScrollContainer" index="0" unique_id=873213578]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="mail" type="Control" parent="content" index="1" unique_id=457954748]
 layout_mode = 1
@@ -46,22 +47,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="background" type="ColorRect" parent="content/mail" index="0" unique_id=1830429271]
+[node name="background" type="ColorRect" parent="content/mail" index="0" unique_id=946110217]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4319731, 0.23577434, 0.16569638, 1)
+
+[node name="top_background" type="ColorRect" parent="content/mail" index="1" unique_id=1830429271]
 layout_mode = 0
 offset_right = 424.0
 offset_bottom = 62.0
 color = Color(0, 0, 0, 0.3882353)
 
-[node name="title" type="Label" parent="content/mail" index="1" unique_id=1055824267]
+[node name="title" type="Label" parent="content/mail" index="2" unique_id=1055824267]
 layout_mode = 1
 offset_left = 3.0
 offset_top = 3.0
 offset_right = 369.0
 offset_bottom = 25.0
-text = "title here"
+text = "title"
 label_settings = SubResource("LabelSettings_itx6c")
 
-[node name="from" type="Label" parent="content/mail" index="2" unique_id=821188837]
+[node name="from" type="Label" parent="content/mail" index="3" unique_id=821188837]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -76,7 +86,7 @@ grow_vertical = 2
 text = "from: someone"
 label_settings = SubResource("LabelSettings_3au1k")
 
-[node name="to" type="Label" parent="content/mail" index="3" unique_id=1973710288]
+[node name="to" type="Label" parent="content/mail" index="4" unique_id=1973710288]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -91,7 +101,7 @@ grow_vertical = 2
 text = "to: you"
 label_settings = SubResource("LabelSettings_k05n2")
 
-[node name="content" type="Label" parent="content/mail" index="4" unique_id=1040797961]
+[node name="content" type="Label" parent="content/mail" index="5" unique_id=1040797961]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -103,23 +113,16 @@ offset_right = -4.0
 offset_bottom = 129.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "contnet herea
-ds
-asd
-a
-sd
-a
-sd
-as
-da"
 label_settings = SubResource("LabelSettings_035rs")
 
-[node name="return" type="TextureButton" parent="content/mail" index="5" unique_id=1992875300]
+[node name="return" type="TextureButton" parent="content/mail" index="6" unique_id=1992875300]
 layout_mode = 0
-offset_left = 389.0
-offset_top = 3.0
-offset_right = 421.0
-offset_bottom = 35.0
+offset_left = 384.0
+offset_top = 2.0
+offset_right = 416.0
+offset_bottom = 34.0
 texture_normal = ExtResource("3_035rs")
 ignore_texture_size = true
 stretch_mode = 0
+
+[connection signal="pressed" from="content/mail/return" to="content" method="cancel"]

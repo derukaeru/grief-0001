@@ -20,7 +20,7 @@ func set_text(text: String = "") -> void:
 	var style: StyleBoxFlat = get_theme_stylebox("panel").duplicate()
 	
 	if not them:
-		style.bg_color = Color(0.657, 0.714, 0.616, 1.0)
-		style.border_color = Color(0.657, 0.714, 0.616, 1.0)
+		style.bg_color = Color("6b8f5dff")
+		style.border_color = Color("6b8f5dff")
 		
 		add_theme_stylebox_override("panel", style)

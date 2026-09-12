@@ -27,7 +27,7 @@ var MESSAGES: Dictionary[String, Array] = {
 }
 
 var MAILS: Dictionary[String, Dictionary] = {
-	"rejection_mail": {
+	"rejection mail": {
 		"title": "LMAO",
 		"from": "idk",
 		"to": "you",

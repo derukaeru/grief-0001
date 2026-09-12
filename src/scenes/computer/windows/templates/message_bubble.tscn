@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://cl4bg1ggsne4n" path="res://src/scenes/computer/windows/templates/message_bubble.gd" id="1_0uj1p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uj1p"]
-bg_color = Color(0.46832395, 0.5763098, 0.73189634, 1)
+bg_color = Color(0.2584723, 0.34890553, 0.47802913, 1)
 border_width_left = 12
 border_width_top = 6
 border_width_right = 12
 border_width_bottom = 6
-border_color = Color(0.46666667, 0.5764706, 0.73333335, 1)
+border_color = Color(0.25882354, 0.34901962, 0.47843137, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
