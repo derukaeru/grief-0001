@@ -211,6 +211,17 @@ texture_normal = ExtResource("2_v3isc")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="tabs_scroll" type="ScrollContainer" parent="action_bar" unique_id=912635868]
+layout_mode = 0
+offset_left = 58.0
+offset_right = 514.0
+offset_bottom = 40.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
+
+[node name="tabs" type="HBoxContainer" parent="action_bar/tabs_scroll" unique_id=1250399823]
+layout_mode = 2
+
 [node name="apps" type="Control" parent="." unique_id=110403345]
 anchors_preset = 0
 offset_right = 576.0

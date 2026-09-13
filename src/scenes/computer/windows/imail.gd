@@ -1,4 +1,3 @@
-@tool
 extends Control
 
 @onready var mails: VBoxContainer = $ScrollContainer/mails

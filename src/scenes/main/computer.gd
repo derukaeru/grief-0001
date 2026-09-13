@@ -8,8 +8,11 @@ class_name Computer extends Control
 @onready var time_label: Label = $action_bar/time
 @onready var computer_open_sfx: AudioStreamPlayer = $computer_open
 
+@onready var tabs: HBoxContainer = $action_bar/tabs_scroll/tabs
+
 var password: String = "griefed"
 var windows: Dictionary = {}
+var window_tabs: Dictionary = {}
 
 func _ready() -> void:
 	EventBus.open_app.connect(open_app)
@@ -19,6 +22,8 @@ func _ready() -> void:
 	
 	EventBus.open_audio.connect(open_audio)
 	EventBus.open_image.connect(open_image)
+	
+	EventBus.open_file.connect(open_file)
 	
 	GameManager.ui.pause_screen.close()
 	GameManager.ui.hide()
@@ -40,6 +45,32 @@ func open_app(app_name: String) -> void:
 		var window: AppWindow = load(Registry.APPS[app_name]).instantiate()
 		windows_container.add_child(window)
 		windows.set(window.app_name, window)
+		
+		add_tab(app_name, File.FILE_TYPES.APP)
+
+func closed_app(app_name: String) -> void:
+	windows.erase(app_name)
+	
+	remove_tab(app_name)
+
+func open_file(file_name: String, file_type: File.FILE_TYPES) -> void:
+	match file_type:
+		File.FILE_TYPES.APP:
+			open_app(file_name)
+		File.FILE_TYPES.DOC:
+			open_doc(file_name)
+		File.FILE_TYPES.AUDIO:
+			open_audio(file_name)
+		File.FILE_TYPES.IMAGE:
+			open_image(file_name)
+		File.FILE_TYPES.EXE:
+			if Registry.UID.has(file_name):
+				GameManager.current_map = file_name
+				SceneChanger.change_scene_immediate("main")
+			else:
+				push_error("Registry.UID does not have a record of the exe file: %s" % file_name)
+	
+	add_tab(file_name, file_type)
 
 func open_zip(zip_name: String) -> void:
 	if not Registry.ZIPS.has(zip_name):
@@ -60,11 +91,12 @@ func open_image(image_name: String) -> void:
 		windows[image_name].open()
 	else:
 		var image_window: ImageFileWindow = load(Registry.UID.image_file_window).instantiate()
+		windows_container.add_child(image_window)
+		
 		image_window.app_name = image_name
 		image_window.app_name_label.text = image_name
 		image_window.image.texture = load(Registry.IMAGES[image_name])
 		
-		windows_container.add_child(image_window)
 		windows.set(image_name, image_window)
 
 func open_audio(audio_name: String) -> void:
@@ -75,12 +107,67 @@ func open_audio(audio_name: String) -> void:
 		windows[audio_name].open()
 	else:
 		var audio_window: AudioFileWindow = load(Registry.UID.audio_file_window).instantiate()
+		windows_container.add_child(audio_window)
+		
 		audio_window.app_name = audio_name
 		audio_window.app_name_label.text = audio_name
 		audio_window.audio = load(Registry.AUDIOS[audio_name])
 		
-		windows_container.add_child(audio_window)
 		windows.set(audio_window.app_name, audio_window)
+
+func open_doc(doc_name: String) -> void:
+	if not Registry.DOCS.has(doc_name):
+		return push_error("Registry does not have record of this document %s" % doc_name)
+	
+	if windows.has(doc_name):
+		windows[doc_name].open()
+	else:
+		var doc_window: DocFileWindow = load(Registry.UID.doc_file_window).instantiate()
+		windows_container.add_child(doc_window)
+		
+		doc_window.app_name = doc_name
+		doc_window.app_name_label.text = doc_name
+		doc_window.label.text = Registry.DOCS[doc_name]
+		
+		windows.set(doc_window.app_name, doc_window)
+
+func add_tab(file_name: String, file_type: File.FILE_TYPES) -> void:
+	var tab_button: TextureButton = TextureButton.new()
+	tabs.add_child(tab_button)
+	
+	if window_tabs.has(file_name):
+		return
+	
+	var icon
+	match file_type:
+		File.FILE_TYPES.IMAGE:
+			icon = load(Registry.APP_ICONS.image)
+		File.FILE_TYPES.DOC:
+			icon = load(Registry.APP_ICONS.doc)
+		File.FILE_TYPES.AUDIO:
+			icon = load(Registry.APP_ICONS.audio)
+		File.FILE_TYPES.EXE:
+			icon = load(Registry.APP_ICONS.exe)
+		File.FILE_TYPES.APP:
+			if not Registry.APP_ICONS.has(file_name):
+				icon = load(Registry.APP_ICONS.app)
+			else:
+				icon = load(Registry.APP_ICONS[file_name])
+		_:
+			icon = load(Registry.APP_ICONS.app)
+	
+	tab_button.texture_normal = icon
+	tab_button.pressed.connect(func() -> void: open_file(file_name, file_type))
+	
+	tab_button.ignore_texture_size = true
+	tab_button.stretch_mode = TextureButton.STRETCH_SCALE
+	tab_button.size = Vector2(40, 40)
+	
+	window_tabs.set(file_name, tab_button)
+
+func remove_tab(tab_name: String) -> void:
+	window_tabs[tab_name].queue_free()
+	window_tabs.erase(tab_name)
 
 func unlock(_text: String = "") -> void:
 	if password == password_label.text:
@@ -94,9 +181,6 @@ func unlock(_text: String = "") -> void:
 	else:
 		password_label.text = ""
 		lockscreen_animation.play("wrong")
-
-func closed_app(app_name: String) -> void:
-	windows.erase(app_name)
 
 func _process(_delta: float) -> void:
 	time_label.text = str(Time.get_time_string_from_system()).left(5)

@@ -18,8 +18,11 @@ var UID: Dictionary = {
 	"crosshair_interact": "uid://b6i64ehbuw5sy",
 	
 	"message_bubble": "uid://b2ra3je6qaakp",
+	
+	# windows
 	"audio_file_window": "uid://bmxqn1bc8uwll",
 	"image_file_window": "uid://1ayjbqtn1xjo",
+	"doc_file_window": "uid://bdgnehojvir7p",
 	
 	# maps
 	"field_exe": "uid://ormu8fsixur7",
@@ -40,12 +43,53 @@ var APPS: Dictionary = {
 	"new_doc_1": "uid://b5rphrupplj2x"
 }
 
+var APP_ICONS: Dictionary = {
+	"logs_md": "uid://degqxwxvk1mli",
+	"eye_png": "uid://dd4ilhivajitl",
+	"settings": "uid://cqt4tplsyeea1",
+	"files": "uid://bqh8hcxi0ugxg",
+	"browser": "uid://c6c7frj5giys3",
+	"messages": "uid://bbwn7us3d50cv",
+	"notes": "uid://q23taynsnvaj",
+	"imail": "uid://dm5mg5vp76hyi",
+	"recycle_bin": "uid://2f2agt6rysfi",
+	"new_doc_1": "uid://b5rphrupplj2x",
+	
+	# general icons
+	"audio": "uid://b7wo8se7cdsfy",
+	"doc": "uid://degqxwxvk1mli",
+	"image": "uid://b4verfo51v2ca",
+	"exe": "uid://su80yymvkaa1",
+	"app": "uid://su80yymvkaa1"
+}
+
+var DOCS: Dictionary = {
+	"new_doc_1": "password: my birthday dont forget!!!!
+
+
+
+
+
+ps: i need to delete this a day after my 
+birthday",
+	"logs_md": "12/20/11 13:25:20
+
+ENTRY LOG
+
+| NAME          |     TIME        |
+| M.Denver      |     00:20:12    |
+| S.Crane       |     7:22:21     |
+
+
+",
+}
+
 var ZIPS: Dictionary = {
 	"untitled_zip": "uid://dgade15bhigwi",
 }
 
 var IMAGES: Dictionary = {
-	
+	"eye_png": "uid://dd4ilhivajitl",
 }
 
 var AUDIOS: Dictionary = {

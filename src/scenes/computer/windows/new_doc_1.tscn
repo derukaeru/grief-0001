@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://b5rphrupplj2x"]
 
 [ext_resource type="PackedScene" uid="uid://bdgnehojvir7p" path="res://src/scenes/computer/windows/templates/doc_window.tscn" id="1_iiuxg"]
-[ext_resource type="Script" uid="uid://cbsoxbiosx3l8" path="res://src/scenes/computer/window.gd" id="2_su75c"]
 
 [node name="new_doc_1" unique_id=1725337698 instance=ExtResource("1_iiuxg")]
-script = ExtResource("2_su75c")
-app_name = "new_doc_1"
 
 [node name="background" parent="." index="1" unique_id=741744896]
 color = Color(0.6294983, 0.545701, 0.3157211, 1)

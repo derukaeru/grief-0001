@@ -36,8 +36,10 @@ func open() -> void:
 func close() -> void:
 	animation.play_backwards("open")
 	click_sfx.play()
+	
 	await animation.animation_finished
 	queue_free()
+	
 	EventBus.closed_app.emit(app_name)
 
 func minimize() -> void:
