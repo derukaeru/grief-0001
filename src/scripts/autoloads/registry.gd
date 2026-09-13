@@ -18,6 +18,7 @@ var UID: Dictionary = {
 	"crosshair_interact": "uid://b6i64ehbuw5sy",
 	
 	"message_bubble": "uid://b2ra3je6qaakp",
+	"tab_button": "uid://j7i71krnjltp",
 	
 	# windows
 	"audio_file_window": "uid://bmxqn1bc8uwll",

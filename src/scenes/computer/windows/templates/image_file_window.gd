@@ -39,7 +39,7 @@ func resize() -> void:
 
 func open() -> void:
 	if opened: return
-	EventBus.opened_app.emit(app_name)
+	EventBus.opened_window.emit(app_name)
 	show()
 	animation.play("open")
 	opened = true
@@ -48,9 +48,10 @@ func open() -> void:
 func close() -> void:
 	animation.play_backwards("open")
 	click_sfx.play()
+	
 	await animation.animation_finished
 	queue_free()
-	EventBus.closed_app.emit(app_name)
+	EventBus.closed_window.emit(app_name)
 	opened = false
 
 func minimize() -> void:
@@ -58,7 +59,7 @@ func minimize() -> void:
 	click_sfx.play()
 	await animation.animation_finished
 	hide()
-	EventBus.closed_app.emit(app_name)
+	EventBus.minimized_window.emit(app_name)
 	opened = false
 
 func top_bar_gui_input(event: InputEvent) -> void:

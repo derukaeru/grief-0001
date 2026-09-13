@@ -13,6 +13,7 @@ class_name AudioFileWindow extends Control
 
 @export var draggable: bool = true
 
+var opened: bool = false
 var dragging: bool = false
 var seek_step: float = 2.5
 
@@ -24,7 +25,10 @@ func _ready() -> void:
 	progress.max_value = audio.get_length() if audio else 0.0
 
 func open() -> void:
-	EventBus.opened_app.emit(app_name)
+	if opened: return
+	EventBus.opened_window.emit(app_name)
+	opened = true
+	
 	show()
 	click_sfx.play()
 	animation.play("open")
@@ -34,14 +38,17 @@ func close() -> void:
 	click_sfx.play()
 	await animation.animation_finished
 	queue_free()
-	EventBus.closed_app.emit(app_name)
+	EventBus.closed_window.emit(app_name)
+	opened = false
 
 func minimize() -> void:
 	animation.play_backwards("open")
 	click_sfx.play()
+	
 	await animation.animation_finished
+	EventBus.minimized_window.emit(app_name)
 	hide()
-	EventBus.closed_app.emit(app_name)
+	
 
 func top_bar_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

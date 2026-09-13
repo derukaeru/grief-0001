@@ -4,7 +4,7 @@ extends Control
 @onready var sfx_slider: HSlider = $sfx_slider
 
 func _ready() -> void:
-	EventBus.opened_app.connect(
+	EventBus.opened_window.connect(
 		func(app_name: String) -> void: 
 			if app_name == "settings":
 				music_slider.value = SettingsManager.music_strength

@@ -4,10 +4,12 @@ signal moved(to: String, from: String)
 signal move_to(map: String)
 signal moving
 
-signal open_app(app_name: String)
-signal opened_app(app_name: String)
-signal closed_app(app_name: String)
+signal open_window(window_name: String)
+signal opened_window(window_name: String)
+signal closed_window(window_name: String)
+signal minimized_window(window_name: String)
 
+signal open_app(app_name: String)
 signal open_file(file_name: String, file_type: File.FILE_TYPES)
 signal open_folder(file_name: String)
 signal open_zip(zip_name: String)

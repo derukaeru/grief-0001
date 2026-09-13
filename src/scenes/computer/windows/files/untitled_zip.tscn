@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bk8wnmpyuw6x2" path="res://src/scripts/components/file.gd" id="2_juxrl"]
 
 [node name="untitled_zip" unique_id=1725337698 instance=ExtResource("1_erdep")]
-app_name = "untitiled.zip"
+app_name = "untitled_zip"
 locked = true
 password = "wretched_612"
 

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://j7i71krnjltp"]
+
+[ext_resource type="Script" uid="uid://brb5e8o7xv6s1" path="res://src/scenes/computer/tab_button.gd" id="1_bu1qe"]
+
+[node name="tab_button" type="TextureButton" unique_id=1370460823]
+custom_minimum_size = Vector2(24, 24)
+offset_right = 24.0
+offset_bottom = 24.0
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_bu1qe")
+
+[node name="indicator" type="ColorRect" parent="." unique_id=2093621452]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 0
+offset_top = 25.0
+offset_right = 24.0
+offset_bottom = 27.0
+color = Color(0.5201557, 0.5947738, 0.86076826, 1)
+
+[connection signal="pressed" from="." to="." method="pressed"]

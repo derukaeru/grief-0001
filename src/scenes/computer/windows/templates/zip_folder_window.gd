@@ -14,6 +14,7 @@ class_name ZipFolderWindow extends Control
 @export var locked: bool = false
 @export var password: String = ""
 
+var opened: bool = false
 var app_name_require: String = " - requires password"
 
 func _ready() -> void:
@@ -28,7 +29,9 @@ func _ready() -> void:
 var dragging: bool = false
 
 func open() -> void:
-	EventBus.opened_app.emit(app_name)
+	if opened: return
+	EventBus.opened_window.emit(app_name)
+	opened = true
 	show()
 	animation.play("open")
 	click_sfx.play()
@@ -39,15 +42,16 @@ func close() -> void:
 	
 	await animation.animation_finished
 	queue_free()
-	
-	EventBus.closed_app.emit(app_name)
+	opened = false
+	EventBus.closed_window.emit(app_name)
 
 func minimize() -> void:
 	animation.play_backwards("open")
 	click_sfx.play()
 	await animation.animation_finished
 	hide()
-	EventBus.closed_app.emit(app_name)
+	EventBus.minimized_window.emit(app_name)
+	opened = false
 
 func top_bar_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

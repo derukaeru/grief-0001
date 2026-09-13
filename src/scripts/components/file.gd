@@ -6,7 +6,8 @@ enum FILE_TYPES {
 	AUDIO,
 	DOC,
 	APP,
-	EXE
+	EXE,
+	ZIP
 }
 
 @export var file_name: String = "" 

@@ -16,7 +16,8 @@ var window_tabs: Dictionary = {}
 
 func _ready() -> void:
 	EventBus.open_app.connect(open_app)
-	EventBus.closed_app.connect(closed_app)
+	EventBus.open_window.connect(open_window)
+	EventBus.closed_window.connect(closed_window)
 	
 	EventBus.open_zip.connect(open_zip)
 	
@@ -48,7 +49,10 @@ func open_app(app_name: String) -> void:
 		
 		add_tab(app_name, File.FILE_TYPES.APP)
 
-func closed_app(app_name: String) -> void:
+func open_window(window_name: String) -> void:
+	windows[window_name].open()
+
+func closed_window(app_name: String) -> void:
 	windows.erase(app_name)
 	
 	remove_tab(app_name)
@@ -81,7 +85,9 @@ func open_zip(zip_name: String) -> void:
 	else:
 		var window: ZipFolderWindow = load(Registry.ZIPS[zip_name]).instantiate()
 		windows_container.add_child(window)
-		windows.set(window.app_name, window)
+		
+		windows.set(zip_name, window)
+		add_tab(zip_name, File.FILE_TYPES.ZIP)
 
 func open_image(image_name: String) -> void:
 	if not Registry.IMAGES.has(image_name):
@@ -132,38 +138,17 @@ func open_doc(doc_name: String) -> void:
 		windows.set(doc_window.app_name, doc_window)
 
 func add_tab(file_name: String, file_type: File.FILE_TYPES) -> void:
-	var tab_button: TextureButton = TextureButton.new()
-	tabs.add_child(tab_button)
-	
 	if window_tabs.has(file_name):
 		return
+		
+	var tab_button: TabButton = load(Registry.UID.tab_button).instantiate()
+	tab_button.window_name = file_name
+	tab_button.window_type = file_type
 	
-	var icon
-	match file_type:
-		File.FILE_TYPES.IMAGE:
-			icon = load(Registry.APP_ICONS.image)
-		File.FILE_TYPES.DOC:
-			icon = load(Registry.APP_ICONS.doc)
-		File.FILE_TYPES.AUDIO:
-			icon = load(Registry.APP_ICONS.audio)
-		File.FILE_TYPES.EXE:
-			icon = load(Registry.APP_ICONS.exe)
-		File.FILE_TYPES.APP:
-			if not Registry.APP_ICONS.has(file_name):
-				icon = load(Registry.APP_ICONS.app)
-			else:
-				icon = load(Registry.APP_ICONS[file_name])
-		_:
-			icon = load(Registry.APP_ICONS.app)
-	
-	tab_button.texture_normal = icon
-	tab_button.pressed.connect(func() -> void: open_file(file_name, file_type))
-	
-	tab_button.ignore_texture_size = true
-	tab_button.stretch_mode = TextureButton.STRETCH_SCALE
-	tab_button.size = Vector2(40, 40)
-	
+	tabs.add_child(tab_button)
 	window_tabs.set(file_name, tab_button)
+	
+	print(file_name)
 
 func remove_tab(tab_name: String) -> void:
 	window_tabs[tab_name].queue_free()

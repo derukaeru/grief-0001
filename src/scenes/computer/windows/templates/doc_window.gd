@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func open() -> void:
 	if opened: return
-	EventBus.opened_app.emit(app_name)
+	EventBus.opened_window.emit(app_name)
 	click_sfx.play()
 	show()
 	animation.play("open")
@@ -25,18 +25,20 @@ func open() -> void:
 func close() -> void:
 	animation.play_backwards("open")
 	click_sfx.play()
+	
 	await animation.animation_finished
 	queue_free()
-	EventBus.closed_app.emit(app_name)
+	EventBus.closed_window.emit(app_name)
 	opened = false
 
 func minimize() -> void:
 	animation.play_backwards("open")
 	click_sfx.play()
+	
 	await animation.animation_finished
 	hide()
-	EventBus.closed_app.emit(app_name)
 	opened = false
+	EventBus.minimized_window.emit(app_name)
 
 func top_bar_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
