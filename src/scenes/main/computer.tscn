@@ -213,7 +213,7 @@ stretch_mode = 0
 
 [node name="tabs_scroll" type="ScrollContainer" parent="action_bar" unique_id=912635868]
 layout_mode = 0
-offset_left = 48.0
+offset_left = 62.0
 offset_top = 6.0
 offset_right = 504.0
 offset_bottom = 30.0
@@ -228,7 +228,7 @@ theme_override_constants/separation = 6
 [node name="apps" type="Control" parent="." unique_id=110403345]
 anchors_preset = 0
 offset_right = 576.0
-offset_bottom = 480.0
+offset_bottom = 436.0
 
 [node name="eye_png" parent="apps" unique_id=1302605451 instance=ExtResource("3_474aq")]
 layout_mode = 0

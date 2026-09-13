@@ -38,4 +38,3 @@ func minimize(owindow_name: String) -> void:
 
 func pressed() -> void:
 	EventBus.open_window.emit(window_name)
-	print("asdasdasd")

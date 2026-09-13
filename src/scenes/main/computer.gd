@@ -147,8 +147,6 @@ func add_tab(file_name: String, file_type: File.FILE_TYPES) -> void:
 	
 	tabs.add_child(tab_button)
 	window_tabs.set(file_name, tab_button)
-	
-	print(file_name)
 
 func remove_tab(tab_name: String) -> void:
 	window_tabs[tab_name].queue_free()
