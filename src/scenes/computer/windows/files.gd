@@ -6,7 +6,8 @@ extends Control
 
 @onready var folders: Dictionary[String, ColorRect] = {
 	"main_files": $main_files,
-	"new_folder": $new_folder
+	"new_folder": $new_folder,
+	"photos": $photos,
 }
 
 var password: String = "12202008"
