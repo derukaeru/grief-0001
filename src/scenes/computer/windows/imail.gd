@@ -10,7 +10,7 @@ extends Control
 
 func _ready() -> void:
 	for entry in Dialogues.MAILS:
-		var mail_button: MailButton = MailButton.new()
+		var mail_button: MailButton = load(Registry.UID.mail_button).instantiate()
 		
 		mail_button.mail_name = entry
 		mail_button.text = entry

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://j7i71krnjltp"]
 
-[ext_resource type="Script" uid="uid://brb5e8o7xv6s1" path="res://src/scenes/computer/tab_button.gd" id="1_bu1qe"]
+[ext_resource type="Script" uid="uid://brb5e8o7xv6s1" path="res://src/scripts/components/tab_button.gd" id="1_bu1qe"]
 
 [node name="tab_button" type="TextureButton" unique_id=1370460823]
 custom_minimum_size = Vector2(24, 24)

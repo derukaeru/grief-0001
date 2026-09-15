@@ -1,4 +1,3 @@
-@tool
 class_name MailButton extends Button
 
 @export var mail_name: String = ""

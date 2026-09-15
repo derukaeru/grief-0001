@@ -32,7 +32,37 @@ var MAILS: Dictionary[String, Dictionary] = {
 		"from": "idk",
 		"to": "you",
 		"content": "yeah u not getting this job"
-	}
+	},
+	"subscription renewal": {
+		"title": "idk subscription",
+		"from": "the team",
+		"to": "you",
+		"content": "Hi -------- ,We hope you are enjoying your time with our product!. \n\nThis is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. \n\n\n\nYou do not need to do anything if you want to keep your access—your renewal will happen automatically using your saved payment method on file. \n\n\n\nIf you need to update your billing details, change your plan, or cancel before the charge goes through, you can visit your Manage Subscription Dashboard.\n\n\n\n\nThank you for being a valued part of our community!Best regards,\nThe Company Team"
+	},
+	"subscription renewal ": {
+		"title": "idk subscription",
+		"from": "the team",
+		"to": "you",
+		"content": "Hi -------- ,We hope you are enjoying your time with our product!. \n\nThis is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. \n\n\n\nYou do not need to do anything if you want to keep your access—your renewal will happen automatically using your saved payment method on file. \n\n\n\nIf you need to update your billing details, change your plan, or cancel before the charge goes through, you can visit your Manage Subscription Dashboard.\n\n\n\n\nThank you for being a valued part of our community!Best regards,\nThe Company Team"
+	},
+	"subscription renewal   ": {
+		"title": "idk subscription",
+		"from": "the team",
+		"to": "you",
+		"content": "Hi -------- ,We hope you are enjoying your time with our product!. \n\nThis is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. \n\n\n\nYou do not need to do anything if you want to keep your access—your renewal will happen automatically using your saved payment method on file. \n\n\n\nIf you need to update your billing details, change your plan, or cancel before the charge goes through, you can visit your Manage Subscription Dashboard.\n\n\n\n\nThank you for being a valued part of our community!Best regards,\nThe Company Team"
+	},
+	"subscription renewal  ": {
+		"title": "idk subscription",
+		"from": "the team",
+		"to": "you",
+		"content": "Hi -------- ,We hope you are enjoying your time with our product!. \n\nThis is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. \n\n\n\nYou do not need to do anything if you want to keep your access—your renewal will happen automatically using your saved payment method on file. \n\n\n\nIf you need to update your billing details, change your plan, or cancel before the charge goes through, you can visit your Manage Subscription Dashboard.\n\n\n\n\nThank you for being a valued part of our community!Best regards,\nThe Company Team"
+	},
+	"subscription renewal    ": {
+		"title": "idk subscription",
+		"from": "the team",
+		"to": "you",
+		"content": "Hi -------- ,We hope you are enjoying your time with our product!. \n\nThis is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. \n\n\n\nYou do not need to do anything if you want to keep your access—your renewal will happen automatically using your saved payment method on file. \n\n\n\nIf you need to update your billing details, change your plan, or cancel before the charge goes through, you can visit your Manage Subscription Dashboard.\n\n\n\n\nThank you for being a valued part of our community!Best regards,\nThe Company Team"
+	},
 }
 
 var DOCS: Dictionary[String, String] = {

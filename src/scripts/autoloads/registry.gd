@@ -19,6 +19,7 @@ var UID: Dictionary = {
 	
 	"message_bubble": "uid://b2ra3je6qaakp",
 	"tab_button": "uid://j7i71krnjltp",
+	"mail_button": "uid://b6ks348m1vft4",
 	
 	# windows
 	"audio_file_window": "uid://bmxqn1bc8uwll",
@@ -41,7 +42,6 @@ var APPS: Dictionary = {
 	"notes": "uid://muaf5rlusq0f",
 	"imail": "uid://bssndj6if32cu",
 	"recycle_bin": "uid://lqqdtrn3j0qk",
-	"new_doc_1": "uid://b5rphrupplj2x"
 }
 
 var APP_ICONS: Dictionary = {

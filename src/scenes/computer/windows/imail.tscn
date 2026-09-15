@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://cn00ht5rclimh" path="res://src/scenes/computer/window.tscn" id="1_1uwr3"]
 [ext_resource type="Script" uid="uid://c7lx4a6qsmfth" path="res://src/scenes/computer/windows/imail.gd" id="2_itx6c"]
 [ext_resource type="Texture2D" uid="uid://fasaqq7evxms" path="res://src/assets/sprites/icons/return.png" id="3_035rs"]
+[ext_resource type="Texture2D" uid="uid://db424qrxs2fxk" path="res://src/assets/sprites/icons/compose.png" id="3_ty23n"]
+[ext_resource type="Texture2D" uid="uid://ctu5xq1lpypl0" path="res://src/assets/sprites/icons/star.png" id="4_yxbu2"]
+[ext_resource type="Texture2D" uid="uid://0xyraqdaymsv" path="res://src/assets/sprites/icons/sent.png" id="5_dskom"]
+[ext_resource type="Texture2D" uid="uid://b3g655umyfp2j" path="res://src/assets/sprites/icons/draft.png" id="6_nlytn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_itx6c"]
 font_size = 24
@@ -29,7 +33,7 @@ script = ExtResource("2_itx6c")
 layout_mode = 0
 offset_right = 424.0
 offset_bottom = 30.0
-color = Color(0, 0, 0, 0.5568628)
+color = Color(0, 0, 0, 0.654902)
 
 [node name="mail" type="Label" parent="content/top_bar" index="0" unique_id=2145201628]
 layout_mode = 1
@@ -46,9 +50,63 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "all mails"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="content" index="1" unique_id=89447743]
+[node name="sidebar" type="ColorRect" parent="content" index="1" unique_id=1244893535]
 layout_mode = 0
-offset_left = 4.0
+offset_top = 30.0
+offset_right = 40.0
+offset_bottom = 264.0
+color = Color(0, 0, 0, 0.654902)
+
+[node name="compose" type="TextureButton" parent="content/sidebar" index="0" unique_id=1042585810]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 32.0
+offset_bottom = 27.0
+texture_normal = ExtResource("3_ty23n")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="all_mail" type="TextureButton" parent="content/sidebar" index="1" unique_id=933848477]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 31.0
+offset_right = 33.0
+offset_bottom = 55.0
+
+[node name="starred" type="TextureButton" parent="content/sidebar" index="2" unique_id=2013633240]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 41.0
+offset_right = 31.0
+offset_bottom = 65.0
+texture_normal = ExtResource("4_yxbu2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="sent" type="TextureButton" parent="content/sidebar" index="3" unique_id=1219206855]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 76.0
+offset_right = 31.0
+offset_bottom = 100.0
+texture_normal = ExtResource("5_dskom")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="draft" type="TextureButton" parent="content/sidebar" index="4" unique_id=664107826]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 113.0
+offset_right = 30.0
+offset_bottom = 137.0
+texture_normal = ExtResource("6_nlytn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="content" index="2" unique_id=89447743]
+layout_mode = 0
+offset_left = 44.0
 offset_top = 35.0
 offset_right = 420.0
 offset_bottom = 260.0
@@ -57,8 +115,10 @@ horizontal_scroll_mode = 0
 [node name="mails" type="VBoxContainer" parent="content/ScrollContainer" index="0" unique_id=873213578]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 6
 
-[node name="mail" type="Control" parent="content" index="2" unique_id=457954748]
+[node name="mail" type="Control" parent="content" index="3" unique_id=457954748]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
