@@ -259,6 +259,7 @@ offset_right = 75.0
 offset_bottom = 220.0
 
 [node name="browser" parent="apps" unique_id=242581469 instance=ExtResource("7_vt54a")]
+visible = false
 layout_mode = 0
 offset_left = 496.0
 offset_top = 24.0
@@ -288,10 +289,10 @@ offset_bottom = 400.0
 
 [node name="imail" parent="apps" unique_id=734688266 instance=ExtResource("11_afb7v")]
 layout_mode = 0
-offset_left = 332.0
-offset_top = 358.0
-offset_right = 372.0
-offset_bottom = 398.0
+offset_left = 499.0
+offset_top = 27.0
+offset_right = 539.0
+offset_bottom = 67.0
 
 [node name="windows" type="Control" parent="." unique_id=1852505008]
 layout_mode = 1

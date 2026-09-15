@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://ormu8fsixur7"]
 
 [ext_resource type="PackedScene" uid="uid://b4wpjmv6lvmbo" path="res://src/scenes/objects/computer.tscn" id="1_uw41p"]
-[ext_resource type="Texture2D" uid="uid://q23taynsnvaj" path="res://src/assets/sprites/icons/notes.png" id="2_qwx05"]
-[ext_resource type="Texture2D" uid="uid://cqt4tplsyeea1" path="res://src/assets/sprites/icons/settings.png" id="3_14x3v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y04lm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,6 +13,9 @@ sky_material = SubResource("ProceduralSkyMaterial_y04lm")
 background_mode = 1
 sky = SubResource("Sky_vw57g")
 tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.12
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y04lm"]
 shading_mode = 0
@@ -46,24 +47,3 @@ shape = SubResource("BoxShape3D_y04lm")
 
 [node name="computer" parent="." unique_id=1702524455 instance=ExtResource("1_uw41p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46299052, -9.39213)
-
-[node name="Label3D" type="Label3D" parent="." unique_id=59703039]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6895375, -14.6761055)
-pixel_size = 0.004
-billboard = 1
-no_depth_test = true
-fixed_size = true
-texture_filter = 0
-text = "work in progress"
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=23450195]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7215953, 1.7186501, -6.228119)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("2_qwx05")
-
-[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1234808658]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4700732, 1.7186501, -6.228119)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("3_14x3v")

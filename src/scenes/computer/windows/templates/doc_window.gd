@@ -1,7 +1,7 @@
 class_name DocFileWindow extends Control
 
 @onready var animation: AnimationPlayer = $AnimationPlayer
-@onready var label: Label = $content/ScrollContainer/Label
+@onready var label: RichTextLabel = $content/ScrollContainer/RichTextLabel
 @onready var app_name_label: Label = $top_bar/app_name
 @onready var click_sfx: AudioStreamPlayer = $click
 

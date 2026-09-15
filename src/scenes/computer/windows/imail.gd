@@ -6,7 +6,7 @@ extends Control
 @onready var title_label: Label = $mail/title
 @onready var from_label: Label = $mail/from
 @onready var to_label: Label = $mail/to
-@onready var content_label: Label = $mail/content
+@onready var content_label: RichTextLabel = $mail/content
 
 func _ready() -> void:
 	for entry in Dialogues.MAILS:

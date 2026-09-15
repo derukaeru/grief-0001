@@ -191,7 +191,16 @@ offset_top = 3.0
 offset_right = 421.0
 offset_bottom = 230.0
 
-[node name="photo_248" type="Button" parent="content/photos/files" index="0" unique_id=1360178706]
+[node name="return" type="Button" parent="content/photos/files" index="0" unique_id=954991861]
+layout_mode = 2
+text = "..."
+flat = true
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "photos"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="photo_248" type="Button" parent="content/photos/files" index="1" unique_id=1360178706]
 layout_mode = 2
 text = "photo_248...txt   20kb       4-10-2002"
 flat = true
