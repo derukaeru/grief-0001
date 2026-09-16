@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://5teshfaynej3"]
+
+[ext_resource type="PackedScene" uid="uid://dudseog2lkwqk" path="res://src/scenes/computer/windows/templates/zip_folder_window.tscn" id="1_p2gb7"]
+
+[node name="GRIEF" unique_id=1725337698 instance=ExtResource("1_p2gb7")]
+app_name = "GRIEF"
+locked = true
+password = "AAMSDMQQQMDFSA"

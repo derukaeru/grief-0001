@@ -4,8 +4,13 @@
 [ext_resource type="Script" uid="uid://c1dvl8gi33ovf" path="res://src/scenes/computer/windows/recycle_bin.gd" id="2_k2n74"]
 [ext_resource type="Script" uid="uid://bk8wnmpyuw6x2" path="res://src/scripts/components/file.gd" id="3_jtgh5"]
 
+[sub_resource type="Theme" id="Theme_jtgh5"]
+
 [node name="recycle_bin" unique_id=1725337698 instance=ExtResource("1_ofgxo")]
 app_name = "recycle_bin"
+
+[node name="background" parent="." index="1" unique_id=741744896]
+color = Color(0.6162137, 0.48610258, 0.35861138, 1)
 
 [node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
 text = "recycle bin"
@@ -17,7 +22,7 @@ script = ExtResource("2_k2n74")
 layout_mode = 0
 offset_right = 424.0
 offset_bottom = 31.0
-color = Color(0.43944743, 0.40519482, 0.33321214, 1)
+color = Color(0, 0, 0, 0.7411765)
 
 [node name="name" type="Label" parent="content/details" index="0" unique_id=1439197030]
 layout_mode = 0
@@ -52,13 +57,12 @@ offset_bottom = 260.0
 
 [node name="new_doc_1" type="Button" parent="content/files" index="0" unique_id=145829660]
 layout_mode = 2
+theme = SubResource("Theme_jtgh5")
 text = "new_doc_1.txt     2kb        12-21-2008"
-flat = true
 alignment = 0
 script = ExtResource("3_jtgh5")
 file_name = "new_doc_1"
 file_type = 2
-from = 1
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="empty_label" type="Label" parent="content" index="2" unique_id=1633366673]

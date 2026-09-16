@@ -54,7 +54,6 @@ var APP_ICONS: Dictionary = {
 	"notes": "uid://q23taynsnvaj",
 	"imail": "uid://dm5mg5vp76hyi",
 	"recycle_bin": "uid://2f2agt6rysfi",
-	"new_doc_1": "uid://b5rphrupplj2x",
 	
 	# general icons
 	"audio": "uid://b7wo8se7cdsfy",
@@ -88,6 +87,8 @@ ENTRY LOG
 
 var ZIPS: Dictionary = {
 	"untitled_zip": "uid://dgade15bhigwi",
+	"GRIEF": "uid://5teshfaynej3",
+	
 }
 
 var IMAGES: Dictionary = {

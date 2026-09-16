@@ -14,6 +14,5 @@ enum FILE_TYPES {
 @export var file_type: FILE_TYPES = FILE_TYPES.APP
 
 func _ready() -> void:
-	flat = true
 	set_text_alignment(HORIZONTAL_ALIGNMENT_LEFT)
 	pressed.connect(func() -> void: EventBus.open_file.emit(file_name, file_type))

@@ -60,9 +60,9 @@ color = Color(0, 0, 0, 0.654902)
 [node name="compose" type="TextureButton" parent="content/sidebar" index="0" unique_id=1042585810]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 3.0
+offset_top = 8.0
 offset_right = 32.0
-offset_bottom = 27.0
+offset_bottom = 32.0
 texture_normal = ExtResource("3_ty23n")
 ignore_texture_size = true
 stretch_mode = 0
@@ -77,9 +77,9 @@ offset_bottom = 55.0
 [node name="starred" type="TextureButton" parent="content/sidebar" index="2" unique_id=2013633240]
 layout_mode = 0
 offset_left = 7.0
-offset_top = 41.0
+offset_top = 46.0
 offset_right = 31.0
-offset_bottom = 65.0
+offset_bottom = 70.0
 texture_normal = ExtResource("4_yxbu2")
 ignore_texture_size = true
 stretch_mode = 0
@@ -87,9 +87,9 @@ stretch_mode = 0
 [node name="sent" type="TextureButton" parent="content/sidebar" index="3" unique_id=1219206855]
 layout_mode = 0
 offset_left = 7.0
-offset_top = 76.0
+offset_top = 81.0
 offset_right = 31.0
-offset_bottom = 100.0
+offset_bottom = 105.0
 texture_normal = ExtResource("5_dskom")
 ignore_texture_size = true
 stretch_mode = 0
@@ -97,9 +97,9 @@ stretch_mode = 0
 [node name="draft" type="TextureButton" parent="content/sidebar" index="4" unique_id=664107826]
 layout_mode = 0
 offset_left = 6.0
-offset_top = 113.0
+offset_top = 118.0
 offset_right = 30.0
-offset_bottom = 137.0
+offset_bottom = 142.0
 texture_normal = ExtResource("6_nlytn")
 ignore_texture_size = true
 stretch_mode = 0

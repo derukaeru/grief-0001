@@ -6,6 +6,9 @@
 [node name="doc_window" unique_id=1725337698 instance=ExtResource("1_suolk")]
 script = ExtResource("2_sxjct")
 
+[node name="background" parent="." index="1" unique_id=741744896]
+color = Color(0.66656864, 0.6665687, 0.6665685, 1)
+
 [node name="ScrollContainer" type="ScrollContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=547996561]
 layout_mode = 0
 offset_left = 5.0
@@ -19,4 +22,5 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 2
+theme_override_colors/default_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
 selection_enabled = true
