@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://demhk8dg5edmg" path="res://src/scenes/computer/apps/messages.tscn" id="9_a0p0o"]
 [ext_resource type="PackedScene" uid="uid://bbtll75h5mhru" path="res://src/scenes/computer/apps/recycle_bin.tscn" id="10_buu0b"]
 [ext_resource type="PackedScene" uid="uid://b1dk628v453gm" path="res://src/scenes/computer/apps/imail.tscn" id="11_afb7v"]
+[ext_resource type="PackedScene" uid="uid://b8gm5wwbyr5us" path="res://src/scenes/computer/apps/bank.tscn" id="12_oj6lh"]
 [ext_resource type="AudioStream" uid="uid://w0e0jbny5km3" path="res://src/scripts/data/computer_ambience.tres" id="14_afb7v"]
 [ext_resource type="AudioStream" uid="uid://d2tohd72l0aig" path="res://src/assets/sfx/accept.mp3" id="15_58tlm"]
 
@@ -293,6 +294,13 @@ offset_left = 499.0
 offset_top = 27.0
 offset_right = 539.0
 offset_bottom = 67.0
+
+[node name="bank" parent="apps" unique_id=1228310613 instance=ExtResource("12_oj6lh")]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 182.0
+offset_right = 541.0
+offset_bottom = 222.0
 
 [node name="windows" type="Control" parent="." unique_id=1852505008]
 layout_mode = 1

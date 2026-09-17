@@ -1,8 +1,21 @@
 [gd_scene format=3 uid="uid://5teshfaynej3"]
 
 [ext_resource type="PackedScene" uid="uid://dudseog2lkwqk" path="res://src/scenes/computer/windows/templates/zip_folder_window.tscn" id="1_p2gb7"]
+[ext_resource type="Script" uid="uid://bk8wnmpyuw6x2" path="res://src/scripts/components/file.gd" id="2_dwbna"]
 
 [node name="GRIEF" unique_id=1725337698 instance=ExtResource("1_p2gb7")]
 app_name = "GRIEF"
 locked = true
 password = "AAMSDMQQQMDFSA"
+
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
+text = "GRIEF"
+
+[node name="test" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="0" unique_id=323403726]
+layout_mode = 2
+text = "test"
+alignment = 0
+script = ExtResource("2_dwbna")
+file_name = "test"
+file_type = 0
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"

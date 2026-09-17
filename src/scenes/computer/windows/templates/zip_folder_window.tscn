@@ -46,6 +46,9 @@ script = ExtResource("2_wexrp")
 locked = false
 password = ""
 
+[node name="background" parent="." index="1" unique_id=741744896]
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
 [node name="details" type="ColorRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="0" unique_id=1430105046]
 layout_mode = 0
 offset_right = 424.0
@@ -76,14 +79,25 @@ offset_right = 396.0
 offset_bottom = 22.0
 text = "date modified"
 
-[node name="files" type="VBoxContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="1" unique_id=1843158095]
-layout_mode = 0
-offset_left = 6.0
+[node name="ScrollContainer" type="ScrollContainer" parent="content" parent_id_path=PackedInt32Array(976143210) index="1" unique_id=1725053852]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
 offset_top = 34.0
-offset_right = 417.0
-offset_bottom = 257.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="files" type="VBoxContainer" parent="content/ScrollContainer" index="0" unique_id=1843158095]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="lock_cover" type="ColorRect" parent="content" parent_id_path=PackedInt32Array(976143210) index="2" unique_id=185874785]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -8,6 +8,11 @@ extends Control
 	"main_files": $main_files,
 	"new_folder": $new_folder,
 	"photos": $photos,
+	"GRIEF": $GRIEF,
+	"system": $system,
+	"downloads": $downloads,
+	"home": $home,
+	"videos": $videos
 }
 
 var password: String = "12202008"

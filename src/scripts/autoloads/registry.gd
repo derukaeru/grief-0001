@@ -42,6 +42,7 @@ var APPS: Dictionary = {
 	"notes": "uid://muaf5rlusq0f",
 	"imail": "uid://bssndj6if32cu",
 	"recycle_bin": "uid://lqqdtrn3j0qk",
+	"bank": "uid://dm0lptsmh6l6n"
 }
 
 var APP_ICONS: Dictionary = {
