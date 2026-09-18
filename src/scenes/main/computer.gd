@@ -17,6 +17,8 @@ var window_tabs: Dictionary = {}
 func _ready() -> void:
 	EventBus.open_app.connect(open_app)
 	EventBus.open_window.connect(open_window)
+	
+	EventBus.minimize_window.connect(minimize_window)
 	EventBus.closed_window.connect(closed_window)
 	
 	EventBus.open_zip.connect(open_zip)
@@ -47,14 +49,16 @@ func open_app(app_name: String) -> void:
 		windows_container.add_child(window)
 		windows.set(window.app_name, window)
 		
-		add_tab(app_name, File.FILE_TYPES.APP)
+		add_tab(app_name, window.type)
 
 func open_window(window_name: String) -> void:
 	windows[window_name].open()
 
+func minimize_window(window_name: String) -> void:
+	windows[window_name].minimize()
+
 func closed_window(app_name: String) -> void:
 	windows.erase(app_name)
-	
 	remove_tab(app_name)
 
 func open_file(file_name: String, file_type: File.FILE_TYPES) -> void:

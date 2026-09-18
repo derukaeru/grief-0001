@@ -5,6 +5,7 @@ signal move_to(map: String)
 signal moving
 
 signal open_window(window_name: String)
+signal minimize_window(window_name: String)
 signal opened_window(window_name: String)
 signal closed_window(window_name: String)
 signal minimized_window(window_name: String)

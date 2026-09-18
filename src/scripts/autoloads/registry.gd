@@ -46,8 +46,6 @@ var APPS: Dictionary = {
 }
 
 var APP_ICONS: Dictionary = {
-	"logs_md": "uid://degqxwxvk1mli",
-	"eye_png": "uid://dd4ilhivajitl",
 	"settings": "uid://cqt4tplsyeea1",
 	"files": "uid://bqh8hcxi0ugxg",
 	"browser": "uid://c6c7frj5giys3",

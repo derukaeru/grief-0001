@@ -7,8 +7,9 @@
 offset_right = -307.0
 offset_bottom = -158.0
 app_name = "eye_png"
+type = 0
 
-[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="3" unique_id=1590715306]
+[node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
 offset_right = 164.0
 text = "eye.png"
 

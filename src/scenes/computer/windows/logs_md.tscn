@@ -4,6 +4,7 @@
 
 [node name="logs_md" unique_id=1725337698 instance=ExtResource("1_3t4i5")]
 app_name = "logs_md"
+type = 2
 
 [node name="background" parent="." index="1" unique_id=741744896]
 color = Color(0.6573172, 0.547355, 0.36602816, 1)

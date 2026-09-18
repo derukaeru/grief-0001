@@ -1,8 +1,9 @@
 class_name TabButton extends TextureButton
-@onready var indicator: ColorRect = $indicator
 
 var window_name: String
 var window_type: File.FILE_TYPES
+
+var open: bool = true
 
 func _ready() -> void:
 	var icon
@@ -25,16 +26,20 @@ func _ready() -> void:
 	
 	texture_normal = icon
 	
-	EventBus.minimized_window.connect(minimize)
 	EventBus.opened_window.connect(opened)
+	EventBus.minimized_window.connect(minimize)
+	EventBus.closed_window.connect(minimize)
 
 func opened(owindow_name: String) -> void:
 	if window_name == owindow_name:
-		indicator.show()
+		open = true
 
 func minimize(owindow_name: String) -> void:
 	if window_name == owindow_name:
-		indicator.hide()
+		open = false
 
 func pressed() -> void:
-	EventBus.open_window.emit(window_name)
+	if open:
+		EventBus.minimize_window.emit(window_name)
+	else:
+		EventBus.open_window.emit(window_name)

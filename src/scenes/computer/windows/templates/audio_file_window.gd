@@ -48,7 +48,6 @@ func minimize() -> void:
 	await animation.animation_finished
 	EventBus.minimized_window.emit(app_name)
 	hide()
-	
 
 func top_bar_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

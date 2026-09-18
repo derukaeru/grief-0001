@@ -6,6 +6,8 @@ class_name AppWindow extends Control
 @export var app_name: String = ""
 @export var draggable: bool = true
 
+@export var type: File.FILE_TYPES = File.FILE_TYPES.APP
+
 var dragging: bool = false
 var opened: bool = false
 
