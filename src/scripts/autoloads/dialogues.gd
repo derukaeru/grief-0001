@@ -23,7 +23,11 @@ var MESSAGES: Dictionary[String, Array] = {
 		{"from": "them", "lines": ["HIM"]},
 		{"from": "them", "lines": ["dzqaktll_612"]},
 		{"from": "you",  "lines": ["what?"]},
-	]
+	],
+	"Elise": [
+		{"from": "them", "lines": [""]},
+		{"from": "you", "lines": [""]},
+	],
 }
 
 var MAILS: Dictionary[String, Dictionary] = {
