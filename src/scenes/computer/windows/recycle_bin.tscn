@@ -65,6 +65,15 @@ file_name = "new_doc_1"
 file_type = 2
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
+[node name="todo_txt" type="Button" parent="content/files" index="1" unique_id=1748228638]
+layout_mode = 2
+text = "todo.txt          1.2kb      12-02-2008"
+alignment = 0
+script = ExtResource("3_jtgh5")
+file_name = "todo"
+file_type = 2
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
 [node name="empty_label" type="Label" parent="content" index="2" unique_id=1633366673]
 visible = false
 layout_mode = 1

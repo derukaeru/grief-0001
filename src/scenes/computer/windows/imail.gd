@@ -24,7 +24,7 @@ func open_mail(mail_name: String) -> void:
 	
 	title_label.text = mail_content.title
 	from_label.text = "from: " + mail_content.from
-	to_label.text = "to" + mail_content.to
+	to_label.text = "to: " + mail_content.to
 	content_label.text = mail_content.content
 	
 	mail.show()

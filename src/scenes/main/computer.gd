@@ -138,7 +138,7 @@ func open_doc(doc_name: String) -> void:
 		windows_container.add_child(doc_window)
 		
 		doc_window.app_name = doc_name
-		doc_window.app_name_label.text = doc_name
+		doc_window.app_name_label.text = doc_name + ".txt"
 		doc_window.label.text = Dialogues.DOCS[doc_name]
 		
 		windows.set(doc_window.app_name, doc_window)
