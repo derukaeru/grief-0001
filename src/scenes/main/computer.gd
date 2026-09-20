@@ -77,7 +77,9 @@ func open_file(file_name: String, file_type: File.FILE_TYPES) -> void:
 				SceneChanger.change_scene_immediate("main")
 			else:
 				push_error("Registry.UID does not have a record of the exe file: %s" % file_name)
-	
+		File.FILE_TYPES.ZIP:
+			open_zip(file_name)
+		
 	add_tab(file_name, file_type)
 
 func open_zip(zip_name: String) -> void:
