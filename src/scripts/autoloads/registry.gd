@@ -53,6 +53,7 @@ var APP_ICONS: Dictionary = {
 	"notes": "uid://q23taynsnvaj",
 	"imail": "uid://dm5mg5vp76hyi",
 	"recycle_bin": "uid://2f2agt6rysfi",
+	"bank": "uid://8x8rk6x5ya7c",
 	
 	# general icons
 	"audio": "uid://b7wo8se7cdsfy",

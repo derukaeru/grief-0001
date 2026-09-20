@@ -128,7 +128,7 @@ func open_audio(audio_name: String) -> void:
 		windows.set(audio_window.app_name, audio_window)
 
 func open_doc(doc_name: String) -> void:
-	if not Registry.DOCS.has(doc_name):
+	if not Dialogues.DOCS.has(doc_name):
 		return push_error("Registry does not have record of this document %s" % doc_name)
 	
 	if windows.has(doc_name):
@@ -139,7 +139,7 @@ func open_doc(doc_name: String) -> void:
 		
 		doc_window.app_name = doc_name
 		doc_window.app_name_label.text = doc_name
-		doc_window.label.text = Registry.DOCS[doc_name]
+		doc_window.label.text = Dialogues.DOCS[doc_name]
 		
 		windows.set(doc_window.app_name, doc_window)
 
