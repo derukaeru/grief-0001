@@ -114,13 +114,21 @@ metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
 [node name="new_folder" type="Button" parent="content/main_files/ScrollContainer/files" index="1" unique_id=935824657]
 layout_mode = 2
-text = "new folder        2.3mb      24-12-2006"
+text = "new folder         -             -"
 alignment = 0
 script = ExtResource("3_s33a6")
 folder_name = "new_folder"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
-[node name="downloads" type="Button" parent="content/main_files/ScrollContainer/files" index="2" unique_id=934632782]
+[node name="documents" type="Button" parent="content/main_files/ScrollContainer/files" index="2" unique_id=2021500054]
+layout_mode = 2
+text = "documents          -             -"
+alignment = 0
+script = ExtResource("3_s33a6")
+folder_name = "documents"
+metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
+
+[node name="downloads" type="Button" parent="content/main_files/ScrollContainer/files" index="3" unique_id=934632782]
 layout_mode = 2
 text = "downloads          -             -"
 alignment = 0
@@ -128,23 +136,23 @@ script = ExtResource("3_s33a6")
 folder_name = "downloads"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
-[node name="home" type="Button" parent="content/main_files/ScrollContainer/files" index="3" unique_id=250889985]
+[node name="home" type="Button" parent="content/main_files/ScrollContainer/files" index="4" unique_id=250889985]
 layout_mode = 2
-text = "home               -              -"
+text = "home               -             -"
 alignment = 0
 script = ExtResource("3_s33a6")
 folder_name = "home"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
-[node name="photos" type="Button" parent="content/main_files/ScrollContainer/files" index="4" unique_id=982815081]
+[node name="photos" type="Button" parent="content/main_files/ScrollContainer/files" index="5" unique_id=982815081]
 layout_mode = 2
-text = "photos            20kb        16-5-2004"
+text = "photos             -             -"
 alignment = 0
 script = ExtResource("3_s33a6")
 folder_name = "photos"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
-[node name="grief" type="Button" parent="content/main_files/ScrollContainer/files" index="5" unique_id=2032572662]
+[node name="grief" type="Button" parent="content/main_files/ScrollContainer/files" index="6" unique_id=2032572662]
 layout_mode = 2
 text = "GRIEF              -             -"
 alignment = 0
@@ -152,15 +160,15 @@ script = ExtResource("3_s33a6")
 folder_name = "GRIEF"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
-[node name="videos" type="Button" parent="content/main_files/ScrollContainer/files" index="6" unique_id=434812592]
+[node name="videos" type="Button" parent="content/main_files/ScrollContainer/files" index="7" unique_id=434812592]
 layout_mode = 2
-text = "videos"
+text = "videos             -             -"
 alignment = 0
 script = ExtResource("3_s33a6")
 folder_name = "videos"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
-[node name="eye_png" type="Button" parent="content/main_files/ScrollContainer/files" index="7" unique_id=1736230867]
+[node name="eye_png" type="Button" parent="content/main_files/ScrollContainer/files" index="8" unique_id=1736230867]
 layout_mode = 2
 text = "eye.png           402kb      02-06-2006"
 alignment = 0
@@ -170,7 +178,7 @@ file_name = "eye_png"
 file_type = 0
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
-[node name="logs_md" type="Button" parent="content/main_files/ScrollContainer/files" index="8" unique_id=1677480838]
+[node name="logs_md" type="Button" parent="content/main_files/ScrollContainer/files" index="9" unique_id=1677480838]
 layout_mode = 2
 text = "logs.md           3kb        20-12-2006"
 alignment = 0
@@ -203,14 +211,6 @@ alignment = 0
 script = ExtResource("5_i6dgw")
 folder_name = "new_folder"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
-
-[node name="untitled_zip" type="Button" parent="content/new_folder/files" index="1" unique_id=1094842183]
-layout_mode = 2
-text = "untitled.zip      2.34mb      20-08-2007"
-alignment = 0
-script = ExtResource("6_vlglj")
-zip_name = "untitled_zip"
-metadata/_custom_type_script = "uid://d1msimb6cwx4c"
 
 [node name="photos" type="ColorRect" parent="content" index="2" unique_id=633946427]
 visible = false
@@ -248,7 +248,6 @@ file_type = 2
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="GRIEF" type="ColorRect" parent="content" index="3" unique_id=1300233245]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -277,6 +276,22 @@ alignment = 0
 script = ExtResource("5_i6dgw")
 folder_name = "GRIEF"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="logs" type="Button" parent="content/GRIEF/files" index="1" unique_id=238334594]
+layout_mode = 2
+text = "logs                -              -"
+alignment = 0
+script = ExtResource("3_s33a6")
+folder_name = "logs"
+metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
+
+[node name="versions" type="Button" parent="content/GRIEF/files" index="2" unique_id=1859444996]
+layout_mode = 2
+text = "versions            -              -"
+alignment = 0
+script = ExtResource("3_s33a6")
+folder_name = "versions"
+metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
 [node name="system" type="ColorRect" parent="content" index="4" unique_id=364987280]
 visible = false
@@ -309,7 +324,33 @@ script = ExtResource("5_i6dgw")
 folder_name = "system"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
-[node name="downloads" type="ColorRect" parent="content" index="5" unique_id=90509069]
+[node name="documents" type="ColorRect" parent="content" index="5" unique_id=804660985]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
+[node name="files" type="VBoxContainer" parent="content/documents" index="0" unique_id=625179276]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 421.0
+offset_bottom = 228.0
+
+[node name="return" type="Button" parent="content/documents/files" index="0" unique_id=1422210315]
+layout_mode = 2
+text = "< return"
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "documents"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="downloads" type="ColorRect" parent="content" index="6" unique_id=90509069]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -340,7 +381,15 @@ script = ExtResource("5_i6dgw")
 folder_name = "downloads"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
-[node name="home" type="ColorRect" parent="content" index="6" unique_id=1448537059]
+[node name="untitled_zip" type="Button" parent="content/downloads/files" index="1" unique_id=1094842183]
+layout_mode = 2
+text = "untitled.zip      2.34mb      20-08-2007"
+alignment = 0
+script = ExtResource("6_vlglj")
+zip_name = "untitled_zip"
+metadata/_custom_type_script = "uid://d1msimb6cwx4c"
+
+[node name="home" type="ColorRect" parent="content" index="7" unique_id=1448537059]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -372,7 +421,7 @@ script = ExtResource("5_i6dgw")
 folder_name = "home"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
-[node name="videos" type="ColorRect" parent="content" index="7" unique_id=1619215244]
+[node name="videos" type="ColorRect" parent="content" index="8" unique_id=1619215244]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -403,7 +452,69 @@ script = ExtResource("5_i6dgw")
 folder_name = "videos"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
-[node name="details" type="ColorRect" parent="content" index="8" unique_id=1649789165]
+[node name="logs" type="ColorRect" parent="content" index="9" unique_id=1999405394]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
+[node name="files" type="VBoxContainer" parent="content/logs" index="0" unique_id=1381705753]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="return" type="Button" parent="content/logs/files" index="0" unique_id=1326261024]
+layout_mode = 2
+text = "< return"
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "logs"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="versions" type="ColorRect" parent="content" index="10" unique_id=282479983]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
+[node name="files" type="VBoxContainer" parent="content/versions" index="0" unique_id=1905465091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="return" type="Button" parent="content/versions/files" index="0" unique_id=1023272454]
+layout_mode = 2
+text = "< return"
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "versions"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="details" type="ColorRect" parent="content" index="11" unique_id=1649789165]
 layout_mode = 0
 offset_right = 424.0
 offset_bottom = 31.0
@@ -433,7 +544,7 @@ offset_right = 396.0
 offset_bottom = 22.0
 text = "date modified"
 
-[node name="lockscreen" type="ColorRect" parent="content" index="9" unique_id=1003493815]
+[node name="lockscreen" type="ColorRect" parent="content" index="12" unique_id=1003493815]
 visible = false
 layout_mode = 1
 anchors_preset = 15

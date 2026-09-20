@@ -13,16 +13,19 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 
-[sub_resource type="LabelSettings" id="LabelSettings_mqs0x"]
-font_size = 20
-
 [node name="message_bubble" type="PanelContainer" unique_id=1652884560]
-offset_right = 45.0
-offset_bottom = 35.0
+custom_minimum_size = Vector2(10, 0)
+offset_right = 64.0
+offset_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_0uj1p")
 script = ExtResource("1_0uj1p")
 
-[node name="label" type="Label" parent="." unique_id=1882884055]
+[node name="label" type="RichTextLabel" parent="." unique_id=520670014]
+custom_minimum_size = Vector2(40, 24)
 layout_mode = 2
-label_settings = SubResource("LabelSettings_mqs0x")
-autowrap_mode = 3
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+scroll_active = false
+selection_enabled = true

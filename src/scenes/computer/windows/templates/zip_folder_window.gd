@@ -20,7 +20,7 @@ var app_name_require: String = " - requires password"
 func _ready() -> void:
 	open()
 	
-	if locked:
+	if locked and not GameManager.opened_zips.has(app_name):
 		lock_cover.show()
 		app_name_label.text = app_name_label.text + app_name_require
 	
@@ -73,6 +73,7 @@ func submit(new_text: String = password_label.text) -> void:
 	if password == new_text:
 		app_name_label.text = app_name_label.text.trim_suffix(app_name_require)
 		lock_cover.hide()
+		GameManager.opened_zips.append(app_name)
 	else:
 		password_label.text = ""
 		lockscreen_animation.play("wrong")

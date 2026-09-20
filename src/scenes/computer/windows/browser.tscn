@@ -49,9 +49,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -97.0
-offset_top = -27.0
+offset_top = -7.0
 offset_right = 122.0
-offset_bottom = -3.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_8st7l")
@@ -59,9 +59,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_8st7l")
 [node name="search" type="TextureButton" parent="content/homepage" index="2" unique_id=1008089599]
 layout_mode = 0
 offset_left = 87.0
-offset_top = 105.0
+offset_top = 125.0
 offset_right = 111.0
-offset_bottom = 129.0
+offset_bottom = 149.0
 texture_normal = ExtResource("2_1y61k")
 ignore_texture_size = true
 stretch_mode = 0
@@ -74,13 +74,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -82.0
-offset_top = -98.0
+offset_top = -88.0
 offset_right = 85.0
-offset_bottom = -57.0
+offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
-text = "SEARCH"
+text = "Orion
+Browser"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -94,65 +95,8 @@ texture_normal = ExtResource("4_41ej8")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="search_page" type="Control" parent="content" index="1" unique_id=1353191733]
+[node name="history" type="Control" parent="content" index="1" unique_id=381759822]
 visible = false
-anchors_preset = 0
-offset_right = 424.0
-offset_bottom = 264.0
-
-[node name="top_bar" type="ColorRect" parent="content/search_page" index="0" unique_id=1749207817]
-layout_mode = 0
-offset_right = 424.0
-offset_bottom = 34.0
-color = Color(0, 0, 0, 0.2627451)
-
-[node name="search_bar" type="LineEdit" parent="content/search_page" index="1" unique_id=696624932]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 5.0
-offset_right = 394.0
-offset_bottom = 28.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_b7bgn")
-
-[node name="search" type="TextureButton" parent="content/search_page" index="2" unique_id=1832551531]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 26.0
-offset_bottom = 26.0
-texture_normal = ExtResource("2_1y61k")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="return" type="Button" parent="content/search_page" index="3" unique_id=1749222811]
-layout_mode = 0
-offset_left = 397.0
-offset_top = 5.0
-offset_right = 420.0
-offset_bottom = 28.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_41ej8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_41ej8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_41ej8")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_41ej8")
-theme_override_styles/focus = SubResource("StyleBoxFlat_41ej8")
-text = "<"
-
-[node name="no_internet" type="Label" parent="content/search_page" index="4" unique_id=1977088156]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -7.5
-offset_right = 52.0
-offset_bottom = 7.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "no internet"
-
-[node name="history" type="Control" parent="content" index="2" unique_id=381759822]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -169,7 +113,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.3960994, 0.48738545, 0.48746586, 1)
 
-[node name="return" type="TextureButton" parent="content/history" index="1" unique_id=1982711883]
+[node name="topbar" type="ColorRect" parent="content/history" index="1" unique_id=1479386310]
+layout_mode = 0
+offset_right = 424.0
+offset_bottom = 39.0
+color = Color(0, 0, 0, 0.27058825)
+
+[node name="return" type="TextureButton" parent="content/history" index="2" unique_id=1982711883]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 1.0
@@ -179,21 +129,96 @@ texture_normal = ExtResource("5_8st7l")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="content/history" index="2" unique_id=960772444]
+[node name="ScrollContainer" type="ScrollContainer" parent="content/history" index="3" unique_id=960772444]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 37.0
+offset_top = 42.0
 offset_right = 421.0
 offset_bottom = 261.0
 pivot_offset = Vector2(-76, 87)
+horizontal_scroll_mode = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="content/history/ScrollContainer" index="0" unique_id=1481983458]
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="Button" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="0" unique_id=1009525956]
+layout_mode = 2
+text = "schizophrenia medicines"
+alignment = 0
+
+[node name="search_page" type="Control" parent="content" index="2" unique_id=1353191733]
+visible = false
+anchors_preset = 0
+offset_right = 424.0
+offset_bottom = 264.0
+
+[node name="background" type="ColorRect" parent="content/search_page" index="0" unique_id=114506097]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.49019608, 0.5882353, 0.5882353, 1)
+
+[node name="top_bar" type="ColorRect" parent="content/search_page" index="1" unique_id=1749207817]
+layout_mode = 0
+offset_right = 424.0
+offset_bottom = 34.0
+color = Color(0, 0, 0, 0.2627451)
+
+[node name="search_bar" type="LineEdit" parent="content/search_page" index="2" unique_id=696624932]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 5.0
+offset_right = 394.0
+offset_bottom = 28.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7bgn")
+
+[node name="search" type="TextureButton" parent="content/search_page" index="3" unique_id=1832551531]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 26.0
+offset_bottom = 26.0
+texture_normal = ExtResource("2_1y61k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="return" type="Button" parent="content/search_page" index="4" unique_id=1749222811]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 5.0
+offset_right = 420.0
+offset_bottom = 28.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_41ej8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_41ej8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_41ej8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_41ej8")
+theme_override_styles/focus = SubResource("StyleBoxFlat_41ej8")
+text = "<"
+
+[node name="no_internet" type="Label" parent="content/search_page" index="5" unique_id=1977088156]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -7.5
+offset_right = 52.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "no internet"
+
 [connection signal="text_submitted" from="content/homepage/search_bar" to="content" method="home_search"]
 [connection signal="pressed" from="content/homepage/search" to="content" method="home_search"]
 [connection signal="pressed" from="content/homepage/history" to="content" method="open_history"]
+[connection signal="pressed" from="content/history/return" to="content" method="close_history"]
+[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/Button" to="content" method="search_history" flags=18]
 [connection signal="text_submitted" from="content/search_page/search_bar" to="content" method="search"]
 [connection signal="pressed" from="content/search_page/search" to="content" method="search"]
 [connection signal="pressed" from="content/search_page/return" to="content" method="return_to_homepage"]

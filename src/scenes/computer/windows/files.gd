@@ -10,9 +10,12 @@ extends Control
 	"photos": $photos,
 	"GRIEF": $GRIEF,
 	"system": $system,
+	"documents": $documents,
 	"downloads": $downloads,
 	"home": $home,
-	"videos": $videos
+	"videos": $videos,
+	"logs": $logs,
+	"versions": $versions
 }
 
 var password: String = "12202008"

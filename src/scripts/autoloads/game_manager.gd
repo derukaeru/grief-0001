@@ -7,6 +7,7 @@ var current_map: String = ""
 
 var computer_open: bool = false
 var file_manager_open: bool = false
+var opened_zips: Array = []
 
 func _ready() -> void:
 	add_child(canvas_layer)
