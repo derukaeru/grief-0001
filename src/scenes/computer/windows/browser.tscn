@@ -158,46 +158,46 @@ theme_override_font_sizes/font_size = 16
 text = "schizophrenia medicines"
 alignment = 0
 
-[node name="search_history_2" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="1" unique_id=1710281079]
-custom_minimum_size = Vector2(0, 28)
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "what are the signs of schizophrenia"
-alignment = 0
-
-[node name="search_history_3" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="2" unique_id=580516967]
+[node name="search_history_3" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="1" unique_id=580516967]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "how do i find the location of someone"
 alignment = 0
 
-[node name="search_history_4" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="3" unique_id=1436930491]
+[node name="search_history_4" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="2" unique_id=1436930491]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "how to tell if sugar is expired"
 alignment = 0
 
-[node name="search_history_5" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="4" unique_id=1540128988]
+[node name="search_history_2" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="3" unique_id=1710281079]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "how to clean keyboard safely"
+text = "what are the signs of schizophrenia"
 alignment = 0
 
-[node name="search_history_6" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="5" unique_id=1316190097]
+[node name="search_history_6" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="4" unique_id=1316190097]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "easy chicken parm recipe"
 alignment = 0
 
-[node name="search_history_7" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="6" unique_id=187092434]
+[node name="search_history_7" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="5" unique_id=187092434]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "cheap headphones under $100"
+alignment = 0
+
+[node name="search_history_12" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="6" unique_id=1353685349]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "can deleted files be recovered"
 alignment = 0
 
 [node name="search_history_8" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="7" unique_id=1333133893]
@@ -207,21 +207,28 @@ theme_override_font_sizes/font_size = 16
 text = "minecraft texture pack 1.8"
 alignment = 0
 
-[node name="search_history_9" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="8" unique_id=1911347297]
+[node name="search_history_5" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="8" unique_id=1540128988]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "how to clean keyboard safely"
+alignment = 0
+
+[node name="search_history_9" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="9" unique_id=1911347297]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "minecraft server commands"
 alignment = 0
 
-[node name="search_history_10" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="9" unique_id=470967175]
+[node name="search_history_10" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="10" unique_id=470967175]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "minecraft how to find village"
 alignment = 0
 
-[node name="search_history_11" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="10" unique_id=475828597]
+[node name="search_history_11" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="11" unique_id=475828597]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
@@ -229,6 +236,7 @@ text = "convert jpg to pdf"
 alignment = 0
 
 [node name="search_page" type="Control" parent="content" index="2" unique_id=1353191733]
+visible = false
 anchors_preset = 0
 offset_right = 424.0
 offset_bottom = 264.0
@@ -299,13 +307,14 @@ text = "no internet"
 [connection signal="pressed" from="content/homepage/history" to="content" method="open_history"]
 [connection signal="pressed" from="content/history/return" to="content" method="close_history"]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_1" to="content" method="search_history" flags=18]
-[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_2" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_3" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_4" to="content" method="search_history" flags=18]
-[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_5" to="content" method="search_history" flags=18]
+[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_2" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_6" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_7" to="content" method="search_history" flags=18]
+[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_12" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_8" to="content" method="search_history" flags=18]
+[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_5" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_9" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_10" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_11" to="content" method="search_history" flags=18]

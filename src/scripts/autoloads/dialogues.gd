@@ -69,6 +69,7 @@ var MAILS: Dictionary[String, Dictionary] = {
 		"to": "",
 		"content": "",
 	},
+	
 	"Subscription Renewal": {
 		"title": "Product Subscription",
 		"from": "The Company Team",
@@ -127,6 +128,24 @@ If you need to update your billing details, change your plan, or cancel before t
 Thank you for being a valued part of our community!
 Best regards,
 The Company Team"
+	},
+	"Grocery Reciept ": {
+		"title": "Grocery Reciept",
+		"from": "Megamall Store",
+		"to": "Daniel Carter",
+		"content": "Thank you for shopping with us
+
+Thank you for your purchase.
+
+2x Milk
+
+4x Bread
+
+2x Cereal
+
+1x Instant noodles
+
+Total: $18.42",
 	},
 	"Please Stop.": {
 		"title": "Stop.",
@@ -326,7 +345,7 @@ birthday",
 	"log_0109": "",
 	"log_0110": "",
 	"log_0111": "",
-	"todo_txt": "buy milk
+	"todo": "buy milk
 call chris
 fix bathroom light
 take trash out

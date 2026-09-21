@@ -5,6 +5,12 @@
 [sub_resource type="LabelSettings" id="LabelSettings_l1oqf"]
 font_size = 12
 
+[sub_resource type="LabelSettings" id="LabelSettings_qbsnb"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_o7emv"]
+font_size = 14
+
 [sub_resource type="LabelSettings" id="LabelSettings_fnltp"]
 font_size = 32
 font_color = Color(0.5251013, 0.5251013, 0.5251013, 1)
@@ -90,55 +96,229 @@ offset_bottom = 255.0
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="transaction" type="ColorRect" parent="content/transactions/VBoxContainer" index="0" unique_id=219099174]
+[node name="transaction2" type="ColorRect" parent="content/transactions/VBoxContainer" index="0" unique_id=1189470787]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(0, 0, 0, 0.2784314)
 
-[node name="transaction2" type="ColorRect" parent="content/transactions/VBoxContainer" index="1" unique_id=506986603]
+[node name="amount" type="Label" parent="content/transactions/VBoxContainer/transaction2" index="0" unique_id=1340682045]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 117.0
+offset_bottom = 30.0
+text = "$49.99"
+label_settings = SubResource("LabelSettings_qbsnb")
+vertical_alignment = 1
+
+[node name="reason" type="Label" parent="content/transactions/VBoxContainer/transaction2" index="1" unique_id=778056226]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "DAAT Telecom - Internet"
+label_settings = SubResource("LabelSettings_o7emv")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="transaction" type="ColorRect" parent="content/transactions/VBoxContainer" index="1" unique_id=219099174]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(0, 0, 0, 0.2784314)
 
-[node name="transaction3" type="ColorRect" parent="content/transactions/VBoxContainer" index="2" unique_id=41352042]
+[node name="amount" type="Label" parent="content/transactions/VBoxContainer/transaction" index="0" unique_id=2043629151]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 117.0
+offset_bottom = 30.0
+text = "$18.42"
+label_settings = SubResource("LabelSettings_qbsnb")
+vertical_alignment = 1
+
+[node name="reason" type="Label" parent="content/transactions/VBoxContainer/transaction" index="1" unique_id=539378072]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Megamall Store - Groceries"
+label_settings = SubResource("LabelSettings_o7emv")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="transaction3" type="ColorRect" parent="content/transactions/VBoxContainer" index="2" unique_id=620603196]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(0, 0, 0, 0.2784314)
 
-[node name="transaction4" type="ColorRect" parent="content/transactions/VBoxContainer" index="3" unique_id=1699107992]
+[node name="amount" type="Label" parent="content/transactions/VBoxContainer/transaction3" index="0" unique_id=1704712592]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 117.0
+offset_bottom = 30.0
+text = "$50.00"
+label_settings = SubResource("LabelSettings_qbsnb")
+vertical_alignment = 1
+
+[node name="reason" type="Label" parent="content/transactions/VBoxContainer/transaction3" index="1" unique_id=1898508142]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "ATM Withdrawal"
+label_settings = SubResource("LabelSettings_o7emv")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="transaction4" type="ColorRect" parent="content/transactions/VBoxContainer" index="3" unique_id=1990042274]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(0, 0, 0, 0.2784314)
 
-[node name="transaction5" type="ColorRect" parent="content/transactions/VBoxContainer" index="4" unique_id=351410698]
+[node name="amount" type="Label" parent="content/transactions/VBoxContainer/transaction4" index="0" unique_id=1352586984]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 117.0
+offset_bottom = 30.0
+text = "$50.00"
+label_settings = SubResource("LabelSettings_qbsnb")
+vertical_alignment = 1
+
+[node name="reason" type="Label" parent="content/transactions/VBoxContainer/transaction4" index="1" unique_id=194766005]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "ATM Withdrawal"
+label_settings = SubResource("LabelSettings_o7emv")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="transaction5" type="ColorRect" parent="content/transactions/VBoxContainer" index="4" unique_id=2021268533]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(0, 0, 0, 0.2784314)
 
-[node name="transaction6" type="ColorRect" parent="content/transactions/VBoxContainer" index="5" unique_id=965760376]
+[node name="amount" type="Label" parent="content/transactions/VBoxContainer/transaction5" index="0" unique_id=922465370]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 117.0
+offset_bottom = 30.0
+text = "$18.42"
+label_settings = SubResource("LabelSettings_qbsnb")
+vertical_alignment = 1
+
+[node name="reason" type="Label" parent="content/transactions/VBoxContainer/transaction5" index="1" unique_id=708609502]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Megamall Store - Groceries"
+label_settings = SubResource("LabelSettings_o7emv")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="transaction6" type="ColorRect" parent="content/transactions/VBoxContainer" index="5" unique_id=25030288]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(0, 0, 0, 0.2784314)
 
-[node name="transaction7" type="ColorRect" parent="content/transactions/VBoxContainer" index="6" unique_id=28415811]
+[node name="amount" type="Label" parent="content/transactions/VBoxContainer/transaction6" index="0" unique_id=672181268]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 117.0
+offset_bottom = 30.0
+text = "$18.42"
+label_settings = SubResource("LabelSettings_qbsnb")
+vertical_alignment = 1
+
+[node name="reason" type="Label" parent="content/transactions/VBoxContainer/transaction6" index="1" unique_id=1758774815]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Megamall Store - Groceries"
+label_settings = SubResource("LabelSettings_o7emv")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="transaction7" type="ColorRect" parent="content/transactions/VBoxContainer" index="6" unique_id=1550448944]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 color = Color(0, 0, 0, 0.2784314)
 
-[node name="transaction8" type="ColorRect" parent="content/transactions/VBoxContainer" index="7" unique_id=162728940]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-color = Color(0, 0, 0, 0.2784314)
+[node name="amount" type="Label" parent="content/transactions/VBoxContainer/transaction7" index="0" unique_id=1846863334]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 117.0
+offset_bottom = 30.0
+text = "$18.42"
+label_settings = SubResource("LabelSettings_qbsnb")
+vertical_alignment = 1
 
-[node name="transaction9" type="ColorRect" parent="content/transactions/VBoxContainer" index="8" unique_id=833540423]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-color = Color(0, 0, 0, 0.2784314)
-
-[node name="transaction10" type="ColorRect" parent="content/transactions/VBoxContainer" index="9" unique_id=1225608002]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-color = Color(0, 0, 0, 0.2784314)
+[node name="reason" type="Label" parent="content/transactions/VBoxContainer/transaction7" index="1" unique_id=675858200]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Megamall Store - Groceries"
+label_settings = SubResource("LabelSettings_o7emv")
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="label_bg" type="ColorRect" parent="content" index="3" unique_id=373030723]
 layout_mode = 1
