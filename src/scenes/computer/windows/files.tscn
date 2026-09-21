@@ -176,6 +176,7 @@ text_direction = 1
 script = ExtResource("4_fxr66")
 file_name = "eye_png"
 file_type = 0
+file_extension = null
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="new_folder" type="ColorRect" parent="content" index="1" unique_id=327654599]
@@ -236,6 +237,7 @@ alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "photo_248.png.txt"
 file_type = 2
+file_extension = null
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="GRIEF" type="ColorRect" parent="content" index="3" unique_id=1300233245]
@@ -320,8 +322,9 @@ layout_mode = 2
 text = "log_0101.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_010"
-file_type = 9
+file_name = "log_0101"
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0102" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="2" unique_id=147179300]
@@ -330,7 +333,8 @@ text = "log_0102.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0102"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0103" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="3" unique_id=480459775]
@@ -339,7 +343,8 @@ text = "log_0103.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0103"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0104" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="4" unique_id=1885999454]
@@ -348,7 +353,8 @@ text = "log_0104.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0104"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0105" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="5" unique_id=141918566]
@@ -357,7 +363,8 @@ text = "log_0105.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0105"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0106" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="6" unique_id=51422622]
@@ -366,7 +373,8 @@ text = "log_0106.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0106"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0107" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="7" unique_id=192917683]
@@ -375,7 +383,8 @@ text = "log_0107.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0107"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0108" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="8" unique_id=1019762830]
@@ -384,7 +393,8 @@ text = "log_0108.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0108"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0109" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="9" unique_id=238560238]
@@ -393,7 +403,8 @@ text = "log_0109.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0109"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0110" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="10" unique_id=1233088385]
@@ -402,7 +413,8 @@ text = "log_0110.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0110"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0111" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="11" unique_id=1076259878]
@@ -411,7 +423,8 @@ text = "log_0111.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0111"
-file_type = 9
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="versions" type="ColorRect" parent="content/GRIEF" index="2" unique_id=282479983]
@@ -452,6 +465,7 @@ alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "GRIEF_versions_old"
 file_type = 5
+file_extension = null
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="grief_v02" type="Button" parent="content/GRIEF/versions/files" index="2" unique_id=350759628]
@@ -461,6 +475,7 @@ alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "GRIEF_versions_new"
 file_type = 5
+file_extension = null
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="system" type="ColorRect" parent="content" index="4" unique_id=364987280]
@@ -495,7 +510,6 @@ folder_name = "system"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
 [node name="documents" type="ColorRect" parent="content" index="5" unique_id=804660985]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -529,7 +543,6 @@ folder_name = "documents/projects"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
 [node name="projects" type="ColorRect" parent="content/documents" index="1" unique_id=687448414]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -568,6 +581,38 @@ script = ExtResource("3_s33a6")
 folder_name = "projects/test"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
+[node name="website" type="Button" parent="content/documents/projects/files" index="2" unique_id=2005131106]
+layout_mode = 2
+text = "website             -             -"
+alignment = 0
+script = ExtResource("3_s33a6")
+folder_name = "projects/website"
+metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
+
+[node name="game" type="Button" parent="content/documents/projects/files" index="3" unique_id=814893909]
+layout_mode = 2
+text = "game                -             -"
+alignment = 0
+script = ExtResource("3_s33a6")
+folder_name = "projects/game"
+metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
+
+[node name="weather_app" type="Button" parent="content/documents/projects/files" index="4" unique_id=882439757]
+layout_mode = 2
+text = "weather_app         -             -"
+alignment = 0
+script = ExtResource("3_s33a6")
+folder_name = "projects/weather_app"
+metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
+
+[node name="calculator" type="Button" parent="content/documents/projects/files" index="5" unique_id=1671916179]
+layout_mode = 2
+text = "calculator          -             -"
+alignment = 0
+script = ExtResource("3_s33a6")
+folder_name = "projects/calculator"
+metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
+
 [node name="test" type="ColorRect" parent="content/documents/projects" index="1" unique_id=1640021663]
 visible = false
 layout_mode = 0
@@ -597,6 +642,184 @@ alignment = 0
 script = ExtResource("5_i6dgw")
 folder_name = "projects/test"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="website" type="ColorRect" parent="content/documents/projects" index="2" unique_id=1415280216]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
+[node name="files" type="VBoxContainer" parent="content/documents/projects/website" index="0" unique_id=1199579286]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="return" type="Button" parent="content/documents/projects/website/files" index="0" unique_id=695191489]
+layout_mode = 2
+text = "< return"
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "projects/website"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="index" type="Button" parent="content/documents/projects/website/files" index="1" unique_id=253367537]
+layout_mode = 2
+text = "index.html          -             -"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "index"
+file_type = 2
+file_extension = ".html"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="styles" type="Button" parent="content/documents/projects/website/files" index="2" unique_id=96069024]
+layout_mode = 2
+text = "styles.css          -             -"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "styles"
+file_type = 2
+file_extension = ".css"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="main" type="Button" parent="content/documents/projects/website/files" index="3" unique_id=1965404489]
+layout_mode = 2
+text = "main.js             -             -"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "main"
+file_type = 2
+file_extension = ".js"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="game" type="ColorRect" parent="content/documents/projects" index="3" unique_id=1926222270]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
+[node name="files" type="VBoxContainer" parent="content/documents/projects/game" index="0" unique_id=998287742]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="return" type="Button" parent="content/documents/projects/game/files" index="0" unique_id=939538357]
+layout_mode = 2
+text = "< return"
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "projects/game"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="main_game" type="Button" parent="content/documents/projects/game/files" index="1" unique_id=1110472195]
+layout_mode = 2
+text = "main_game.exe       -             -"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "main_game"
+file_type = 2
+file_extension = ".exe"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="old_save" type="Button" parent="content/documents/projects/game/files" index="2" unique_id=1426176658]
+layout_mode = 2
+text = "old_save.dat        -             -"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "old_save"
+file_type = 2
+file_extension = ".dat"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="weather_app" type="ColorRect" parent="content/documents/projects" index="4" unique_id=1235957941]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
+[node name="files" type="VBoxContainer" parent="content/documents/projects/weather_app" index="0" unique_id=1595065081]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="return" type="Button" parent="content/documents/projects/weather_app/files" index="0" unique_id=43019406]
+layout_mode = 2
+text = "< return"
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "projects/weather_app"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="calculator" type="ColorRect" parent="content/documents/projects" index="5" unique_id=951941447]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.46666667, 0.39607844, 1)
+
+[node name="files" type="VBoxContainer" parent="content/documents/projects/calculator" index="0" unique_id=844899037]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="return" type="Button" parent="content/documents/projects/calculator/files" index="0" unique_id=865020983]
+layout_mode = 2
+text = "< return"
+alignment = 0
+script = ExtResource("5_i6dgw")
+folder_name = "projects/calculator"
+metadata/_custom_type_script = "uid://bhnkq7fk56pco"
+
+[node name="calculator" type="Button" parent="content/documents/projects/calculator/files" index="1" unique_id=64277264]
+layout_mode = 2
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "calculator"
+file_type = 2
+file_extension = ".py"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="downloads" type="ColorRect" parent="content" index="6" unique_id=90509069]
 visible = false

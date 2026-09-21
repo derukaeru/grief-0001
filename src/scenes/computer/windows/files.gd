@@ -19,7 +19,12 @@ extends Control
 	"GRIEF/versions": $GRIEF/versions,
 	
 	"documents/projects": $documents/projects,
-	"projects/test": $documents/projects/test
+	
+	"projects/test": $documents/projects/test,
+	"projects/website": $documents/projects/website,
+	"projects/game": $documents/projects/game,
+	"projects/calculator": $documents/projects/calculator,
+	"projects/weather_app": $documents/projects/weather_app
 }
 
 var password: String = "12202008"

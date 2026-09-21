@@ -11,7 +11,7 @@ signal closed_window(window_name: String)
 signal minimized_window(window_name: String)
 
 signal open_app(app_name: String)
-signal open_file(file_name: String, file_type: File.FILE_TYPES)
+signal open_file(file_name: String, file_type: File.FILE_TYPES, extension: String)
 signal open_folder(file_name: String)
 signal open_zip(zip_name: String)
 

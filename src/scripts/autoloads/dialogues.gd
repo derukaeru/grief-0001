@@ -362,4 +362,9 @@ old email",
 	"new": "",
 	"new2": "",
 	"elise_english_essay_final": "I believe that people often remember things differently than they actually happened.",
+	"index": "",
+	"styles": "",
+	"main": "",
+	"calculator": "",
+	"main_game": ""
 }
