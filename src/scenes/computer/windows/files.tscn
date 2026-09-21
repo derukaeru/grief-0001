@@ -178,15 +178,6 @@ file_name = "eye_png"
 file_type = 0
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
-[node name="logs_md" type="Button" parent="content/main_files/ScrollContainer/files" index="9" unique_id=1677480838]
-layout_mode = 2
-text = "logs.md           3kb        20-12-2006"
-alignment = 0
-script = ExtResource("4_fxr66")
-file_name = "logs_md"
-file_type = 2
-metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
-
 [node name="new_folder" type="ColorRect" parent="content" index="1" unique_id=327654599]
 visible = false
 layout_mode = 1
@@ -466,9 +457,9 @@ color = Color(0.5019608, 0.46666667, 0.39607844, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="content/logs" index="0" unique_id=917069693]
 layout_mode = 0
-offset_left = 2.0
+offset_left = 5.0
 offset_top = 3.0
-offset_right = 421.0
+offset_right = 420.0
 offset_bottom = 230.0
 
 [node name="files" type="VBoxContainer" parent="content/logs/ScrollContainer" index="0" unique_id=1381705753]
@@ -485,104 +476,105 @@ metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
 [node name="log_0101" type="Button" parent="content/logs/ScrollContainer/files" index="1" unique_id=637093883]
 layout_mode = 2
-text = "log_0101.txt        -             -"
+text = "log_0101.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0101.txt"
-file_type = 2
+file_name = "log_010"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0102" type="Button" parent="content/logs/ScrollContainer/files" index="2" unique_id=147179300]
 layout_mode = 2
-text = "log_0102.txt        -             -"
+text = "log_0102.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0102.txt"
-file_type = 2
+file_name = "log_0102"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0103" type="Button" parent="content/logs/ScrollContainer/files" index="3" unique_id=480459775]
 layout_mode = 2
-text = "log_0103.txt        -             -"
+text = "log_0103.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0103.txt"
-file_type = 2
+file_name = "log_0103"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0104" type="Button" parent="content/logs/ScrollContainer/files" index="4" unique_id=1885999454]
 layout_mode = 2
-text = "log_0104.txt        -             -"
+text = "log_0104.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0104.txt"
-file_type = 2
+file_name = "log_0104"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0105" type="Button" parent="content/logs/ScrollContainer/files" index="5" unique_id=141918566]
 layout_mode = 2
-text = "log_0105.txt        -             -"
+text = "log_0105.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0105.txt"
-file_type = 2
+file_name = "log_0105"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0106" type="Button" parent="content/logs/ScrollContainer/files" index="6" unique_id=51422622]
 layout_mode = 2
-text = "log_0106.txt        -             -"
+text = "log_0106.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0106.txt"
-file_type = 2
+file_name = "log_0106"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0107" type="Button" parent="content/logs/ScrollContainer/files" index="7" unique_id=192917683]
 layout_mode = 2
-text = "log_0107.txt        -             -"
+text = "log_0107.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0107.txt"
-file_type = 2
+file_name = "log_0107"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0108" type="Button" parent="content/logs/ScrollContainer/files" index="8" unique_id=1019762830]
 layout_mode = 2
-text = "log_0108.txt        -             -"
+text = "log_0108.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0108.txt"
-file_type = 2
+file_name = "log_0108"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0109" type="Button" parent="content/logs/ScrollContainer/files" index="9" unique_id=238560238]
 layout_mode = 2
-text = "log_0109.txt        -             -"
+text = "log_0109.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0109.txt"
-file_type = 2
+file_name = "log_0109"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0110" type="Button" parent="content/logs/ScrollContainer/files" index="10" unique_id=1233088385]
 layout_mode = 2
-text = "log_0110.txt        -             -"
+text = "log_0110.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0110.txt"
-file_type = 2
+file_name = "log_0110"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0111" type="Button" parent="content/logs/ScrollContainer/files" index="11" unique_id=1076259878]
 layout_mode = 2
-text = "log_0111.txt.txt        -             -"
+text = "log_0111.log        -             -"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0111.txt"
-file_type = 2
+file_name = "log_0111"
+file_type = 9
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="versions" type="ColorRect" parent="content" index="10" unique_id=282479983]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -85,6 +85,7 @@ offset_left = 6.0
 offset_top = 42.0
 offset_right = 419.0
 offset_bottom = 283.0
+horizontal_scroll_mode = 0
 
 [node name="message_bubble_container" type="VBoxContainer" parent="content/message/ScrollContainer" index="0" unique_id=1382716259]
 layout_mode = 2

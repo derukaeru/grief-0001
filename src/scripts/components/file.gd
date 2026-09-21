@@ -7,7 +7,11 @@ enum FILE_TYPES {
 	DOC,
 	APP,
 	EXE,
-	ZIP
+	ZIP,
+	PDF,
+	DOCX,
+	XLSX,
+	LOG,
 }
 
 @export var file_name: String = "" 

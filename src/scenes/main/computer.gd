@@ -65,8 +65,8 @@ func open_file(file_name: String, file_type: File.FILE_TYPES) -> void:
 	match file_type:
 		File.FILE_TYPES.APP:
 			open_app(file_name)
-		File.FILE_TYPES.DOC:
-			open_doc(file_name)
+		File.FILE_TYPES.DOC, File.FILE_TYPES.PDF, File.FILE_TYPES.DOCX, File.FILE_TYPES.XLSX, File.FILE_TYPES.LOG:
+			open_doc(file_name, file_type)
 		File.FILE_TYPES.AUDIO:
 			open_audio(file_name)
 		File.FILE_TYPES.IMAGE:
@@ -79,7 +79,7 @@ func open_file(file_name: String, file_type: File.FILE_TYPES) -> void:
 				push_error("Registry.UID does not have a record of the exe file: %s" % file_name)
 		File.FILE_TYPES.ZIP:
 			open_zip(file_name)
-		
+	
 	add_tab(file_name, file_type)
 
 func open_zip(zip_name: String) -> void:
@@ -127,7 +127,7 @@ func open_audio(audio_name: String) -> void:
 		
 		windows.set(audio_window.app_name, audio_window)
 
-func open_doc(doc_name: String) -> void:
+func open_doc(doc_name: String, type: File.FILE_TYPES) -> void:
 	if not Dialogues.DOCS.has(doc_name):
 		return push_error("Registry does not have record of this document %s" % doc_name)
 	
@@ -137,8 +137,20 @@ func open_doc(doc_name: String) -> void:
 		var doc_window: DocFileWindow = load(Registry.UID.doc_file_window).instantiate()
 		windows_container.add_child(doc_window)
 		
+		var suffix: String = ".txt"
+		
+		match type:
+			File.FILE_TYPES.PDF:
+				suffix = ".pdf"
+			File.FILE_TYPES.DOCX:
+				suffix = ".docx"
+			File.FILE_TYPES.XLSX:
+				suffix = ".xlsx"
+			File.FILE_TYPES.LOG:
+				suffix = ".log"
+		
 		doc_window.app_name = doc_name
-		doc_window.app_name_label.text = doc_name + ".txt"
+		doc_window.app_name_label.text = doc_name + suffix
 		doc_window.label.text = Dialogues.DOCS[doc_name]
 		
 		windows.set(doc_window.app_name, doc_window)
