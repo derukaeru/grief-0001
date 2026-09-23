@@ -11,15 +11,11 @@ password = "wretched_612"
 [node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
 text = "untitled.zip"
 
-[node name="field_exe" type="Button" parent="content/files" parent_id_path=PackedInt32Array(1843158095) index="0" unique_id=825704741]
+[node name="field_exe" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="0" unique_id=825704741]
 layout_mode = 2
 text = "field.exe         9.26mb     02-12-2006"
-flat = true
 alignment = 0
 script = ExtResource("2_juxrl")
 file_name = "field_exe"
 file_type = 4
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
-
-[node name="lock_cover" parent="content" parent_id_path=PackedInt32Array(976143210) index="2" unique_id=185874785]
-visible = false

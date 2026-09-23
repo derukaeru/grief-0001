@@ -231,7 +231,7 @@ metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
 [node name="IMG_8503" type="Button" parent="content/photos/files" index="1" unique_id=1360178706]
 layout_mode = 2
-text = "IMG_8503.jpg   196kb       4-10-2002"
+text = "IMG_8503.jpg      196kb       4-10-2002"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "IMG_8503"
@@ -241,7 +241,7 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="IMG_8512" type="Button" parent="content/photos/files" index="2" unique_id=2020011509]
 layout_mode = 2
-text = "IMG_8503.jpg   220kb       4-10-2002"
+text = "IMG_8503.jpg      220kb       4-10-2002"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "IMG_8512"
@@ -250,6 +250,7 @@ file_extension = ".jpg"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="GRIEF" type="ColorRect" parent="content" index="3" unique_id=1300233245]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -296,6 +297,7 @@ folder_name = "GRIEF/versions"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
 [node name="logs" type="ColorRect" parent="content/GRIEF" index="1" unique_id=1999405394]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -467,7 +469,7 @@ metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
 [node name="grief_v01" type="Button" parent="content/GRIEF/versions/files" index="1" unique_id=75529389]
 layout_mode = 2
-text = "GRIEF_...old.zip    -         04-02-2010"
+text = "GRIEF_...old.zip    -         04-02-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "GRIEF_versions_old"
@@ -476,11 +478,21 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="grief_v02" type="Button" parent="content/GRIEF/versions/files" index="2" unique_id=350759628]
 layout_mode = 2
-text = "GRIEF_...new.zip    -         04-02-2010"
+text = "GRIEF_...new.zip    -         04-02-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "GRIEF_versions_new"
 file_type = 5
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="IMG_qqAkg" type="Button" parent="content/GRIEF/versions/files" index="3" unique_id=389086890]
+layout_mode = 2
+text = "IMG_qqAkg.png     145kb       09-14-2008"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "IMG_qqAkg"
+file_type = 0
+file_extension = ".png"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="system" type="ColorRect" parent="content" index="4" unique_id=364987280]
@@ -627,6 +639,16 @@ alignment = 0
 script = ExtResource("3_s33a6")
 folder_name = "projects/calculator"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
+
+[node name="28973" type="Button" parent="content/documents/projects/files" index="6" unique_id=1066569919]
+layout_mode = 2
+text = "28973.png          145kb      04-10-2008"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "28973"
+file_type = 0
+file_extension = ".png"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="test" type="ColorRect" parent="content/documents/projects" index="1" unique_id=1640021663]
 visible = false
@@ -830,6 +852,7 @@ metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
 [node name="calculator" type="Button" parent="content/documents/projects/calculator/files" index="1" unique_id=64277264]
 layout_mode = 2
+text = "calculator.py       -        10-20-2008"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "calculator"
@@ -904,7 +927,7 @@ metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
 [node name="untitled_zip" type="Button" parent="content/downloads/files" index="2" unique_id=1094842183]
 layout_mode = 2
-text = "untitled.zip      2.34mb      20-08-2007"
+text = "untitled.zip      2.34mb      03-08-2008"
 alignment = 0
 script = ExtResource("6_vlglj")
 zip_name = "untitled_zip"
@@ -912,10 +935,20 @@ metadata/_custom_type_script = "uid://d1msimb6cwx4c"
 
 [node name="town" type="Button" parent="content/downloads/files" index="3" unique_id=707941016]
 layout_mode = 2
-text = "town.jpg          501kb       4-10-2002"
+text = "town.jpg          501kb       02-24-2008"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "town"
+file_type = 0
+file_extension = ".png"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="leek_021" type="Button" parent="content/downloads/files" index="4" unique_id=2026229659]
+layout_mode = 2
+text = "leek_021.png      177kb       04-10-2008"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "leek_021"
 file_type = 0
 file_extension = ".png"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
@@ -1045,7 +1078,6 @@ offset_bottom = 22.0
 text = "date modified"
 
 [node name="lockscreen" type="ColorRect" parent="content" index="10" unique_id=1003493815]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

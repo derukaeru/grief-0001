@@ -83,7 +83,7 @@ var MAILS: Dictionary[String, Dictionary] = {
 		"to": "Daniel Carter",
 		"content": "Hi Daniel Carter,
 We hope you are enjoying your time with our product!. 
-This is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. 
+This is a quick heads-up that your current subscription is set to automatically renew on October 17th, 2004 for $9.99. 
 		
 		
 		
@@ -100,7 +100,15 @@ Thank you for being a valued part of our community!
 Best regards,
 The Company Team"
 	},
-	
+	"check up": {
+		"title": "yo man",
+		"from": "mike8888@email.com",
+		"to": "Daniel",
+		"content": "hey man, it's been like 2 months. you good? you stopped answering
+the group chat too. just checking in, call me whenever.
+
+- mike",
+	},
 	"Internet Removal": {
 		"title": "Internet Bill Removal",
 		"from": "DAAT Telecom",
@@ -181,7 +189,7 @@ Michael Ward",
 
 Amount due: $49.99
 
-Due date: April 18.",
+Due date: March 18.",
 	},
 	"Subscription Renewal  ": {
 		"title": "Product Subscription",
@@ -189,7 +197,7 @@ Due date: April 18.",
 		"to": "Daniel Carter",
 		"content": "Hi Daniel Carter,
 We hope you are enjoying your time with our product!. 
-This is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. 
+This is a quick heads-up that your current subscription is set to automatically renew on March 17th, 2004 for $9.99. 
 		
 		
 		
@@ -223,30 +231,7 @@ Don't miss out.",
 		"to": "Daniel Carter",
 		"content": "Hi Daniel Carter,
 We hope you are enjoying your time with our product!. 
-This is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. 
-		
-		
-		
-You do not need to do anything if you want to keep your access—your renewal will happen automatically using your saved payment method on file. 
-		
-		
-		
-If you need to update your billing details, change your plan, or cancel before the charge goes through, you can visit your Manage Subscription Dashboard.
-		
-		
-		
-		
-Thank you for being a valued part of our community!
-Best regards,
-The Company Team"
-	},
-	"Subscription Renewal    ": {
-		"title": "Product Subscription",
-		"from": "The Company Team",
-		"to": "Daniel Carter",
-		"content": "Hi Daniel Carter,
-We hope you are enjoying your time with our product!. 
-This is a quick heads-up that your current subscription is set to automatically renew on September 17th, 2004 for $9.99. 
+This is a quick heads-up that your current subscription is set to automatically renew on February 17th, 2004 for $9.99. 
 		
 		
 		
@@ -305,7 +290,7 @@ Total: $18.42",
 
 Amount due: $49.99
 
-Due date: March 18.",
+Due date: February 18.",
 	},
 	
 	"photossss": {
@@ -454,7 +439,9 @@ old email",
 	"main": "",
 	"calculator": "",
 	"main_game": "",
-	"grief-0001-old": "",
-	"grief-0002-old": "",
+	"grief-0001-old": "<to be continued>",
+	"grief-0002-old": "<to be continued>",
+	"grief-0001-new": "<to be continued>",
+	"grief-0002-new": "<to be continued>",
 	"old_save": ""
 }

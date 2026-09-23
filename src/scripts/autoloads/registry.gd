@@ -74,7 +74,12 @@ var IMAGES: Dictionary = {
 	"town": "uid://73qa8qea1rmn",
 	"IMG_8503": "uid://bdr6dwy3crj8e",
 	"IMG_8512": "uid://eawn5v10kqcd",
-	"IMG_8523": "uid://dh8duco1xo45f"
+	"IMG_8523": "uid://dh8duco1xo45f",
+	
+	".thumb_cache": "uid://dgqcvs7wq7exv",
+	"IMG_qqAkg": "uid://dbu7eb6qgn345",
+	"leek_021": "uid://bpdk70wlxsj6a",
+	"28973": "uid://b4wk1h6udxral",
 }
 
 var AUDIOS: Dictionary = {
