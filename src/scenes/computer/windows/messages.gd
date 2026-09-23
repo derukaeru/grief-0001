@@ -28,7 +28,7 @@ func _ready() -> void:
 
 func open_message(id: String) -> void:
 	var thread: Array = Dialogues.MESSAGES[id]
-	messenger_name.text = id
+	messenger_name.text = id 
 	
 	for child in message_bubbles_container.get_children():
 		child.queue_free()
@@ -43,10 +43,9 @@ func open_message(id: String) -> void:
 			bubble.set_text(line)
 	
 	await get_tree().process_frame
+	message.show()
 	var scroll: ScrollContainer = $message/ScrollContainer
 	scroll.scroll_vertical = int(scroll.get_v_scroll_bar().max_value)
-	
-	message.show()
 
 func back() -> void:
 	message.hide()

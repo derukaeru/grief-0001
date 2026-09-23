@@ -176,7 +176,6 @@ text_direction = 1
 script = ExtResource("4_fxr66")
 file_name = "eye_png"
 file_type = 0
-file_extension = null
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="new_folder" type="ColorRect" parent="content" index="1" unique_id=327654599]
@@ -237,7 +236,6 @@ alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "photo_248.png.txt"
 file_type = 2
-file_extension = null
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="GRIEF" type="ColorRect" parent="content" index="3" unique_id=1300233245]
@@ -465,7 +463,6 @@ alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "GRIEF_versions_old"
 file_type = 5
-file_extension = null
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="grief_v02" type="Button" parent="content/GRIEF/versions/files" index="2" unique_id=350759628]
@@ -475,7 +472,6 @@ alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "GRIEF_versions_new"
 file_type = 5
-file_extension = null
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="system" type="ColorRect" parent="content" index="4" unique_id=364987280]
@@ -510,6 +506,7 @@ folder_name = "system"
 metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
 [node name="documents" type="ColorRect" parent="content" index="5" unique_id=804660985]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -543,6 +540,7 @@ folder_name = "documents/projects"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
 [node name="projects" type="ColorRect" parent="content/documents" index="1" unique_id=687448414]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -704,6 +702,7 @@ file_extension = ".js"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="game" type="ColorRect" parent="content/documents/projects" index="3" unique_id=1926222270]
+visible = false
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
