@@ -74,6 +74,16 @@ file_name = "todo"
 file_type = 2
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
+[node name="wallpaper_1" type="Button" parent="content/files" index="2" unique_id=773664510]
+layout_mode = 2
+text = "wallpaper(1).jpg  205kb      05-17-2008"
+alignment = 0
+script = ExtResource("3_jtgh5")
+file_name = "IMG_8523"
+file_type = 0
+file_extension = ".jpg"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
 [node name="empty_label" type="Label" parent="content" index="2" unique_id=1633366673]
 visible = false
 layout_mode = 1

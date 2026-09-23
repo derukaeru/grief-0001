@@ -172,74 +172,81 @@ theme_override_font_sizes/font_size = 16
 text = "how to tell if sugar is expired"
 alignment = 0
 
-[node name="search_history_2" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="3" unique_id=1710281079]
+[node name="search_history_13" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="3" unique_id=127534413]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "can an AI learn a person"
+alignment = 0
+
+[node name="search_history_2" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="4" unique_id=1710281079]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "what are the signs of schizophrenia"
 alignment = 0
 
-[node name="search_history_6" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="4" unique_id=1316190097]
+[node name="search_history_6" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="5" unique_id=1316190097]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "easy chicken parm recipe"
 alignment = 0
 
-[node name="search_history_7" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="5" unique_id=187092434]
+[node name="search_history_7" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="6" unique_id=187092434]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "cheap headphones under $100"
 alignment = 0
 
-[node name="search_history_12" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="6" unique_id=1353685349]
+[node name="search_history_12" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="7" unique_id=1353685349]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "can deleted files be recovered"
 alignment = 0
 
-[node name="search_history_8" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="7" unique_id=1333133893]
+[node name="search_history_8" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="8" unique_id=1333133893]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "minecraft texture pack 1.8"
 alignment = 0
 
-[node name="search_history_5" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="8" unique_id=1540128988]
+[node name="search_history_5" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="9" unique_id=1540128988]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "how to clean keyboard safely"
 alignment = 0
 
-[node name="search_history_9" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="9" unique_id=1911347297]
+[node name="search_history_14" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="10" unique_id=433806254]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "riverside locations near me"
+alignment = 0
+
+[node name="search_history_9" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="11" unique_id=1911347297]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "minecraft server commands"
 alignment = 0
 
-[node name="search_history_10" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="10" unique_id=470967175]
+[node name="search_history_10" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="12" unique_id=470967175]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "minecraft how to find village"
 alignment = 0
 
-[node name="search_history_11" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="11" unique_id=475828597]
+[node name="search_history_11" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="13" unique_id=475828597]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "convert jpg to pdf"
-alignment = 0
-
-[node name="search_history_13" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="12" unique_id=127534413]
-custom_minimum_size = Vector2(0, 28)
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-text = "can an AI learn a person"
 alignment = 0
 
 [node name="search_page" type="Control" parent="content" index="2" unique_id=1353191733]
@@ -316,16 +323,17 @@ text = "no internet"
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_1" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_3" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_4" to="content" method="search_history" flags=18]
+[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_13" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_2" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_6" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_7" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_12" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_8" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_5" to="content" method="search_history" flags=18]
+[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_14" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_9" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_10" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_11" to="content" method="search_history" flags=18]
-[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_13" to="content" method="search_history" flags=18]
 [connection signal="text_submitted" from="content/search_page/search_bar" to="content" method="search"]
 [connection signal="pressed" from="content/search_page/search" to="content" method="search"]
 [connection signal="pressed" from="content/search_page/return" to="content" method="return_to_homepage"]

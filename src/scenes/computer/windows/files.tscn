@@ -249,18 +249,7 @@ file_type = 0
 file_extension = ".jpg"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
-[node name="IMG_8523" type="Button" parent="content/photos/files" index="3" unique_id=1698167829]
-layout_mode = 2
-text = "IMG_8503.jpg   205kb       4-10-2002"
-alignment = 0
-script = ExtResource("4_fxr66")
-file_name = "IMG_8523"
-file_type = 0
-file_extension = ".jpg"
-metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
-
 [node name="GRIEF" type="ColorRect" parent="content" index="3" unique_id=1300233245]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -307,7 +296,6 @@ folder_name = "GRIEF/versions"
 metadata/_custom_type_script = "uid://cg4nopqq4ykkf"
 
 [node name="logs" type="ColorRect" parent="content/GRIEF" index="1" unique_id=1999405394]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -338,7 +326,7 @@ metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
 [node name="log_0101" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="1" unique_id=637093883]
 layout_mode = 2
-text = "log_0101.log        -             -"
+text = "log_0101.log      1.23kb    05-06-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0101"
@@ -348,7 +336,7 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0102" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="2" unique_id=147179300]
 layout_mode = 2
-text = "log_0102.log        -             -"
+text = "log_0102.log      1.55kb    05-09-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0102"
@@ -358,7 +346,7 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0103" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="3" unique_id=480459775]
 layout_mode = 2
-text = "log_0103.log        -             -"
+text = "log_0103.log      0.78kb    05-12-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0103"
@@ -368,7 +356,7 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0104" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="4" unique_id=1885999454]
 layout_mode = 2
-text = "log_0104.log        -             -"
+text = "log_0104.log      2kb       05-14-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0104"
@@ -378,7 +366,7 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="log_0105" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="5" unique_id=141918566]
 layout_mode = 2
-text = "log_0105.log        -             -"
+text = "log_0105.log      1.1kb     05-17-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0105"
@@ -386,29 +374,9 @@ file_type = 2
 file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
-[node name="log_0106" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="6" unique_id=51422622]
+[node name="log_0108" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="6" unique_id=1019762830]
 layout_mode = 2
-text = "log_0106.log        -             -"
-alignment = 0
-script = ExtResource("4_fxr66")
-file_name = "log_0106"
-file_type = 2
-file_extension = ".log"
-metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
-
-[node name="log_0107" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="7" unique_id=192917683]
-layout_mode = 2
-text = "log_0107.log        -             -"
-alignment = 0
-script = ExtResource("4_fxr66")
-file_name = "log_0107"
-file_type = 2
-file_extension = ".log"
-metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
-
-[node name="log_0108" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="8" unique_id=1019762830]
-layout_mode = 2
-text = "log_0108.log        -             -"
+text = "log_0108.log      2.23kb    05-18-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0108"
@@ -416,9 +384,9 @@ file_type = 2
 file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
-[node name="log_0109" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="9" unique_id=238560238]
+[node name="log_0109" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="7" unique_id=238560238]
 layout_mode = 2
-text = "log_0109.log        -             -"
+text = "log_0109.log      1.23kb    05-20-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "log_0109"
@@ -426,22 +394,42 @@ file_type = 2
 file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
-[node name="log_0110" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="10" unique_id=1233088385]
+[node name="log_0111" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="8" unique_id=1076259878]
 layout_mode = 2
-text = "log_0110.log        -             -"
+text = "log_0111.log      1.6kb    05-22-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0110"
+file_name = "log_0111"
 file_type = 2
 file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
-[node name="log_0111" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="11" unique_id=1076259878]
+[node name="log_0112" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="9" unique_id=32423997]
 layout_mode = 2
-text = "log_0111.log        -             -"
+text = "log_0112.log      0.56kb    05-23-2009"
 alignment = 0
 script = ExtResource("4_fxr66")
-file_name = "log_0111"
+file_name = "log_0112"
+file_type = 2
+file_extension = ".log"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="log_0113" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="10" unique_id=1856471950]
+layout_mode = 2
+text = "log_0113.log      1.23kb    05-25-2009"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "log_0113"
+file_type = 2
+file_extension = ".log"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="log_0128" type="Button" parent="content/GRIEF/logs/ScrollContainer/files" index="11" unique_id=2089386752]
+layout_mode = 2
+text = "log_0128.log      2.2kb     05-27-2009"
+alignment = 0
+script = ExtResource("4_fxr66")
+file_name = "log_0128"
 file_type = 2
 file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
@@ -479,7 +467,7 @@ metadata/_custom_type_script = "uid://bhnkq7fk56pco"
 
 [node name="grief_v01" type="Button" parent="content/GRIEF/versions/files" index="1" unique_id=75529389]
 layout_mode = 2
-text = "GRIEF_...old.zip    -              -"
+text = "GRIEF_...old.zip    -         04-02-2010"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "GRIEF_versions_old"
@@ -488,7 +476,7 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="grief_v02" type="Button" parent="content/GRIEF/versions/files" index="2" unique_id=350759628]
 layout_mode = 2
-text = "GRIEF_...new.zip    -              -"
+text = "GRIEF_...new.zip    -         04-02-2010"
 alignment = 0
 script = ExtResource("4_fxr66")
 file_name = "GRIEF_versions_new"

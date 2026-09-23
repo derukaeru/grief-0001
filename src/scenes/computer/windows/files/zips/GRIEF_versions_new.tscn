@@ -13,7 +13,7 @@ text = "GRIEF_versions_new"
 
 [node name="GRIEF-0001-new" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="0" unique_id=1775216594]
 layout_mode = 2
-text = "GRIEF-0..new.exe   -               -"
+text = "GRIEF-0..new.exe   5.7mb          -"
 alignment = 0
 script = ExtResource("2_b4f0f")
 file_name = "grief-0001-new"
@@ -23,10 +23,60 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="GRIEF-0002-new" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="1" unique_id=1336655704]
 layout_mode = 2
-text = "GRIEF-0..new.exe   -               -"
+text = "GRIEF-0..new.exe   6.1mb          -"
 alignment = 0
 script = ExtResource("2_b4f0f")
 file_name = "grief-0001-new"
 file_type = 2
 file_extension = ".exe"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="log_0201" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="2" unique_id=2104187332]
+layout_mode = 2
+text = "log_0201.log       2kb        06-02-2009 "
+alignment = 0
+script = ExtResource("2_b4f0f")
+file_name = "log_0201"
+file_type = 2
+file_extension = ".log"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="log_0205" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="3" unique_id=83444468]
+layout_mode = 2
+text = "log_0205.log       1.4kb      06-04-2009 "
+alignment = 0
+script = ExtResource("2_b4f0f")
+file_name = "log_0205"
+file_type = 2
+file_extension = ".log"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="log_0207" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="4" unique_id=1585773569]
+layout_mode = 2
+text = "log_0207.log       2.2kb      06-09-2009 "
+alignment = 0
+script = ExtResource("2_b4f0f")
+file_name = "log_0207"
+file_type = 2
+file_extension = ".log"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="log_0210" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="5" unique_id=932845440]
+layout_mode = 2
+text = "log_0210.log       1.2kb      06-13-2009 "
+alignment = 0
+script = ExtResource("2_b4f0f")
+file_name = "log_0210"
+file_type = 2
+file_extension = ".log"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="log_0214" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="6" unique_id=173116968]
+layout_mode = 2
+text = "log_0214.log       0.75kb     06-16-2009 "
+alignment = 0
+script = ExtResource("2_b4f0f")
+file_name = "log_0214"
+file_type = 2
+file_extension = ".log"
 metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"

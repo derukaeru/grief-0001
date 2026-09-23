@@ -13,7 +13,7 @@ text = "GRIEF_versions_old"
 
 [node name="GRIEF-0001-old" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="0" unique_id=730552749]
 layout_mode = 2
-text = "GRIEF-0..old.exe   -              -"
+text = "GRIEF-0..old.exe   4.2mb          -"
 alignment = 0
 script = ExtResource("2_dal73")
 file_name = "grief-0001-old"
@@ -23,7 +23,7 @@ metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
 
 [node name="GRIEF-0002-old" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="1" unique_id=1098925691]
 layout_mode = 2
-text = "GRIEF-0..old.exe   -              -"
+text = "GRIEF-0..old.exe   4.8mb          -"
 alignment = 0
 script = ExtResource("2_dal73")
 file_name = "grief-0002-old"
