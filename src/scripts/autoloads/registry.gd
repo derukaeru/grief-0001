@@ -71,6 +71,10 @@ var ZIPS: Dictionary = {
 
 var IMAGES: Dictionary = {
 	"eye_png": "uid://dd4ilhivajitl",
+	"town": "uid://73qa8qea1rmn",
+	"IMG_8503": "uid://bdr6dwy3crj8e",
+	"IMG_8512": "uid://eawn5v10kqcd",
+	"IMG_8523": "uid://dh8duco1xo45f"
 }
 
 var AUDIOS: Dictionary = {

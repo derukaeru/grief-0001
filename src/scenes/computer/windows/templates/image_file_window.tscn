@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dvgkjgp27id72" path="res://src/scenes/computer/windows/templates/image_file_window.gd" id="2_lm8i2"]
 
 [node name="image_file_window" unique_id=1725337698 instance=ExtResource("1_73chq")]
-offset_right = -258.0
-offset_bottom = -140.0
+offset_right = -273.0
+offset_bottom = -178.0
 script = ExtResource("2_lm8i2")
 texture = null
 

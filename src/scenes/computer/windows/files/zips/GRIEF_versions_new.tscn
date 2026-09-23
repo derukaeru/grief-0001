@@ -1,11 +1,32 @@
 [gd_scene format=3 uid="uid://ck186vgm6jw3p"]
 
 [ext_resource type="PackedScene" uid="uid://dudseog2lkwqk" path="res://src/scenes/computer/windows/templates/zip_folder_window.tscn" id="1_aqkja"]
+[ext_resource type="Script" uid="uid://bk8wnmpyuw6x2" path="res://src/scripts/components/file.gd" id="2_b4f0f"]
 
 [node name="GRIEF_versions_new" unique_id=1725337698 instance=ExtResource("1_aqkja")]
 app_name = "GRIEF_versions_new"
 locked = true
-password = "6b2v3r09u"
+password = "findingelise_new"
 
 [node name="app_name" parent="top_bar" parent_id_path=PackedInt32Array(1193579824) index="1" unique_id=1590715306]
 text = "GRIEF_versions_new"
+
+[node name="GRIEF-0001-new" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="0" unique_id=1775216594]
+layout_mode = 2
+text = "GRIEF-0..new.exe   -               -"
+alignment = 0
+script = ExtResource("2_b4f0f")
+file_name = "grief-0001-new"
+file_type = 2
+file_extension = ".exe"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"
+
+[node name="GRIEF-0002-new" type="Button" parent="content/ScrollContainer/files" parent_id_path=PackedInt32Array(1843158095) index="1" unique_id=1336655704]
+layout_mode = 2
+text = "GRIEF-0..new.exe   -               -"
+alignment = 0
+script = ExtResource("2_b4f0f")
+file_name = "grief-0001-new"
+file_type = 2
+file_extension = ".exe"
+metadata/_custom_type_script = "uid://bk8wnmpyuw6x2"

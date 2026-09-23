@@ -19,6 +19,9 @@ extends Control
 	"GRIEF/versions": $GRIEF/versions,
 	
 	"documents/projects": $documents/projects,
+	"documents/work": $documents/work,
+	
+	"downloads/voice_test": $downloads/voice_test,
 	
 	"projects/test": $documents/projects/test,
 	"projects/website": $documents/projects/website,

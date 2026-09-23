@@ -25,8 +25,22 @@ var MESSAGES: Dictionary[String, Array] = {
 		{"from": "you",  "lines": ["what?"]},
 	],
 	"Elise": [
-		{"from": "them", "lines": [""]},
-		{"from": "you", "lines": [""]},
+		{"from": "them", "lines": ["<corrupted>"]},
+		{"from": "them", "lines": ["<corrupted>"]},
+		{"from": "you", "lines": ["<corrupted>"]},
+		{"from": "them", "lines": ["<corrupted>"]},
+		{"from": "you", "lines": ["<corrupted>"]},
+		{"from": "you", "lines": ["<corrupted>"]},
+		{"from": "you", "lines": ["<corrupted>"]},
+		{"from": "them", "lines": ["<corrupted>"]},
+		{"from": "you", "lines": ["<corrupted>"]},
+		{"from": "them", "lines": ["<corrupted>"]},
+		{"from": "them", "lines": ["im going"]},
+		{"from": "you", "lines": ["<corrupted>"]},
+		{"from": "you", "lines": ["<corrupted>"]},
+		{"from": "you", "lines": ["Elise?"]},
+		{"from": "you", "lines": ["Hello???"]},
+		{"from": "you", "lines": ["Elise where are you????"]},
 	],
 	"Chris": [
 		{"from": "them", "lines": ["yo"]},
@@ -63,13 +77,6 @@ var MESSAGES: Dictionary[String, Array] = {
 }
 
 var MAILS: Dictionary[String, Dictionary] = {
-	"": {
-		"title": "",
-		"from": "",
-		"to": "",
-		"content": "",
-	},
-	
 	"Subscription Renewal": {
 		"title": "Product Subscription",
 		"from": "The Company Team",
@@ -366,5 +373,8 @@ old email",
 	"styles": "",
 	"main": "",
 	"calculator": "",
-	"main_game": ""
+	"main_game": "",
+	"grief-0001-old": "",
+	"grief-0002-old": "",
+	"old_save": ""
 }

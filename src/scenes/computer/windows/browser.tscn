@@ -235,6 +235,13 @@ theme_override_font_sizes/font_size = 16
 text = "convert jpg to pdf"
 alignment = 0
 
+[node name="search_history_13" type="Button" parent="content/history/ScrollContainer/VBoxContainer" index="12" unique_id=127534413]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "can an AI learn a person"
+alignment = 0
+
 [node name="search_page" type="Control" parent="content" index="2" unique_id=1353191733]
 visible = false
 anchors_preset = 0
@@ -318,6 +325,7 @@ text = "no internet"
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_9" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_10" to="content" method="search_history" flags=18]
 [connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_11" to="content" method="search_history" flags=18]
+[connection signal="pressed" from="content/history/ScrollContainer/VBoxContainer/search_history_13" to="content" method="search_history" flags=18]
 [connection signal="text_submitted" from="content/search_page/search_bar" to="content" method="search"]
 [connection signal="pressed" from="content/search_page/search" to="content" method="search"]
 [connection signal="pressed" from="content/search_page/return" to="content" method="return_to_homepage"]
